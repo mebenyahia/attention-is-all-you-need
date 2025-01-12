@@ -1,6 +1,6 @@
 .venv*
 
 training/data/*
-training/tokenizers/*
+training/tokenizer/*
 
 *__pycache__*
