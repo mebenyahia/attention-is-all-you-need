@@ -1,14 +1,5 @@
 import torch
 from torch import nn
-from torch.nn import functional as F
-from tokenizers import Tokenizer, trainers, models, pre_tokenizers, normalizers
-from datasets import load_dataset
-from datasets import Dataset
-from torch.utils.data import DataLoader
-from torch.optim.lr_scheduler import ReduceLROnPlateau
-import math
-import json
-import os
 
 
 class Module(nn.Module):
@@ -59,7 +50,7 @@ class ScaledDotProductAttention(Module):
         
         return value_weights @ v # (batch_size, sec_length, sec_length) @ ()
 
-        
+# TODO: implement multi head attention with broadcasting for better performance    
 class MultiHeadAttention(Module):
     
     def __init__(self, d_model, num_heads, use_mask=False):
@@ -135,6 +126,7 @@ class Embedding(Module):
         super().__init__()
         self.embedding = nn.Embedding(vocab_size, d_model, 2) # 2 is the eos token, we also pad with it
         self.dropout = nn.Dropout(dropout_rate)
+        # TODO: implement positional encodings as part of the model (compute during initialization, use register buffer)
         self.pos_enc = pos_enc
             
     def forward(self, x):
