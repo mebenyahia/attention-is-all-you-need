@@ -9,48 +9,47 @@ import os
 import json
 import math
 
-resume = False
+resume = True
 
 # only for mac, remove for training on cuda or cpu
 if torch.backends.mps.is_available():
     os.environ["ACCELERATE_USE_MPS_DEVICE"] = "True"
 
-
 print("Loading training set from saved...")
+
+
 def load_from_json(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         data = json.load(f)
     return Dataset.from_list(data)
+
 
 train_dataset = load_from_json(f'data/{config.LANGS}-train_data.json')
 
 print("Loading tokenizer from saved...")
 tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
 
-
 train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer)
 
 accelerator = Accelerator(project_dir="accelerator")
 
-output_dir = "accelerator"
-if resume:
-    print("Loading accelerator state...")
-    accelerator.load_state(output_dir)
-
 print("Computing positional encodings...")
+
+
 # calculating the positional encoding
 # TODO: move this part to the model into the embedding class or as a separate layer
 def gen_pos_enc(seq_len, d_model, n):
     pos_enc = torch.zeros((seq_len, d_model), dtype=torch.float)
-    
+
     for k in range(seq_len):
-        for i in range(d_model//2):
-            theta = k / (n ** (2*i / d_model))
-            pos_enc[k, 2*i] = math.sin(theta)
-            pos_enc[k, 2*i+1] = math.cos(theta)
-            
-    pos_enc.requires_grad=False
+        for i in range(d_model // 2):
+            theta = k / (n ** (2 * i / d_model))
+            pos_enc[k, 2 * i] = math.sin(theta)
+            pos_enc[k, 2 * i + 1] = math.cos(theta)
+
+    pos_enc.requires_grad = False
     return pos_enc
+
 
 pos_enc = gen_pos_enc(config.ALLOWED_SEQ_LENGTH, config.D_MODEL, 10000)
 
@@ -64,39 +63,72 @@ sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
 
 model, optimizer, train_dataloader = accelerator.prepare(model, optimizer, train_dlp.dataloader)
 accelerator.register_for_checkpointing(sheduler)
+accelerator.register_for_checkpointing(model)
+accelerator.register_for_checkpointing(optimizer)
+
+output_dir = "accelerator_checkpoint_batch_10"
+if resume:
+    print("Loading accelerator state...")
+    accelerator.load_state(output_dir)
 
 if not resume:
     print("Saving initial accelerator state...")
     accelerator.save_state(output_dir="accelerator")
 
+
 def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, accelerator):
     model.train()
     train_loss = 0
     num_batches = 0
+    last_batch = 0
+
+    if resume:
+        with open(f"{output_dir}/metadata.json", "r") as f:
+            metadata = json.load(f)
+        last_batch = metadata["batch"] #use last batch to continue training from that point
+        num_batches = last_batch
 
     for batch in train_dataloader:
+        if last_batch > 0:
+            last_batch = last_batch - 1 #skip the batches that have already been trained
+            continue
+
         sources = batch['sources']
         targets = batch['targets']
-        
+
         optimizer.zero_grad()
-        predictions = model(sources, targets[:, :-1]) 
-        
+        predictions = model(sources, targets[:, :-1])
+
         B, S, C = predictions.shape
-        
+
         loss = loss_function(predictions.reshape(-1, C), targets[:, 1:].reshape(-1))
-        #loss.backward()
+        # loss.backward()
         accelerator.backward(loss)
         optimizer.step()
-                
+
         print(f'training loss: {loss.item()}')
         train_loss += loss.item()
         num_batches += 1
-        
+
         accelerator.save_state(output_dir="accelerator")
-        if num_batches == 10:
+
+        if num_batches % 10 == 0:
+            checkpoint_dir = f"accelerator_checkpoint_batch_{num_batches}"
+            print(f"Saving checkpoint to {checkpoint_dir}...")
+            accelerator.save_state(output_dir=checkpoint_dir)
+            # Save progress
+            metadata = {
+                "batch": num_batches,
+            }
+            with open(f"{checkpoint_dir}/metadata.json", "w") as f:
+                json.dump(metadata, f)
+
+        if num_batches == 100:
             break
         sheduler.step(loss.item())
 
+
 print("Training: ")
-train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function, sheduler=sheduler, accelerator=accelerator)
+train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
+            sheduler=sheduler, accelerator=accelerator)
 
