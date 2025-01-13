@@ -4,7 +4,7 @@ import config
 from datasets import Dataset
 from tokenizers import Tokenizer, trainers, models, pre_tokenizers, normalizers
 
-# TODO: move to a config file
+# TODO: move to a config file- is it not already in config.py?
 allowed_sequence_length = config.ALLOWED_SEQ_LENGTH
 
 def load_from_json(filename):
@@ -22,6 +22,7 @@ validation_dataset = load_from_json(f'data/{langs}-validation_data.json')
 test_dataset = load_from_json(f'data/{langs}-test_data.json')
 
 print("Preparing data for tokenizer training...")
+os.makedirs('tokenizer', exist_ok=True)
 with open("tokenizer/common_data.txt", "w", encoding="utf-8") as common_file:
     for split in [train_dataset, validation_dataset, test_dataset]:
         for example in split:

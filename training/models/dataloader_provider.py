@@ -1,5 +1,5 @@
 import torch
-from datasets import DataLoader
+from torch.utils.data import DataLoader
 
 class DataloaderProvider:
     
@@ -39,7 +39,7 @@ class DataloaderProvider:
             }
             return batch
         
-        self.datloader = DataLoader(
+        self.dataloader = DataLoader(
             dataset, 
             batch_size=batch_size, 
             shuffle=True, 

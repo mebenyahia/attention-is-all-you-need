@@ -22,7 +22,7 @@ def load_from_json(filename):
         data = json.load(f)
     return Dataset.from_list(data)
 
-train_dataset = load_from_json(f'{config.LANGS}-train_data.json')
+train_dataset = load_from_json(f'data/{config.LANGS}-train_data.json')
 
 print("Loading tokenizer from saved...")
 tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
@@ -62,7 +62,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=1e-5, betas=(0.9, 0.98), eps
 loss_function = torch.nn.CrossEntropyLoss()
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
 
-model, optimizer, train_dataloader = accelerator.prepare(model, optimizer, train_dlp.datloader)
+model, optimizer, train_dataloader = accelerator.prepare(model, optimizer, train_dlp.dataloader)
 accelerator.register_for_checkpointing(sheduler)
 
 if not resume:
@@ -93,9 +93,9 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         num_batches += 1
         
         accelerator.save_state(output_dir="accelerator")
-        break
-        
-    sheduler.step()
+        if num_batches == 10:
+            break
+        sheduler.step(loss.item())
 
 print("Training: ")
 train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function, sheduler=sheduler, accelerator=accelerator)

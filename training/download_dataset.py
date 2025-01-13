@@ -1,6 +1,7 @@
 from datasets import load_dataset
 import config
 import json
+import os
 
 print("Downloading dataset...")
 
@@ -9,6 +10,7 @@ def save_to_json(dataset_split, filename):
         # Convert dataset to a list of dictionaries and save to JSON
         json.dump([example for example in dataset_split], f, ensure_ascii=False, indent=4)
 
+os.makedirs('data', exist_ok=True)
 
 langs = config.LANGS
 dataset = load_dataset("wmt14", langs)
