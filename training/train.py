@@ -32,7 +32,7 @@ tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
 
 train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer)
 
-output_dir = "accelerator_checkpoints"
+output_dir = "accelerator_checkpoint"
 accelerator_project_config = ProjectConfiguration(
     total_limit=3,
     automatic_checkpoint_naming=True,
@@ -91,8 +91,9 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         # loss.backward()
         accelerator.backward(loss)
         optimizer.step()
-
-        print(f'training loss: {loss.item()}')
+         
+        # TODO: calculate validation loss
+        print(f'training loss: {loss.item()}, validation Loss')
         train_loss += loss.item()
         num_batches += 1
 
@@ -111,11 +112,15 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         if num_batches == 200:
             break
         sheduler.step(loss.item())
+        
+
 
 
 print("Training: ")
-train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
+
+for epoch in range(config.EPOCHS):
+    train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
             sheduler=sheduler, accelerator=accelerator)
-print("Saving model...")
-accelerator.save_model(model, "saved_model")
+    
+    
 

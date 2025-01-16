@@ -45,7 +45,7 @@ class ScaledDotProductAttention(Module):
         
         if self.use_mask:
             sec_len = rel.size(-1)
-            mask = torch.tril(torch.ones(sec_len, sec_len, requires_grad=False,)).to(self.device)
+            mask = torch.tril(torch.ones(sec_len, sec_len, requires_grad=False)).to(self.device)
             rel = rel.masked_fill(mask == 0, float('-inf'))
         
         value_weights = self.softmax(rel)
@@ -61,13 +61,53 @@ class MultiHeadAttention(Module):
         self.num_heads = num_heads
         self.use_mask = use_mask
         
-        head_size = d_model // num_heads
-        self.heads = nn.ModuleList([ScaledDotProductAttention(d_model, head_size, use_mask) for _ in range(num_heads)])
+        self.w_q = nn.Linear(d_model, d_model, bias=False) # (batch_size, head_size)
+        self.w_k = nn.Linear(d_model, d_model, bias=False)
+        self.w_v = nn.Linear(d_model, d_model, bias=False)
         self.w_o = nn.Linear(d_model, d_model, bias=False)
+        
+        self.softmax = nn.Softmax(dim=-1)
+
     
     def forward(self, q, k, v):
-        merged = torch.cat([head(q, k, v) for head in self.heads], dim=-1)
+        q = self.w_q(q) # (batch_size, sec_len, d_model) @ (d_model, d_model) = (batch_size, sec_len, d_model)
+        k = self.w_k(k) 
+        v = self.w_v(v)
+        
+        q_heads = self.split_heads(q) # (batch_size, num_heads, sec_len1, head_size)
+        k_heads = self.split_heads(k) # (batch_size, num_heads, sec_len2, head_size)
+        v_heads = self.split_heads(v) # (batch_size, num_heads, sec_len2, head_size)
+        
+        # (batch_size, num_heads, sec_len1, head_size) @ (batch_size, num_heads, head_size, sec_len2) = (batch_size, num_heads, sec_len1, sec_len2)
+        rel = q_heads @ k_heads.transpose(-2, -1)
+        rel = rel * self.head_size**-0.5 
+        
+        if self.use_mask:
+            sec_len = rel.size(-1)
+            mask = torch.tril(torch.ones(sec_len, sec_len, requires_grad=False,)).to(self.device)
+            rel = rel.masked_fill(mask == 0, float('-inf'))
+        
+        value_weights = self.softmax(rel)
+        
+        # (batch_size, num_heads, sec_len1, sec_len2) @ (batch_size, num_heads, sec_len2, head_size) = (batch_size, num_heads, sec_len1, head_size)
+        attn_heads = value_weights @ v_heads 
+        
+        merged = self.merge_heads(attn_heads)
+        
         return self.w_o(merged)
+
+    def split_heads(self, x):
+        B, S, C = x.shape
+        head_size = C // self.num_heads
+        x = x.view(B, S, self.num_heads, head_size)
+        
+        return x.transpose(2, 1) # (B, num_heads, S, head_size)
+        
+    def merge_heads(self, x):
+        B, H, S, C = x.shape
+        x = x.transpose(2, 1) # (B, S, num_heads, head_size)
+        
+        return x.view(B, S, H*C) # H*C=d_model
 
 
 class EncoderLayer(Module):
