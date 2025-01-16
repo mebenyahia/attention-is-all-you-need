@@ -55,8 +55,8 @@ accelerator.register_for_checkpointing(sheduler)
 accelerator.register_for_checkpointing(model)
 accelerator.register_for_checkpointing(optimizer)
 
-output_dir = "accelerator_checkpoints"
-last_batch = 0 #use last batch to continue training from that point
+output_dir = "accelerator_checkpoint"
+last_batch = 0  # use last batch to continue training from that point
 if resume:
     print("Loading accelerator state...")
     accelerator.load_state()
@@ -65,17 +65,15 @@ if resume:
     last_batch = metadata["batch"]
     skipped_dataloader = accelerator.skip_first_batches(train_dataloader, last_batch)
 
-
 if not resume:
     print("Saving initial accelerator state...")
-    accelerator.save_state()
+    # accelerator.save_state()
 
 
 def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, accelerator):
     model.train()
     train_loss = 0
     num_batches = last_batch
-
 
     for batch in train_dataloader:
 
@@ -91,12 +89,11 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         # loss.backward()
         accelerator.backward(loss)
         optimizer.step()
-         
+
         # TODO: calculate validation loss
         print(f'training loss: {loss.item()}, validation Loss')
         train_loss += loss.item()
         num_batches += 1
-
 
         if num_batches % 10 == 0:
             checkpoint_dir = f"accelerator_checkpoints"
@@ -112,15 +109,13 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         if num_batches == 200:
             break
         sheduler.step(loss.item())
-        
-
 
 
 print("Training: ")
 
 for epoch in range(config.EPOCHS):
     train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
-            sheduler=sheduler, accelerator=accelerator)
-    
-    
+                sheduler=sheduler, accelerator=accelerator)
+
+
 
