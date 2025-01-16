@@ -24,37 +24,6 @@ class FeedForwardNetword(Module):
         return x
 
 
-# the following implementation of Multi Head Attention is slow and unsuitable for training
-class ScaledDotProductAttention(Module):
-
-    def __init__(self, d_model, head_size, use_mask=False):
-        super().__init__()
-        self.head_size = head_size
-        self.w_q = nn.Linear(d_model, head_size, bias=False)  # (batch_size, head_size)
-        self.w_k = nn.Linear(d_model, head_size, bias=False)
-        self.w_v = nn.Linear(d_model, head_size, bias=False)
-        self.use_mask = use_mask
-        self.softmax = nn.Softmax(dim=-1)
-
-    def forward(self, q, k, v):
-        q = self.w_q(q)  # (batch_size, sec_len, d_model) @ (d_model, head_size) = (batch_size, sec_len, head_size)
-        k = self.w_k(k)
-        v = self.w_v(v)
-
-        rel = q @ k.transpose(-2, -1)  # (batch_size, sec_length, sec_length)
-        rel = rel * self.head_size ** -0.5
-
-        if self.use_mask:
-            sec_len = rel.size(-1)
-            mask = torch.tril(torch.ones(sec_len, sec_len, requires_grad=False)).to(self.device)
-            rel = rel.masked_fill(mask == 0, float('-inf'))
-
-        value_weights = self.softmax(rel)
-
-        return value_weights @ v  # (batch_size, sec_length, sec_length) @ ()
-
-
-# TODO: implement multi head attention with broadcasting for better performance
 class MultiHeadAttention(Module):
 
     def __init__(self, d_model, num_heads, use_mask=False):
@@ -63,8 +32,8 @@ class MultiHeadAttention(Module):
         self.num_heads = num_heads
         self.use_mask = use_mask
         self.head_size = d_model // self.num_heads
-
-        self.w_q = nn.Linear(d_model, d_model, bias=False)  # (batch_size, head_size)
+        
+        self.w_q = nn.Linear(d_model, d_model, bias=False) # (batch_size, head_size)
         self.w_k = nn.Linear(d_model, d_model, bias=False)
         self.w_v = nn.Linear(d_model, d_model, bias=False)
         self.w_o = nn.Linear(d_model, d_model, bias=False)
@@ -189,7 +158,6 @@ class Embedding(Module):
         super().__init__()
         self.embedding = nn.Embedding(vocab_size, d_model, 2)  # 2 is the eos token, we also pad with it
         self.dropout = nn.Dropout(dropout_rate)
-        # TODO: implement positional encodings as part of the model (compute during initialization, use register buffer)
         self.pos_enc = PositionalEncoding(d_model, 0.1, 1000)
 
     def forward(self, x):

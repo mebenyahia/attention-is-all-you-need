@@ -6,3 +6,5 @@ training/tokenizer/*
 *__pycache__*
 
 training/accelerator_checkpoints*
+
+sofiia*

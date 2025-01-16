@@ -8,6 +8,7 @@ class DataloaderProvider:
         self.tokenizer = tokenizer
         vocab = tokenizer.get_vocab()
         
+        
         self.sos = vocab["[START]"]
         self.end = vocab["[END]"]
         self.unk = vocab["[UNK]"]
