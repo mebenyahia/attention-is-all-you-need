@@ -1,3 +1,5 @@
+import math
+
 import torch
 from torch import nn
 
@@ -119,29 +121,46 @@ class DecoderLayer(Module):
         x = self.layer_norm_3(x + self.dropout_3(fnn_out))
         return x
 
+class PositionalEncoding(Module):
+
+    def __init__(self, d_model, dropout=0.1, max_len=1000):
+        super().__init__()
+        self.dropout = nn.Dropout(p=dropout)
+
+        pe = torch.zeros(max_len, d_model)
+        position = torch.arange(0, max_len, dtype=torch.float).unsqueeze(1)
+        div_term = torch.exp(torch.arange(0, d_model, 2).float() * (-math.log(10000.0) / d_model))
+        pe[:, 0::2] = torch.sin(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term)
+        pe = pe.unsqueeze(0).transpose(0, 1)
+        self.register_buffer('pe', pe)
+
+    def forward(self, x):
+        x = x + self.pe[:x.size(0), :]
+        return self.dropout(x)
 
 class Embedding(Module):
         
-    def __init__(self, vocab_size, d_model, pos_enc, dropout_rate=0.1):
+    def __init__(self, vocab_size, d_model, dropout_rate=0.1):
         super().__init__()
         self.embedding = nn.Embedding(vocab_size, d_model, 2) # 2 is the eos token, we also pad with it
         self.dropout = nn.Dropout(dropout_rate)
         # TODO: implement positional encodings as part of the model (compute during initialization, use register buffer)
-        self.pos_enc = pos_enc
+        self.pos_enc = PositionalEncoding(d_model, 0.1, 1000)
             
     def forward(self, x):
         emb_out = self.embedding(x) # (batch, sequence, embedding)
-        sec_len = emb_out.shape[1]
-        return self.dropout(emb_out + self.pos_enc[:sec_len,:])
+        emb_out = self.pos_enc(emb_out)
+        return self.dropout(emb_out)
     
 
 class Transformer(Module):
         
-    def __init__(self, vocab_size, d_model, d_ff, pos_enc, num_heads=8, N=6, seed=5012025, dropout_rate=0.1):
+    def __init__(self, vocab_size, d_model, d_ff, num_heads=8, N=6, seed=5012025, dropout_rate=0.1):
         super().__init__()
         torch.manual_seed(seed)
-        self.source_embedding = Embedding(vocab_size, d_model, pos_enc, dropout_rate=dropout_rate) 
-        self.target_embedding = Embedding(vocab_size, d_model, pos_enc, dropout_rate=dropout_rate)
+        self.source_embedding = Embedding(vocab_size, d_model, dropout_rate=dropout_rate)
+        self.target_embedding = Embedding(vocab_size, d_model, dropout_rate=dropout_rate)
         
 
         self.encoder_stack = nn.ModuleList([EncoderLayer(d_model, d_ff, num_heads, dropout_rate) for _ in range(N)])

@@ -44,28 +44,8 @@ accelerator = Accelerator(project_config=accelerator_project_config)
 
 print("Computing positional encodings...")
 
-
-# calculating the positional encoding
-# TODO: move this part to the model into the embedding class or as a separate layer
-def gen_pos_enc(seq_len, d_model, n):
-    pos_enc = torch.zeros((seq_len, d_model), dtype=torch.float)
-
-    for k in range(seq_len):
-        for i in range(d_model // 2):
-            theta = k / (n ** (2 * i / d_model))
-            pos_enc[k, 2 * i] = math.sin(theta)
-            pos_enc[k, 2 * i + 1] = math.cos(theta)
-
-    pos_enc.requires_grad = False
-    return pos_enc
-
-
-pos_enc = gen_pos_enc(config.ALLOWED_SEQ_LENGTH, config.D_MODEL, 10000)
-
-pos_enc = pos_enc.to('cuda' if torch.cuda.is_available() else ('mps' if torch.backends.mps.is_available() else 'cpu'))
-
 print("Preparing model...")
-model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, pos_enc, config.N_HEADS, config.N_LAYERS)
+model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS)
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-5, betas=(0.9, 0.98), eps=1e-9)
 loss_function = torch.nn.CrossEntropyLoss()
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
@@ -79,7 +59,7 @@ output_dir = "accelerator_checkpoints"
 last_batch = 0 #use last batch to continue training from that point
 if resume:
     print("Loading accelerator state...")
-    accelerator.load_state(output_dir+"/checkpoints/checkpoint_6")
+    accelerator.load_state()
     with open(f"{output_dir}/metadata.json", "r") as f:
         metadata = json.load(f)
     last_batch = metadata["batch"]
@@ -136,4 +116,6 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
 print("Training: ")
 train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
             sheduler=sheduler, accelerator=accelerator)
+print("Saving model...")
+accelerator.save_model(model, "saved_model")
 
