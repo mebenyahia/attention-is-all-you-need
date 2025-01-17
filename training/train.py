@@ -11,6 +11,7 @@ import json
 import math
 
 resume = False
+train_count = 1 #used for the checkpoint directory name
 
 # only for mac, remove for training on cuda or cpu
 if torch.backends.mps.is_available():
@@ -32,7 +33,7 @@ tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
 
 train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer)
 
-output_dir = "accelerator_checkpoint"
+output_dir = f"accelerator_checkpoints_{train_count}"
 accelerator_project_config = ProjectConfiguration(
     total_limit=3,
     automatic_checkpoint_naming=True,
@@ -42,7 +43,8 @@ accelerator_project_config = ProjectConfiguration(
 
 accelerator = Accelerator(project_config=accelerator_project_config)
 
-print("Computing positional encodings...")
+
+
 
 print("Preparing model...")
 model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS)
@@ -55,19 +57,18 @@ accelerator.register_for_checkpointing(sheduler)
 accelerator.register_for_checkpointing(model)
 accelerator.register_for_checkpointing(optimizer)
 
-output_dir = "accelerator_checkpoint"
 last_batch = 0  # use last batch to continue training from that point
+
 if resume:
     print("Loading accelerator state...")
-    accelerator.load_state()
-    with open(f"{output_dir}/metadata.json", "r") as f:
+    previous_run_dir = f"accelerator_checkpoints_{train_count - 1}"
+    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_15" #change the directory name to the desired checkpoint
+    accelerator.load_state(checkpoint_dir)
+    with open(f"{previous_run_dir}/metadata.json", "r") as f:
         metadata = json.load(f)
     last_batch = metadata["batch"]
     skipped_dataloader = accelerator.skip_first_batches(train_dataloader, last_batch)
 
-if not resume:
-    print("Saving initial accelerator state...")
-    # accelerator.save_state()
 
 
 def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, accelerator):
@@ -96,14 +97,13 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         num_batches += 1
 
         if num_batches % 10 == 0:
-            checkpoint_dir = f"accelerator_checkpoints"
-            print(f"Saving checkpoint to {checkpoint_dir}...")
+            print(f"Saving checkpoint to {output_dir}...")
             accelerator.save_state()
             # Save progress
             metadata = {
                 "batch": num_batches,
             }
-            with open(f"{checkpoint_dir}/metadata.json", "w") as f:
+            with open(f"{output_dir}/metadata.json", "w") as f:
                 json.dump(metadata, f)
 
         if num_batches == 200:
