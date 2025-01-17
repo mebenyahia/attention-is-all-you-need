@@ -10,8 +10,8 @@ import os
 import json
 import math
 
-resume = False
-train_count = 1 #used for the checkpoint directory name
+resume = True
+train_count = 3 #used for the checkpoint directory name
 
 # only for mac, remove for training on cuda or cpu
 if torch.backends.mps.is_available():
@@ -62,7 +62,7 @@ last_batch = 0  # use last batch to continue training from that point
 if resume:
     print("Loading accelerator state...")
     previous_run_dir = f"accelerator_checkpoints_{train_count - 1}"
-    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_15" #change the directory name to the desired checkpoint
+    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_119" #change the directory name to the desired checkpoint
     accelerator.load_state(checkpoint_dir)
     with open(f"{previous_run_dir}/metadata.json", "r") as f:
         metadata = json.load(f)
@@ -118,4 +118,5 @@ for epoch in range(config.EPOCHS):
                 sheduler=sheduler, accelerator=accelerator)
 
 
-
+print("Saving model...")
+accelerator.save_model(model, "saved_model")
