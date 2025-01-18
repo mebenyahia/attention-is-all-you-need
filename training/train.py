@@ -10,8 +10,8 @@ import os
 import json
 import math
 
-resume = True
-train_count = 3 #used for the checkpoint directory name
+resume = False
+train_count = 7 #used for the checkpoint directory name
 
 # only for mac, remove for training on cuda or cpu
 if torch.backends.mps.is_available():
@@ -49,7 +49,7 @@ accelerator = Accelerator(project_config=accelerator_project_config)
 print("Preparing model...")
 model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS)
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-5, betas=(0.9, 0.98), eps=1e-9)
-loss_function = torch.nn.CrossEntropyLoss()
+loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.mask)
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
 
 model, optimizer, train_dataloader = accelerator.prepare(model, optimizer, train_dlp.dataloader)
@@ -57,12 +57,12 @@ accelerator.register_for_checkpointing(sheduler)
 accelerator.register_for_checkpointing(model)
 accelerator.register_for_checkpointing(optimizer)
 
-last_batch = 0  # use last batch to continue training from that point
+last_batch = 0  # use last batch to continue tr aining from that point
 
 if resume:
     print("Loading accelerator state...")
     previous_run_dir = f"accelerator_checkpoints_{train_count - 1}"
-    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_119" #change the directory name to the desired checkpoint
+    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_6" #change the directory name to the desired checkpoint
     accelerator.load_state(checkpoint_dir)
     with open(f"{previous_run_dir}/metadata.json", "r") as f:
         metadata = json.load(f)
@@ -113,8 +113,8 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
 
 print("Training: ")
 
-for epoch in range(config.EPOCHS):
-    train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
+#for epoch in range(config.EPOCHS):
+train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
                 sheduler=sheduler, accelerator=accelerator)
 
 

@@ -38,7 +38,7 @@ def predict(input_text):
         targets = [sos]
         torch_sources_tokens = torch.tensor(sources, dtype=torch.long).unsqueeze(0).to(model.device)
 
-        for _ in range(max_length):
+        for i in range(max_length):
             # Prepare the current output tensor
             torch_targets_tokens = torch.tensor(targets, dtype=torch.long).unsqueeze(0).to(model.device)
 
@@ -47,7 +47,6 @@ def predict(input_text):
 
             # Get the token with the highest probability
             next_token = torch.argmax(logits[:, -1, :], dim=-1).item()
-
             # Append the token to the output
             targets.append(next_token)
 
@@ -56,12 +55,11 @@ def predict(input_text):
                 break
 
         # Decode the output tokens
-        output_text = tokenizer.decode(targets[1:-1])
-
+        output_text = tokenizer.decode(targets)
+        print(targets)
         return output_text
 
-
-# Test the model with some input
+# Test the with some input
 input_text = "Hi, how are you?"
 output_text = predict(input_text)
 print(f"Input: {input_text}")

@@ -51,12 +51,13 @@ class MultiHeadAttention(Module):
 
         # (batch_size, num_heads, sec_len1, head_size) @ (batch_size, num_heads, head_size, sec_len2) = (batch_size, num_heads, sec_len1, sec_len2)
         rel = q_heads @ k_heads.transpose(-2, -1)
-        rel = rel * self.head_size ** -0.5
+        rel = rel * (self.head_size ** -0.5)
 
         if self.use_mask:
             sec_len = rel.size(-1)
-            mask = torch.tril(torch.ones(sec_len, sec_len, requires_grad=False, )).to(self.device)
-            rel = rel.masked_fill(mask == 0, float('-inf'))
+            mask = torch.tril(torch.ones((sec_len, sec_len), requires_grad=False)).to(self.device)
+            mask = mask.unsqueeze(0).unsqueeze(0)
+            rel = torch.masked_fill(rel, mask == 0, float('-inf'))
 
         value_weights = self.softmax(rel)
 

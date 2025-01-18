@@ -14,8 +14,6 @@ class DataloaderProvider:
         self.unk = vocab["[UNK]"]
         self.mask = vocab["[MASK]"]
         
-        # TODO: tokenize the dataset outside the collate_fn function to improve training speed
-        # self.tokenized = []
         
         def collate_fn(batch):
             tokenized_batch = []
@@ -31,8 +29,8 @@ class DataloaderProvider:
             max_ger_length = max(len(ger) for (_, ger) in tokenized_batch)
 
             # Pad all sequences to the maximum length (we pad with the end of sentence)
-            sources = [[self.sos] + eng + [self.end] * (max_eng_length - len(eng)) + [self.end] for eng, _ in tokenized_batch]
-            targets = [[self.sos] + ger + [self.end] * (max_ger_length - len(ger)) + [self.end] for _, ger in tokenized_batch]
+            sources = [[self.sos] + eng + [self.end] + [self.mask] * (max_eng_length - len(eng)) for eng, _ in tokenized_batch]
+            targets = [[self.sos] + ger + [self.end] + [self.mask] * (max_ger_length - len(ger)) for _, ger in tokenized_batch]
         
             batch = {
                "sources": torch.tensor(sources, dtype=torch.long), 
