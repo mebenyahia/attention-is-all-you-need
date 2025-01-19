@@ -8,3 +8,8 @@ training/tokenizer/*
 training/accelerator_checkpoints*
 
 sofiia*
+training/saved_model*
+training/saved_state*
+training/accelerator*
+
+training/output*

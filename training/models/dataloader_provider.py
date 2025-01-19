@@ -1,5 +1,6 @@
 import torch
 from torch.utils.data import DataLoader
+from torch.utils.data import Dataset
 
 class DataloaderProvider:
     
@@ -12,36 +13,34 @@ class DataloaderProvider:
         self.sos = vocab["[START]"]
         self.end = vocab["[END]"]
         self.unk = vocab["[UNK]"]
-        self.mask = vocab["[MASK]"]
+        self.pad = vocab["[MASK]"]
         
-        
-        def collate_fn(batch):
-            tokenized_batch = []
-            for example in batch:
-                # Tokenize and encode sentences
-                eng = self.tokenizer.encode(example["translation"]["en"]).ids
-                ger = self.tokenizer.encode(example["translation"]["de"]).ids
-            
-                tokenized_batch.append((eng, ger))
-        
-            # Find the maximum sequence length in the batch
-            max_eng_length = max(len(eng) for (eng, _) in tokenized_batch)
-            max_ger_length = max(len(ger) for (_, ger) in tokenized_batch)
-
-            # Pad all sequences to the maximum length (we pad with the end of sentence)
-            sources = [[self.sos] + eng + [self.end] + [self.mask] * (max_eng_length - len(eng)) for eng, _ in tokenized_batch]
-            targets = [[self.sos] + ger + [self.end] + [self.mask] * (max_ger_length - len(ger)) for _, ger in tokenized_batch]
-        
-            batch = {
-               "sources": torch.tensor(sources, dtype=torch.long), 
-               "targets": torch.tensor(targets, dtype=torch.long)
-            }
-            return batch
+        processed_dataset = self.process(dataset)
         
         self.dataloader = DataLoader(
-            dataset, 
-            batch_size=batch_size, 
+            processed_dataset, 
+            batch_size=batch_size,
+            collate_fn=self.pad_entry,
             shuffle=True, 
-            collate_fn=collate_fn
         )
-  
+        
+    def process(self, dataset: Dataset):
+        return dataset.map(self.tokenize)
+    
+    def tokenize(self, example):
+        source = self.tokenizer.encode(example["translation"]["en"]).ids
+        target = self.tokenizer.encode(example["translation"]["de"]).ids
+        return {"src": source, "trg": target}
+    
+    def pad_entry(self, batch):
+        max_eng_length = max(len(ex["src"]) for ex in batch)
+        max_ger_length = max(len(ex["trg"]) for ex in batch)
+        
+        sources = [[self.sos] + ex["src"] + [self.end] + [self.pad] * (max_eng_length - len(ex["src"])) for ex in batch]
+        targets = [[self.sos] + ex["trg"] + [self.end] + [self.pad] * (max_ger_length - len(ex["trg"])) for ex in batch]
+        
+        batch = {
+            "sources": torch.tensor(sources, dtype=torch.long), 
+            "targets": torch.tensor(targets, dtype=torch.long)
+        }
+        return batch

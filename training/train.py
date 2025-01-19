@@ -28,10 +28,15 @@ def load_from_json(filename):
 
 train_dataset = load_from_json(f'data/{config.LANGS}-train_data.json')
 
+subset_idx = int(0.01 * len(train_dataset))
+train_dataset_subset = train_dataset.select(range(subset_idx))
+
 print("Loading tokenizer from saved...")
 tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
 
-train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer)
+#train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer)
+train_dlp = DataloaderProvider(train_dataset_subset, config.BATCH_SIZE, tokenizer)
+
 
 output_dir = f"accelerator_checkpoints_{train_count}"
 accelerator_project_config = ProjectConfiguration(
@@ -49,7 +54,7 @@ accelerator = Accelerator(project_config=accelerator_project_config)
 print("Preparing model...")
 model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS)
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-5, betas=(0.9, 0.98), eps=1e-9)
-loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.mask)
+loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad)
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
 
 model, optimizer, train_dataloader = accelerator.prepare(model, optimizer, train_dlp.dataloader)

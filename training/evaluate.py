@@ -2,12 +2,10 @@ import os
 
 import torch
 from accelerate import Accelerator
-from accelerate.utils import ProjectConfiguration
 from tokenizers import Tokenizer
 from models import Transformer
 import config
-import json
-import math
+
 
 # Initialize the accelerator
 output_dir = "saved_model"
@@ -21,7 +19,6 @@ max_length = 50
 
 # Load the tokenizer
 tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
-
 
 # Function to predict output from input text
 def predict(input_text):
@@ -60,7 +57,7 @@ def predict(input_text):
         return output_text
 
 # Test the with some input
-input_text = "Hi, how are you?"
+input_text = "Hello, how are you?"
 output_text = predict(input_text)
 print(f"Input: {input_text}")
 print(f"Output: {output_text}")
