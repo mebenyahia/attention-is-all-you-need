@@ -48,9 +48,6 @@ accelerator_project_config = ProjectConfiguration(
 
 accelerator = Accelerator(project_config=accelerator_project_config)
 
-
-
-
 print("Preparing model...")
 model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS)
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-5, betas=(0.9, 0.98), eps=1e-9)

@@ -145,19 +145,20 @@ class PositionalEncoding(Module):
         div_term = torch.exp(torch.arange(0, d_model, 2).float() * (-math.log(10000.0) / d_model))
         pe[:, 0::2] = torch.sin(position * div_term)
         pe[:, 1::2] = torch.cos(position * div_term)
-        pe = pe.unsqueeze(0).transpose(0, 1)
+        pe = pe.unsqueeze(0)
         self.register_buffer('pe', pe)
 
-    def forward(self, x):
-        x = x + self.pe[:x.size(0), :]
+    def forward(self, x): 
+        seq_len = x.shape[1]
+        x = x + self.pe[:, :seq_len, :]
         return self.dropout(x)
 
 
 class Embedding(Module):
 
-    def __init__(self, vocab_size, d_model, dropout_rate=0.1):
+    def __init__(self, vocab_size, d_model, dropout_rate=0.1, pad_token=3):
         super().__init__()
-        self.embedding = nn.Embedding(vocab_size, d_model, 2)  # 2 is the eos token, we also pad with it
+        self.embedding = nn.Embedding(vocab_size, d_model, pad_token)  # 3 is the eos token, we also pad with it
         self.dropout = nn.Dropout(dropout_rate)
         self.pos_enc = PositionalEncoding(d_model, 0.1, 1000)
 

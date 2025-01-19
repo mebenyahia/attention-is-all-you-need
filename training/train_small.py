@@ -80,34 +80,6 @@ sentences = [
 
 train_dataset = Dataset.from_list(sentences)
 
-# print("Preparing data for tokenizer training...")
-# os.makedirs('tokenizer', exist_ok=True)
-# with open("tokenizer/small_common_data.txt", "w", encoding="utf-8") as common_file:
-#     for split in [train_dataset]:
-#         for example in split:
-#             common_file.write(example['translation']['en'] + "\n")
-#             common_file.write(example['translation']['de'] + "\n")
-
-# print("Training small tokenizer... ")
-
-# tokenizer = Tokenizer(models.BPE(unk_token='[UNK]'))
-
-# tokenizer.normalizer = normalizers.Sequence([
-#      normalizers.Lowercase()
-# ])
-# tokenizer.pre_tokenizer = pre_tokenizers.Sequence([
-#      pre_tokenizers.Whitespace(),
-# ])
-# tokenizer.enable_truncation(max_length=20)
-# trainer = trainers.BpeTrainer(vocab_size=500, special_tokens=["[UNK]", "[START]", "[END]", "[MASK]"], show_progress=True)
-
-# print("Training tokenizer...")
-# os.environ["TOKENIZERS_PARALLELISM"] = "true"
-
-# tokenizer.train(["tokenizer/small_common_data.txt"], trainer=trainer)
-
-# print("Saving tokenizer...")
-# tokenizer.save('tokenizer/bpe_small.json')
 
 print("Loading small tokenizer from saved...")
 tokenizer = Tokenizer.from_file('tokenizer/bpe_small.json')
@@ -125,8 +97,8 @@ accelerator_project_config = ProjectConfiguration(
 accelerator = Accelerator(project_config=accelerator_project_config)
 
 print("Preparing model...")
-model = Transformer(300, 128, 1024, 4, 4)
-optimizer = torch.optim.Adam(model.parameters(), lr=1e-5, betas=(0.9, 0.98), eps=1e-9)
+model = Transformer(500, 128, 512, 4, 2)
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, betas=(0.9, 0.98), eps=1e-9)
 loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad)
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
 
@@ -142,6 +114,7 @@ accelerator.register_for_checkpointing(optimizer)
 
 def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, accelerator):
     model.train()
+    
     train_loss = 0
     num_batches = 0
 
@@ -163,21 +136,22 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         train_loss += loss.item()
         num_batches += 1
 
-        sheduler.step(loss.item())
-        return train_loss/num_batches
+    avg_epoch_loss = train_loss/num_batches
+    sheduler.step(avg_epoch_loss)
+    return avg_epoch_loss
 
 
 print("Training: ")
 losses = []
 
-for epoch in range(500):
+for epoch in range(250):
     print(f'Epoch: {epoch}')
     loss = train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
                 sheduler=sheduler, accelerator=accelerator)
     print(f'Average training loss: {loss}' )
     losses.append(loss)
 
-plt.plot(range(500), losses)
+plt.plot(range(250), losses)
 plt.savefig('output.png')
 print("Saving model...")
 accelerator.save_model(model, "saved_model")
