@@ -11,7 +11,7 @@ import json
 import math
 
 resume = False
-train_count = 7 #used for the checkpoint directory name
+train_count = 0 #used for the checkpoint directory name
 
 # only for mac, remove for training on cuda or cpu
 if torch.backends.mps.is_available():
@@ -28,14 +28,20 @@ def load_from_json(filename):
 
 train_dataset = load_from_json(f'data/{config.LANGS}-train_data.json')
 
-subset_idx = int(0.01 * len(train_dataset))
+subset_idx = int(0.0001 * len(train_dataset))
 train_dataset_subset = train_dataset.select(range(subset_idx))
+
+print("Loading validation set from saved...")
+validation_dataset = load_from_json(f'data/{config.LANGS}-validation_data.json')
+
 
 print("Loading tokenizer from saved...")
 tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
 
 #train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer)
 train_dlp = DataloaderProvider(train_dataset_subset, config.BATCH_SIZE, tokenizer)
+validation_dlp = DataloaderProvider(validation_dataset, config.BATCH_SIZE, tokenizer)
+validation_dataloader = validation_dlp.dataloader
 
 
 output_dir = f"accelerator_checkpoints_{train_count}"
@@ -50,7 +56,7 @@ accelerator = Accelerator(project_config=accelerator_project_config)
 
 print("Preparing model...")
 model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS)
-optimizer = torch.optim.Adam(model.parameters(), lr=1e-5, betas=(0.9, 0.98), eps=1e-9)
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, betas=(0.9, 0.98), eps=1e-9)
 loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad)
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
 
@@ -72,6 +78,25 @@ if resume:
     skipped_dataloader = accelerator.skip_first_batches(train_dataloader, last_batch)
 
 
+def calculate_validation_loss(model, validation_dataloader, loss_function):
+    model.eval()
+    validation_loss = 0
+    num_batches = 0
+
+    with torch.no_grad():
+        for batch in validation_dataloader:
+            sources = batch['sources'].to(model.device)
+            targets = batch['targets'].to(model.device)
+
+            predictions = model(sources, targets[:, :-1])
+            B, S, C = predictions.shape
+
+            loss = loss_function(predictions.reshape(-1, C), targets[:, 1:].reshape(-1))
+            validation_loss += loss.item()
+            num_batches += 1
+
+    avg_validation_loss = validation_loss / num_batches
+    return avg_validation_loss
 
 def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, accelerator):
     model.train()
@@ -92,13 +117,11 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         # loss.backward()
         accelerator.backward(loss)
         optimizer.step()
-
-        # TODO: calculate validation loss
-        print(f'training loss: {loss.item()}, validation Loss')
+        print(f'training loss: {loss.item()}')
         train_loss += loss.item()
         num_batches += 1
 
-        if num_batches % 10 == 0:
+        if num_batches % 100 == 0:
             print(f"Saving checkpoint to {output_dir}...")
             accelerator.save_state()
             # Save progress
@@ -108,16 +131,23 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
             with open(f"{output_dir}/metadata.json", "w") as f:
                 json.dump(metadata, f)
 
-        if num_batches == 200:
-            break
-        sheduler.step(loss.item())
+    avg_train_loss = train_loss / num_batches
+    avg_validation_loss = calculate_validation_loss(model, validation_dataloader, loss_function)
+    print(f"Average Validation Loss: {avg_validation_loss}")
+    sheduler.step(avg_train_loss)
+    return avg_train_loss, avg_validation_loss
 
 
 print("Training: ")
+losses = []
+validation_losses = []
 
-#for epoch in range(config.EPOCHS):
-train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
+for epoch in range(config.EPOCHS):
+    train_loss, val_loss = train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
                 sheduler=sheduler, accelerator=accelerator)
+    print(f'Epoch {epoch + 1}: Average Training Loss: {train_loss}, Average Validation Loss: {val_loss}')
+    losses.append(train_loss)
+    validation_losses.append(val_loss)
 
 
 print("Saving model...")
