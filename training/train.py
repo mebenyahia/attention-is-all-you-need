@@ -1,3 +1,6 @@
+import csv
+import time
+
 import torch
 from accelerate.utils import ProjectConfiguration
 from torch.optim.lr_scheduler import ReduceLROnPlateau
@@ -28,7 +31,7 @@ def load_from_json(filename):
 
 train_dataset = load_from_json(f'data/{config.LANGS}-train_data.json')
 
-subset_idx = int(0.0001 * len(train_dataset))
+subset_idx = int(0.01 * len(train_dataset))
 train_dataset_subset = train_dataset.select(range(subset_idx))
 
 print("Loading validation set from saved...")
@@ -59,7 +62,7 @@ accelerator = Accelerator(project_config=accelerator_project_config)
 
 print("Preparing model...")
 model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH, pad_token=pad)
-optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, betas=(0.9, 0.98), eps=1e-9)
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-5, betas=(0.9, 0.98), eps=1e-9)
 loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad)
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
 
@@ -123,7 +126,7 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         train_loss += loss.item()
         num_batches += 1
 
-        if num_batches % 100 == 0:
+        if num_batches % 300 == 0:
             print(f"Saving checkpoint to {output_dir}...")
             accelerator.save_state()
             # Save progress
@@ -139,22 +142,35 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
     sheduler.step(avg_train_loss)
     return avg_train_loss, avg_validation_loss
 
+try:
+    print("Training: ")
+    losses = []
+    validation_losses = []
+    log_file = 'training_log.csv'
 
-print("Training: ")
-losses = []
-validation_losses = []
+    # Write the header if the file does not exist
+    if not os.path.exists(log_file):
+        with open(log_file, 'w', newline='') as f:
+            writer = csv.writer(f, delimiter=';')
+            writer.writerow(['Epoch', 'Time', 'Train_Loss', 'Val_Loss'])
 
-for epoch in range(config.EPOCHS):
-    if epoch == 0 and resume:
-        train_dataloader = skipped_dataloader
-    elif epoch != 0:
-        last_batch = 0
-    train_loss, val_loss = train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
-                sheduler=sheduler, accelerator=accelerator)
-    print(f'Epoch {epoch + 1}: Average Training Loss: {train_loss}, Average Validation Loss: {val_loss}')
-    losses.append(train_loss)
-    validation_losses.append(val_loss)
-
-
-print("Saving model...")
-accelerator.save_model(model, "saved_model")
+    for epoch in range(config.EPOCHS):
+        start_time = time.time()
+        if epoch == 0 and resume:
+            train_dataloader = skipped_dataloader
+        elif epoch != 0:
+            last_batch = 0
+        train_loss, val_loss = train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
+                    sheduler=sheduler, accelerator=accelerator)
+        print(f'Epoch {epoch + 1}: Average Training Loss: {train_loss}, Average Validation Loss: {val_loss}')
+        losses.append(train_loss)
+        validation_losses.append(val_loss)
+        end_time = time.time()
+        epoch_time = end_time - start_time
+        # Log the epoch, time, train loss, and validation loss
+        with open(log_file, 'a', newline='') as f:
+            writer = csv.writer(f, delimiter=';')
+            writer.writerow([epoch + 1, f"{epoch_time:.2f}", f"{train_loss:.4f}", f"{val_loss:.4f}"])
+finally:
+    print("Saving model...")
+    accelerator.save_model(model, "saved_model")
