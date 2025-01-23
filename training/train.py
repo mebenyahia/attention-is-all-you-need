@@ -55,7 +55,7 @@ accelerator_project_config = ProjectConfiguration(
 accelerator = Accelerator(project_config=accelerator_project_config)
 
 print("Preparing model...")
-model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS)
+model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH)
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, betas=(0.9, 0.98), eps=1e-9)
 loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad)
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
@@ -114,7 +114,6 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         B, S, C = predictions.shape
 
         loss = loss_function(predictions.reshape(-1, C), targets[:, 1:].reshape(-1))
-        # loss.backward()
         accelerator.backward(loss)
         optimizer.step()
         print(f'training loss: {loss.item()}')
@@ -143,6 +142,10 @@ losses = []
 validation_losses = []
 
 for epoch in range(config.EPOCHS):
+    if epoch == 0 and resume:
+        train_dataloader = skipped_dataloader
+    elif epoch != 0:
+        last_batch = 0
     train_loss, val_loss = train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
                 sheduler=sheduler, accelerator=accelerator)
     print(f'Epoch {epoch + 1}: Average Training Loss: {train_loss}, Average Validation Loss: {val_loss}')

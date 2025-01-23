@@ -12,7 +12,7 @@ output_dir = "saved_model"
 accelerator = Accelerator()
 
 # Load the trained model
-model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS)
+model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH)
 model = accelerator.prepare(model)
 accelerator.load_state(output_dir)
 max_length = 50

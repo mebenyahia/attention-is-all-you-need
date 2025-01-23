@@ -12,7 +12,7 @@ output_dir = "saved_model"
 accelerator = Accelerator()
 
 # Load the trained model
-model = Transformer(500, 128, 512, 4, 2)
+model = Transformer(500, 128, 512, 4, 2, 1000)
 model = accelerator.prepare(model)
 accelerator.load_state(output_dir)
 max_length = 50

@@ -97,7 +97,7 @@ accelerator_project_config = ProjectConfiguration(
 accelerator = Accelerator(project_config=accelerator_project_config)
 
 print("Preparing model...")
-model = Transformer(500, 128, 512, 4, 2)
+model = Transformer(500, 128, 512, 4, 2, 1000)
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, betas=(0.9, 0.98), eps=1e-9)
 loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad)
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
