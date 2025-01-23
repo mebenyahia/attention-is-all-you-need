@@ -10,23 +10,24 @@ import config
 # Initialize the accelerator
 output_dir = "saved_model"
 accelerator = Accelerator()
+tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
+vocab = tokenizer.get_vocab()
+sos = vocab["[START]"]
+end = vocab["[END]"]
+pad = vocab["[PAD]"]
 
 # Load the trained model
-model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH)
+model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH, pad_token=pad)
 model = accelerator.prepare(model)
 accelerator.load_state(output_dir)
 max_length = 50
 
 # Load the tokenizer
-tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
 
 # Function to predict output from input text
 def predict(input_text):
     with torch.no_grad():
         model.eval()
-        vocab = tokenizer.get_vocab()
-        sos = vocab["[START]"]
-        end = vocab["[END]"]
 
             # Tokenize the input text
 

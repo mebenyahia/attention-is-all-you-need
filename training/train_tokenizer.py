@@ -4,7 +4,6 @@ import config
 from datasets import Dataset
 from tokenizers import Tokenizer, trainers, models, pre_tokenizers, normalizers
 
-# TODO: move to a config file- is it not already in config.py?
 allowed_sequence_length = config.ALLOWED_SEQ_LENGTH
 
 def load_from_json(filename):
@@ -38,7 +37,7 @@ tokenizer.pre_tokenizer = pre_tokenizers.Sequence([
      pre_tokenizers.Whitespace(),
 ])
 tokenizer.enable_truncation(max_length=allowed_sequence_length)
-trainer = trainers.BpeTrainer(vocab_size=config.VOCAB_SIZE, special_tokens=["[UNK]", "[START]", "[END]", "[MASK]"], show_progress=True)
+trainer = trainers.BpeTrainer(vocab_size=config.VOCAB_SIZE, special_tokens=["[UNK]", "[START]", "[END]", "[PAD]"], show_progress=True)
 
 print("Training tokenizer...")
 os.environ["TOKENIZERS_PARALLELISM"] = "true"

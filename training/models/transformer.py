@@ -158,7 +158,7 @@ class Embedding(Module):
 
     def __init__(self, vocab_size, d_model, dropout_rate=0.1, pad_token=3, max_seq_len=1000):
         super().__init__()
-        self.embedding = nn.Embedding(vocab_size, d_model, pad_token)  # 3 is the eos token, we also pad with it
+        self.embedding = nn.Embedding(vocab_size, d_model, pad_token)
         self.dropout = nn.Dropout(dropout_rate)
         self.pos_enc = PositionalEncoding(d_model, 0.1, max_seq_len)
 
@@ -170,11 +170,11 @@ class Embedding(Module):
 
 class Transformer(Module):
 
-    def __init__(self, vocab_size, d_model, d_ff, num_heads=8, N=6, seed=5012025, dropout_rate=0.1, max_seq_len=1000):
+    def __init__(self, vocab_size, d_model, d_ff, num_heads=8, N=6, seed=5012025, dropout_rate=0.1, max_seq_len=1000, pad_token = 3):
         super().__init__()
         torch.manual_seed(seed)
-        self.source_embedding = Embedding(vocab_size, d_model, dropout_rate=dropout_rate, max_seq_len=max_seq_len)
-        self.target_embedding = Embedding(vocab_size, d_model, dropout_rate=dropout_rate, max_seq_len=max_seq_len)
+        self.source_embedding = Embedding(vocab_size, d_model, dropout_rate=dropout_rate, max_seq_len=max_seq_len, pad_token=pad_token)
+        self.target_embedding = Embedding(vocab_size, d_model, dropout_rate=dropout_rate, max_seq_len=max_seq_len, pad_token=pad_token)
 
         self.encoder_stack = nn.ModuleList([EncoderLayer(d_model, d_ff, num_heads, dropout_rate) for _ in range(N)])
         self.decoder_stack = nn.ModuleList([DecoderLayer(d_model, d_ff, num_heads, dropout_rate) for _ in range(N)])

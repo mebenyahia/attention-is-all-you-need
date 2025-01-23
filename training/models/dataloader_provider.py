@@ -1,10 +1,13 @@
+import json
+import os
+
 import torch
 from torch.utils.data import DataLoader
 from torch.utils.data import Dataset
 
 class DataloaderProvider:
     
-    def __init__(self, dataset, batch_size, tokenizer):
+    def __init__(self, dataset, batch_size, tokenizer, save_path, load_dataset=False):
         self.dataset = dataset
         self.tokenizer = tokenizer
         vocab = tokenizer.get_vocab()
@@ -13,7 +16,13 @@ class DataloaderProvider:
         self.sos = vocab["[START]"]
         self.end = vocab["[END]"]
         self.unk = vocab["[UNK]"]
-        self.pad = vocab["[MASK]"]
+        self.pad = vocab["[PAD]"]
+
+        if load_dataset:
+            processed_dataset = self.load_processed_dataset(save_path)
+        else:
+            processed_dataset = self.process(dataset)
+            self.save_processed_dataset(processed_dataset, save_path)
         
         processed_dataset = self.process(dataset)
         
@@ -44,3 +53,12 @@ class DataloaderProvider:
             "targets": torch.tensor(targets, dtype=torch.long)
         }
         return batch
+
+    def save_processed_dataset(self, dataset, save_path):
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        with open(save_path, 'w') as f:
+            json.dump([example for example in dataset], f)
+
+    def load_processed_dataset(self, save_path):
+        with open(save_path, 'r') as f:
+            return json.load(f)

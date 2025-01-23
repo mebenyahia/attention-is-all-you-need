@@ -37,10 +37,13 @@ validation_dataset = load_from_json(f'data/{config.LANGS}-validation_data.json')
 
 print("Loading tokenizer from saved...")
 tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
+vocab = tokenizer.get_vocab()
+pad = vocab["[PAD]"]
 
 #train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer)
-train_dlp = DataloaderProvider(train_dataset_subset, config.BATCH_SIZE, tokenizer)
-validation_dlp = DataloaderProvider(validation_dataset, config.BATCH_SIZE, tokenizer)
+train_dlp = DataloaderProvider(train_dataset_subset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_train_dataset_subset.json", load_dataset=True)
+train_dlp.dataset
+validation_dlp = DataloaderProvider(validation_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_validation_dataset.json", load_dataset=True)
 validation_dataloader = validation_dlp.dataloader
 
 
@@ -55,7 +58,7 @@ accelerator_project_config = ProjectConfiguration(
 accelerator = Accelerator(project_config=accelerator_project_config)
 
 print("Preparing model...")
-model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH)
+model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH, pad_token=pad)
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, betas=(0.9, 0.98), eps=1e-9)
 loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad)
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
