@@ -43,9 +43,7 @@ tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
 vocab = tokenizer.get_vocab()
 pad = vocab["[PAD]"]
 
-#train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer)
 train_dlp = DataloaderProvider(train_dataset_subset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_train_dataset_subset.json", load_dataset=True)
-train_dlp.dataset
 validation_dlp = DataloaderProvider(validation_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_validation_dataset.json", load_dataset=True)
 validation_dataloader = validation_dlp.dataloader
 
