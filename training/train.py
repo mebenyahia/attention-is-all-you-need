@@ -22,7 +22,6 @@ if torch.backends.mps.is_available():
 
 print("Loading training set from saved...")
 
-
 def load_from_json(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -30,9 +29,7 @@ def load_from_json(filename):
 
 
 train_dataset = load_from_json(f'data/{config.LANGS}-train_data.json')
-
-subset_idx = int(0.01 * len(train_dataset))
-train_dataset_subset = train_dataset.select(range(subset_idx))
+print(f'Dataset size: {len(train_dataset)}')
 
 print("Loading validation set from saved...")
 validation_dataset = load_from_json(f'data/{config.LANGS}-validation_data.json')
@@ -43,8 +40,8 @@ tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
 vocab = tokenizer.get_vocab()
 pad = vocab["[PAD]"]
 
-train_dlp = DataloaderProvider(train_dataset_subset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_train_dataset_subset.json", load_dataset=True)
-validation_dlp = DataloaderProvider(validation_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_validation_dataset.json", load_dataset=True)
+train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_train_dataset.json", load_dataset=True, lang_1=config.LANG_1, lang_2=config.LANG_2)
+validation_dlp = DataloaderProvider(validation_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_validation_dataset.json", load_dataset=True, lang_1=config.LANG_1, lang_2=config.LANG_2)
 validation_dataloader = validation_dlp.dataloader
 
 
@@ -59,7 +56,15 @@ accelerator_project_config = ProjectConfiguration(
 accelerator = Accelerator(project_config=accelerator_project_config)
 
 print("Preparing model...")
-model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH, pad_token=pad)
+model = Transformer(
+    vocab_size=config.VOCAB_SIZE, 
+    d_model=config.D_MODEL, 
+    d_ff=config.D_FF, 
+    num_heads=config.N_HEADS, 
+    N=config.N_LAYERS, 
+    max_seq_len=config.ALLOWED_SEQ_LENGTH, 
+    pad_token=pad, 
+    seed=config.SEED)
 optimizer = torch.optim.Adam(model.parameters(), lr=config.L_RATE, betas=(config.BETA_1, config.BETA_2), eps=config.EPS)
 loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad, label_smoothing=config.EPS_LS)
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
@@ -120,10 +125,10 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         loss = loss_function(predictions.reshape(-1, C), targets[:, 1:].reshape(-1))
         accelerator.backward(loss)
         optimizer.step()
-        print(f'training loss: {loss.item()}')
         train_loss += loss.item()
         num_batches += 1
-
+        if num_batches % 30 == 0:
+            print(f'Batch {num_batches}: training loss {loss.item()}')
         if num_batches % 300 == 0:
             print(f"Saving checkpoint to {output_dir}...")
             accelerator.save_state()

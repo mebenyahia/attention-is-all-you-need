@@ -7,11 +7,12 @@ from torch.utils.data import Dataset
 
 class DataloaderProvider:
     
-    def __init__(self, dataset, batch_size, tokenizer, save_path, load_dataset=False):
+    def __init__(self, dataset, batch_size, tokenizer, save_path, load_dataset=False, lang_1="en", lang_2="de"):
         self.dataset = dataset
         self.tokenizer = tokenizer
         vocab = tokenizer.get_vocab()
-        
+        self.lang_1 = lang_1
+        self.lang_2 = lang_2
         
         self.sos = vocab["[START]"]
         self.end = vocab["[END]"]
@@ -19,13 +20,13 @@ class DataloaderProvider:
         self.pad = vocab["[PAD]"]
 
         if load_dataset:
+            print("Loading processed dataset...")
             processed_dataset = self.load_processed_dataset(save_path)
         else:
+            print("Processing dataset...")
             processed_dataset = self.process(dataset)
             self.save_processed_dataset(processed_dataset, save_path)
-        
-        processed_dataset = self.process(dataset)
-        
+                
         self.dataloader = DataLoader(
             processed_dataset, 
             batch_size=batch_size,
@@ -37,8 +38,8 @@ class DataloaderProvider:
         return dataset.map(self.tokenize)
     
     def tokenize(self, example):
-        source = self.tokenizer.encode(example["translation"]["en"]).ids
-        target = self.tokenizer.encode(example["translation"]["de"]).ids
+        source = self.tokenizer.encode(example["translation"][self.lang_1]).ids
+        target = self.tokenizer.encode(example["translation"][self.lang_2]).ids
         return {"src": source, "trg": target}
     
     def pad_entry(self, batch):
