@@ -60,8 +60,8 @@ accelerator = Accelerator(project_config=accelerator_project_config)
 
 print("Preparing model...")
 model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH, pad_token=pad)
-optimizer = torch.optim.Adam(model.parameters(), lr=1e-5, betas=(0.9, 0.98), eps=1e-9)
-loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad)
+optimizer = torch.optim.Adam(model.parameters(), lr=config.L_RATE, betas=(config.BETA_1, config.BETA_2), eps=config.EPS)
+loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad, label_smoothing=config.EPS_LS)
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
 
 model, optimizer, train_dataloader = accelerator.prepare(model, optimizer, train_dlp.dataloader)
