@@ -13,15 +13,14 @@ import os
 import json
 import math
 
-resume = False
-train_count = 0 #used for the checkpoint directory name
+resume = True
+train_count = 1 #used for the checkpoint directory name
 
 # only for mac, remove for training on cuda or cpu
 if torch.backends.mps.is_available():
     os.environ["ACCELERATE_USE_MPS_DEVICE"] = "True"
 
 print("Loading training set from saved...")
-
 
 def load_from_json(filename):
     with open(filename, 'r', encoding='utf-8') as f:
@@ -30,9 +29,7 @@ def load_from_json(filename):
 
 
 train_dataset = load_from_json(f'data/{config.LANGS}-train_data.json')
-
-subset_idx = int(0.01 * len(train_dataset))
-train_dataset_subset = train_dataset.select(range(subset_idx))
+print(f'Dataset size: {len(train_dataset)}')
 
 # Convert the train_dataset_subset to a list of dictionaries
 train_dataset_subset_list = train_dataset_subset.to_dict()
@@ -53,8 +50,8 @@ tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
 vocab = tokenizer.get_vocab()
 pad = vocab["[PAD]"]
 
-train_dlp = DataloaderProvider(train_dataset_subset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_train_dataset_subset.json", load_dataset=True)
-validation_dlp = DataloaderProvider(validation_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_validation_dataset.json", load_dataset=True)
+train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_train_dataset.json", load_dataset=True, lang_1=config.LANG_1, lang_2=config.LANG_2)
+validation_dlp = DataloaderProvider(validation_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_validation_dataset.json", load_dataset=True, lang_1=config.LANG_1, lang_2=config.LANG_2)
 validation_dataloader = validation_dlp.dataloader
 
 
@@ -69,9 +66,17 @@ accelerator_project_config = ProjectConfiguration(
 accelerator = Accelerator(project_config=accelerator_project_config)
 
 print("Preparing model...")
-model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH, pad_token=pad)
-optimizer = torch.optim.Adam(model.parameters(), lr=1e-5, betas=(0.9, 0.98), eps=1e-9)
-loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad)
+model = Transformer(
+    vocab_size=config.VOCAB_SIZE, 
+    d_model=config.D_MODEL, 
+    d_ff=config.D_FF, 
+    num_heads=config.N_HEADS, 
+    N=config.N_LAYERS, 
+    max_seq_len=config.ALLOWED_SEQ_LENGTH, 
+    pad_token=pad, 
+    seed=config.SEED)
+optimizer = torch.optim.Adam(model.parameters(), lr=config.L_RATE, betas=(config.BETA_1, config.BETA_2), eps=config.EPS)
+loss_function = torch.nn.CrossEntropyLoss(ignore_index=train_dlp.pad, label_smoothing=config.EPS_LS)
 sheduler = ReduceLROnPlateau(optimizer, factor=0.5)
 
 model, optimizer, train_dataloader = accelerator.prepare(model, optimizer, train_dlp.dataloader)
@@ -84,11 +89,12 @@ last_batch = 0  # use last batch to continue tr aining from that point
 if resume:
     print("Loading accelerator state...")
     previous_run_dir = f"accelerator_checkpoints_{train_count - 1}"
-    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_6" #change the directory name to the desired checkpoint
+    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_91" #change the directory name to the desired checkpoint
     accelerator.load_state(checkpoint_dir)
     with open(f"{previous_run_dir}/metadata.json", "r") as f:
         metadata = json.load(f)
     last_batch = metadata["batch"]
+    train_dataloader_backup = train_dataloader
     skipped_dataloader = accelerator.skip_first_batches(train_dataloader, last_batch)
 
 
@@ -115,8 +121,10 @@ def calculate_validation_loss(model, validation_dataloader, loss_function):
 def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, accelerator):
     model.train()
     train_loss = 0
+    train_losses_log = []
     num_batches = last_batch
-
+    ind_num_batches = 0
+    
     for batch in train_dataloader:
 
         sources = batch['sources']
@@ -130,23 +138,27 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         loss = loss_function(predictions.reshape(-1, C), targets[:, 1:].reshape(-1))
         accelerator.backward(loss)
         optimizer.step()
-        print(f'training loss: {loss.item()}')
         train_loss += loss.item()
+        train_losses_log.append(loss.item())
         num_batches += 1
-
+        ind_num_batches += 1
+        
+        if num_batches % 30 == 0:
+            print(f'Batch {num_batches}: training loss {loss.item()}')
         if num_batches % 300 == 0:
             print(f"Saving checkpoint to {output_dir}...")
             accelerator.save_state()
             # Save progress
             metadata = {
                 "batch": num_batches,
+                "training_losses_epoch": train_losses_log
             }
             with open(f"{output_dir}/metadata.json", "w") as f:
                 json.dump(metadata, f)
 
-    avg_train_loss = train_loss / num_batches
+    avg_train_loss = train_loss / ind_num_batches
     avg_validation_loss = calculate_validation_loss(model, validation_dataloader, loss_function)
-    print(f"Average Validation Loss: {avg_validation_loss}")
+    #print(f"Average Validation Loss: {avg_validation_loss}")
     sheduler.step(avg_train_loss)
     return avg_train_loss, avg_validation_loss
 
@@ -168,6 +180,7 @@ try:
             train_dataloader = skipped_dataloader
         elif epoch != 0:
             last_batch = 0
+            train_dataloader = train_dataloader_backup
         train_loss, val_loss = train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
                     sheduler=sheduler, accelerator=accelerator)
         print(f'Epoch {epoch + 1}: Average Training Loss: {train_loss}, Average Validation Loss: {val_loss}')

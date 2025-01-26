@@ -17,7 +17,15 @@ end = vocab["[END]"]
 pad = vocab["[PAD]"]
 
 # Load the trained model
-model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH, pad_token=pad)
+model = Transformer(
+    vocab_size=config.VOCAB_SIZE, 
+    d_model=config.D_MODEL, 
+    d_ff=config.D_FF, 
+    num_heads=config.N_HEADS, 
+    N=config.N_LAYERS, 
+    max_seq_len=config.ALLOWED_SEQ_LENGTH, 
+    pad_token=pad, 
+    seed=config.SEED)
 model = accelerator.prepare(model)
 accelerator.load_state(output_dir)
 max_length = 50
@@ -58,7 +66,8 @@ def predict(input_text):
         return output_text
 
 # Test the with some input
-input_text = "Hello, how are you?"
+input_text = "The push comes as the country's Highway Trust Fund, financed with taxes Americans pay at the gas pump, is broke."
 output_text = predict(input_text)
 print(f"Input: {input_text}")
 print(f"Output: {output_text}")
+print(f"Actual: La pression vient du fait que le Highway Trust Fund du pays, financé avec les taxes que les Américains paient à la pompe, est financièrement à sec.")

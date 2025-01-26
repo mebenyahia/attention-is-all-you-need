@@ -25,8 +25,8 @@ os.makedirs('tokenizer', exist_ok=True)
 with open("tokenizer/common_data.txt", "w", encoding="utf-8") as common_file:
     for split in [train_dataset, validation_dataset, test_dataset]:
         for example in split:
-            common_file.write(example['translation']['en'] + "\n")
-            common_file.write(example['translation']['de'] + "\n")
+            common_file.write(example['translation'][config.LANG_1] + "\n")
+            common_file.write(example['translation'][config.LANG_2] + "\n")
             
 tokenizer = Tokenizer(models.BPE(unk_token='[UNK]'))
 
