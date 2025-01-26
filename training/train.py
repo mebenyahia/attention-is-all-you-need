@@ -31,15 +31,6 @@ def load_from_json(filename):
 train_dataset = load_from_json(f'data/{config.LANGS}-train_data.json')
 print(f'Dataset size: {len(train_dataset)}')
 
-# Convert the train_dataset_subset to a list of dictionaries
-train_dataset_subset_list = train_dataset_subset.to_dict()
-
-# Define the file path for the JSON file
-json_file_path = 'data/de_en_train_dataset_subset.json'
-
-# Save the list of dictionaries to the JSON file
-with open(json_file_path, 'w', encoding='utf-8') as json_file:
-    json.dump(train_dataset_subset_list, json_file, ensure_ascii=False, indent=4)
 
 print("Loading validation set from saved...")
 validation_dataset = load_from_json(f'data/{config.LANGS}-validation_data.json')
