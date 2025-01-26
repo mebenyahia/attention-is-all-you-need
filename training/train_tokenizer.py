@@ -18,12 +18,11 @@ print("Loading data splits from saved...")
 # load train, validation and test splits
 train_dataset = load_from_json(f'data/{langs}-train_data.json')
 validation_dataset = load_from_json(f'data/{langs}-validation_data.json')
-test_dataset = load_from_json(f'data/{langs}-test_data.json')
 
 print("Preparing data for tokenizer training...")
 os.makedirs('tokenizer', exist_ok=True)
 with open("tokenizer/common_data.txt", "w", encoding="utf-8") as common_file:
-    for split in [train_dataset, validation_dataset, test_dataset]:
+    for split in [train_dataset, validation_dataset]:
         for example in split:
             common_file.write(example['translation'][config.LANG_1] + "\n")
             common_file.write(example['translation'][config.LANG_2] + "\n")
@@ -44,6 +43,6 @@ os.environ["TOKENIZERS_PARALLELISM"] = "true"
 tokenizer.train(["tokenizer/common_data.txt"], trainer=trainer)
 
 print("Saving tokenizer...")
-tokenizer.save('tokenizer/bpe.json')
+tokenizer.save('tokenizer/bpe-test.json')
 
 print("Finished.")
