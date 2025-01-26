@@ -17,9 +17,11 @@ end = vocab["[END]"]
 pad = vocab["[PAD]"]
 
 # Load the trained model
-model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS, config.ALLOWED_SEQ_LENGTH, pad_token=pad)
+model = Transformer(config.VOCAB_SIZE, config.D_MODEL, config.D_FF, config.N_HEADS, config.N_LAYERS,
+                    config.ALLOWED_SEQ_LENGTH, pad_token=pad)
 model = accelerator.prepare(model)
 accelerator.load_state(output_dir)
+
 
 # Utility to load dataset
 def load_from_json(filename):
@@ -27,6 +29,7 @@ def load_from_json(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         data = json.load(f)
     return Dataset.from_list(data)
+
 
 # BLEU Score Calculation
 def calculate_bleu_score(references, hypotheses):
@@ -38,33 +41,11 @@ def calculate_bleu_score(references, hypotheses):
     ]
     return sum(bleu_scores) / len(bleu_scores)
 
-# Predict the Whole Sentence
-def predict_whole_sentence(torch_sources_tokens):
-    targets = [sos]
-
-    for i in range(config.ALLOWED_SEQ_LENGTH):
-        # Prepare the current output tensor
-        torch_targets_tokens = torch.tensor(targets, dtype=torch.long).unsqueeze(0).to(model.device)
-
-        # Forward pass through the model
-        logits = model(torch_sources_tokens, torch_targets_tokens)
-
-        # Get the token with the highest probability
-        next_token = torch.argmax(logits[:, -1, :], dim=-1).item()
-        # Append the token to the output
-        targets.append(next_token)
-
-        # Stop if `[END]` token is generated
-        if next_token == end:
-            break
-
-    # Decode the output tokens
-    output_text = tokenizer.decode(targets, skip_special_tokens=True)
-    return output_text
 
 # Load test data
 test_dataset = load_from_json(f'data/{config.LANGS}-test_data.json')
-test_dlp = DataloaderProvider(test_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_test_dataset.json", load_dataset=False)
+test_dlp = DataloaderProvider(test_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_test_dataset.json",
+                              load_dataset=False)
 test_dataloader = test_dlp.dataloader
 
 loss_function = torch.nn.CrossEntropyLoss(ignore_index=test_dlp.pad)
@@ -75,7 +56,6 @@ validation_loss = 0
 num_batches = 0
 references = []
 hypotheses = []
-full_sentence_references = []
 full_sentence_hypotheses = []
 
 with torch.no_grad():
@@ -84,6 +64,12 @@ with torch.no_grad():
         sources = batch['sources'].to(model.device)
         targets = batch['targets'].to(model.device)
 
+        print("Generating whole sentence predictions..")
+        generated = model.generate(sources, max_length=config.ALLOWED_SEQ_LENGTH, start_token=sos, end_token=end)
+        generated_text = tokenizer.decode(generated[0].tolist(), skip_special_tokens=True)
+        full_sentence_hypotheses.append(generated_text)
+
+        print("Calculating loss and token-level prediction..")
         # Calculate token-level loss
         predictions = model(sources, targets[:, :-1])
         B, S, C = predictions.shape
@@ -96,22 +82,16 @@ with torch.no_grad():
         target_tokens = targets[:, 1:].cpu().tolist()
 
         for pred, target in zip(pred_tokens, target_tokens):
-            # Last token BLEU
+            # Token-Level BLEU
             pred_str = tokenizer.decode(pred, skip_special_tokens=True)
             target_str = tokenizer.decode(target, skip_special_tokens=True)
             hypotheses.append(pred_str)
             references.append(target_str)
 
-        for source in sources:
-            # Full-Sentence BLEU
-            predicted_sentence = predict_whole_sentence(source.unsqueeze(0))
-            full_sentence_hypotheses.append(predicted_sentence)
-            full_sentence_references.append(target_str)
-
 # Calculate Metrics
 avg_validation_loss = validation_loss / num_batches
 token_level_bleu = calculate_bleu_score(references, hypotheses)
-sentence_level_bleu = calculate_bleu_score(full_sentence_references, full_sentence_hypotheses)
+sentence_level_bleu = calculate_bleu_score(references, full_sentence_hypotheses)
 
 # Print Results
 print(f"Average Validation Loss: {avg_validation_loss:.4f}")

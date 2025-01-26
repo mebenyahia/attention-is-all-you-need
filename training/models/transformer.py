@@ -32,8 +32,8 @@ class MultiHeadAttention(Module):
         self.num_heads = num_heads
         self.use_mask = use_mask
         self.head_size = d_model // self.num_heads
-        
-        self.w_q = nn.Linear(d_model, d_model, bias=False) # (batch_size, head_size)
+
+        self.w_q = nn.Linear(d_model, d_model, bias=False)  # (batch_size, head_size)
         self.w_k = nn.Linear(d_model, d_model, bias=False)
         self.w_v = nn.Linear(d_model, d_model, bias=False)
         self.w_o = nn.Linear(d_model, d_model, bias=False)
@@ -148,7 +148,7 @@ class PositionalEncoding(Module):
         pe = pe.unsqueeze(0)
         self.register_buffer('pe', pe)
 
-    def forward(self, x): 
+    def forward(self, x):
         seq_len = x.shape[1]
         x = x + self.pe[:, :seq_len, :]
         return self.dropout(x)
@@ -170,11 +170,14 @@ class Embedding(Module):
 
 class Transformer(Module):
 
-    def __init__(self, vocab_size, d_model, d_ff, num_heads=8, N=6, seed=5012025, dropout_rate=0.1, max_seq_len=1000, pad_token = 3):
+    def __init__(self, vocab_size, d_model, d_ff, num_heads=8, N=6, seed=5012025, dropout_rate=0.1, max_seq_len=1000,
+                 pad_token=3):
         super().__init__()
         torch.manual_seed(seed)
-        self.source_embedding = Embedding(vocab_size, d_model, dropout_rate=dropout_rate, max_seq_len=max_seq_len, pad_token=pad_token)
-        self.target_embedding = Embedding(vocab_size, d_model, dropout_rate=dropout_rate, max_seq_len=max_seq_len, pad_token=pad_token)
+        self.source_embedding = Embedding(vocab_size, d_model, dropout_rate=dropout_rate, max_seq_len=max_seq_len,
+                                          pad_token=pad_token)
+        self.target_embedding = Embedding(vocab_size, d_model, dropout_rate=dropout_rate, max_seq_len=max_seq_len,
+                                          pad_token=pad_token)
 
         self.encoder_stack = nn.ModuleList([EncoderLayer(d_model, d_ff, num_heads, dropout_rate) for _ in range(N)])
         self.decoder_stack = nn.ModuleList([DecoderLayer(d_model, d_ff, num_heads, dropout_rate) for _ in range(N)])
@@ -196,3 +199,29 @@ class Transformer(Module):
             dec_out = decoder_layer(dec_out, enc_out)
 
         return self.linear(dec_out)
+
+    def generate(self, source, max_length, start_token, end_token):
+        self.eval()
+
+        enc_out = self.source_embedding(source)
+        for encoder_layer in self.encoder_stack:
+            enc_out = encoder_layer(enc_out)
+
+        batch_size = source.size(0)
+        generated = torch.full((batch_size, 1), start_token, dtype=torch.long, device=self.device)
+
+        for _ in range(max_length):
+            dec_out = self.target_embedding(generated)
+            for decoder_layer in self.decoder_stack:
+                dec_out = decoder_layer(dec_out, enc_out)
+
+            logits = self.linear(dec_out[:, -1, :])
+            next_token = torch.argmax(logits, dim=-1, keepdim=True)
+
+            generated = torch.cat([generated, next_token], dim=1)
+
+            if (next_token == end_token).all():
+                break
+
+        return generated
+
