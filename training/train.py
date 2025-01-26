@@ -13,8 +13,8 @@ import os
 import json
 import math
 
-resume = False
-train_count = 0 #used for the checkpoint directory name
+resume = True
+train_count = 1 #used for the checkpoint directory name
 
 # only for mac, remove for training on cuda or cpu
 if torch.backends.mps.is_available():
@@ -79,11 +79,12 @@ last_batch = 0  # use last batch to continue tr aining from that point
 if resume:
     print("Loading accelerator state...")
     previous_run_dir = f"accelerator_checkpoints_{train_count - 1}"
-    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_6" #change the directory name to the desired checkpoint
+    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_91" #change the directory name to the desired checkpoint
     accelerator.load_state(checkpoint_dir)
     with open(f"{previous_run_dir}/metadata.json", "r") as f:
         metadata = json.load(f)
     last_batch = metadata["batch"]
+    train_dataloader_backup = train_dataloader
     skipped_dataloader = accelerator.skip_first_batches(train_dataloader, last_batch)
 
 
@@ -110,8 +111,10 @@ def calculate_validation_loss(model, validation_dataloader, loss_function):
 def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, accelerator):
     model.train()
     train_loss = 0
+    train_losses_log = []
     num_batches = last_batch
-
+    ind_num_batches = 0
+    
     for batch in train_dataloader:
 
         sources = batch['sources']
@@ -126,7 +129,10 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         accelerator.backward(loss)
         optimizer.step()
         train_loss += loss.item()
+        train_losses_log.append(loss.item())
         num_batches += 1
+        ind_num_batches += 1
+        
         if num_batches % 30 == 0:
             print(f'Batch {num_batches}: training loss {loss.item()}')
         if num_batches % 300 == 0:
@@ -135,13 +141,14 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
             # Save progress
             metadata = {
                 "batch": num_batches,
+                "training_losses_epoch": train_losses_log
             }
             with open(f"{output_dir}/metadata.json", "w") as f:
                 json.dump(metadata, f)
 
-    avg_train_loss = train_loss / num_batches
+    avg_train_loss = train_loss / ind_num_batches
     avg_validation_loss = calculate_validation_loss(model, validation_dataloader, loss_function)
-    print(f"Average Validation Loss: {avg_validation_loss}")
+    #print(f"Average Validation Loss: {avg_validation_loss}")
     sheduler.step(avg_train_loss)
     return avg_train_loss, avg_validation_loss
 
@@ -163,6 +170,7 @@ try:
             train_dataloader = skipped_dataloader
         elif epoch != 0:
             last_batch = 0
+            train_dataloader = train_dataloader_backup
         train_loss, val_loss = train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
                     sheduler=sheduler, accelerator=accelerator)
         print(f'Epoch {epoch + 1}: Average Training Loss: {train_loss}, Average Validation Loss: {val_loss}')
