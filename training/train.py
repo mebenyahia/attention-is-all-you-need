@@ -38,6 +38,7 @@ validation_dataset = load_from_json(f'data/{config.LANGS}-validation_data.json')
 
 print("Loading tokenizer from saved...")
 tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
+tokenizer.enable_truncation(max_length=config.ALLOWED_SEQ_LENGTH)
 vocab = tokenizer.get_vocab()
 pad = vocab["[PAD]"]
 
