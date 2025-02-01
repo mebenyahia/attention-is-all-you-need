@@ -3,7 +3,7 @@ Download the dataset (needed to run training and evaluation scripts):
 2. script -c "python download_dataset.py" log_download_dataset.txt
 
 Configuration (needed to run models from our presentation):
-1. Download the corresponding archive from https://drive.google.com/drive/folders/1V5u4u_5HQFyxP8Kp_HC4wWX05qKQpBH0?usp=drive_link) and paste the contents (config.py, accelerator_checkpoint_X, saved_model, tokenizer) to the training folder.
+1. Download the corresponding archive from https://drive.google.com/drive/folders/1V5u4u_5HQFyxP8Kp_HC4wWX05qKQpBH0?usp=drive_link) and paste the contents (config.py and the folders accelerator_checkpoint_X, saved_model, tokenizer) to the training folder.
 2. Download the correct training split (40000 for config_1 and config_2, 300000 for config_3 and config_4) and save it to training/data/{langs}-train_data.json
 
 Train a tokenizer:
@@ -23,6 +23,3 @@ Continiue training after interruption/train existing model:
 Test/evaluate existing model: 
 1. script -c "python evaluate.py" log_evaluate.txt
 2. script -c "python test.py" log_test.txt
-
-
-Download the training set and create a subset.

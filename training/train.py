@@ -41,8 +41,8 @@ tokenizer.enable_truncation(max_length=config.ALLOWED_SEQ_LENGTH)
 vocab = tokenizer.get_vocab()
 pad = vocab["[PAD]"]
 
-train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_train_dataset.json", load_dataset=True, lang_1=config.LANG_1, lang_2=config.LANG_2)
-validation_dlp = DataloaderProvider(validation_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_validation_dataset.json", load_dataset=True, lang_1=config.LANG_1, lang_2=config.LANG_2)
+train_dlp = DataloaderProvider(train_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_train_dataset.json", load_dataset=False, lang_1=config.LANG_1, lang_2=config.LANG_2)
+validation_dlp = DataloaderProvider(validation_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_validation_dataset.json", load_dataset=False, lang_1=config.LANG_1, lang_2=config.LANG_2)
 validation_dataloader = validation_dlp.dataloader
 
 
@@ -80,7 +80,7 @@ last_batch = 0  # use last batch to continue tr aining from that point
 if resume:
     print("Loading accelerator state...")
     previous_run_dir = f"accelerator_checkpoints_{train_count - 1}"
-    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_306" #change the directory name to the desired checkpoint
+    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_231" #change the directory name to the desired checkpoint
     accelerator.load_state(checkpoint_dir)
     with open(f"{previous_run_dir}/metadata.json", "r") as f:
         metadata = json.load(f)
