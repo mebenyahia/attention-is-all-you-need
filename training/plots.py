@@ -50,7 +50,7 @@ def get_distribution(model, token_level, sentence_level):
     plt.show()
 
 def plot(config):
-    json_file_path = f"{config.PATH}/results.json"
+    json_file_path = f"results.json"
     token_level, sentence_level = get_bleu_scores(json_file_path)
     get_distribution(config.MODEL, token_level, sentence_level)
 
