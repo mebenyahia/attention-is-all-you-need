@@ -1,0 +1,7 @@
+Script started on 2025-01-26 20:41:02+00:00 [COMMAND="python evaluate.py" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="138" LINES="47"]
+[1, 355, 1844, 353, 555, 391, 411, 72, 41, 387, 6170, 353, 364, 3625, 42, 9214, 41, 387, 808, 7860, 882, 3952, 381, 2847, 41, 440, 1731, 388, 377, 41, 1731, 388, 642, 41, 1731, 388, 43, 2]
+Input: The push comes as the country's Highway Trust Fund, financed with taxes Americans pay at the gas pump, is broke.
+Output: le fonds de fi du ci e , des finances de la terre - neuve , des imp ôts finan cés au gaz , est bro ch as , bro ch ure , bro ch .
+Actual: La pression vient du fait que le Highway Trust Fund du pays, financé avec les taxes que les Américains paient à la pompe, est financièrement à sec.
+
+Script done on 2025-01-26 20:41:10+00:00 [COMMAND_EXIT_CODE="0"]

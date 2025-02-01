@@ -40,6 +40,7 @@ class DataloaderProvider:
     def tokenize(self, example):
         source = self.tokenizer.encode(example["translation"][self.lang_1]).ids
         target = self.tokenizer.encode(example["translation"][self.lang_2]).ids
+        
         return {"src": source, "trg": target}
     
     def pad_entry(self, batch):

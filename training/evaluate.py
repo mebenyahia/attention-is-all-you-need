@@ -1,16 +1,17 @@
-import os
-
 import torch
 from accelerate import Accelerator
 from tokenizers import Tokenizer
 from models import Transformer
 import config
 
-
 # Initialize the accelerator
-output_dir = "saved_model"
+output_dir = f"saved_model"
 accelerator = Accelerator()
-tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
+
+# Load the tokenizer
+tokenizer = Tokenizer.from_file(f"tokenizer/bpe.json")
+tokenizer.enable_truncation(max_length=config.ALLOWED_SEQ_LENGTH)
+
 vocab = tokenizer.get_vocab()
 sos = vocab["[START]"]
 end = vocab["[END]"]
@@ -29,8 +30,6 @@ model = Transformer(
 model = accelerator.prepare(model)
 accelerator.load_state(output_dir)
 max_length = 50
-
-# Load the tokenizer
 
 # Function to predict output from input text
 def predict(input_text):
@@ -65,9 +64,21 @@ def predict(input_text):
         print(targets)
         return output_text
 
+def print_example(input_text, actual_translation):
+    output_text = predict(input_text)
+    print(f"Input:  {input_text}")
+    print(f"Output: {output_text}")
+    print(f"Actual: {actual_translation}")
+    print()
+
 # Test the with some input
-input_text = "The push comes as the country's Highway Trust Fund, financed with taxes Americans pay at the gas pump, is broke."
-output_text = predict(input_text)
-print(f"Input: {input_text}")
-print(f"Output: {output_text}")
-print(f"Actual: La pression vient du fait que le Highway Trust Fund du pays, financé avec les taxes que les Américains paient à la pompe, est financièrement à sec.")
+
+print_example("The federal tax itself, 18.4 cents per gallon, hasn't gone up in 20 years.", "La taxe fédérale elle-même, qui est de 18,4 cents par gallon, n'a pas augmenté depuis 20 ans.")
+
+print_example("A feast for fans", "Un festin pour ses fans")
+
+print_example("People are paying more directly into what they are getting.", "Les gens paient plus directement pour les avantages qui leur sont procurés.")
+
+print_example("However, Atomica is not the only track to have been released.", "Mais Atomica n'est pas le seul titre à dévoiler ses charmes.")
+
+

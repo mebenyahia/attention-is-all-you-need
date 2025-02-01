@@ -1,10 +1,7 @@
-import os
-
 import torch
 from accelerate import Accelerator
 from tokenizers import Tokenizer
 from models import Transformer
-import config
 
 
 # Initialize the accelerator

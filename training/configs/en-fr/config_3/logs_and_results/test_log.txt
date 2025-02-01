@@ -1,0 +1,84 @@
+Script started on 2025-01-27 17:21:06+00:00 [COMMAND="python test.py" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="146" LINES="66"]
+Loading testing set from saved...
+Processing dataset...
+Map:   0%|                                                                                                        | 0/3003 [00:00<?, ? examples/s]Map:  29%|██████████████████████████▍                                                                 | 862/3003 [00:00<00:00, 8576.92 examples/s]Map:  68%|██████████████████████████████████████████████████████████████▎                            | 2057/3003 [00:00<00:00, 8157.77 examples/s]Map:  99%|██████████████████████████████████████████████████████████████████████████████████████████ | 2971/3003 [00:00<00:00, 8540.89 examples/s]Map: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 3003/3003 [00:00<00:00, 8227.06 examples/s]
+Evaluating the model...
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 0: loss 3.036381721496582
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 1: loss 3.103058338165283
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 2: loss 2.9571776390075684
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 3: loss 2.975518226623535
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 4: loss 3.0075905323028564
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 5: loss 3.029688596725464
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 6: loss 3.0904393196105957
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 7: loss 3.001870632171631
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 8: loss 3.027050495147705
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 9: loss 3.0232110023498535
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 10: loss 3.118000030517578
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 11: loss 3.0946950912475586
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 12: loss 3.0632896423339844
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 13: loss 3.1330745220184326
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 14: loss 3.052548408508301
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 15: loss 3.0105929374694824
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 16: loss 3.053962230682373
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 17: loss 3.0693910121917725
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 18: loss 3.085327386856079
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 19: loss 3.107081651687622
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 20: loss 2.9914042949676514
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 21: loss 3.0570669174194336
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 22: loss 3.146507740020752
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 23: loss 2.987732410430908
+Calculating BLEU Score...
+Calculating BLEU Score...
+Average test Loss: 3.0509
+Token-Level BLEU Score: 0.1419
+Full-Sentence BLEU Score: 0.0888
+
+Script done on 2025-01-27 17:24:48+00:00 [COMMAND_EXIT_CODE="0"]

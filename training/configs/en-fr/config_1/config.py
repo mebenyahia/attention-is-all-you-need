@@ -1,0 +1,21 @@
+BATCH_SIZE = 64
+LANGS = "fr-en"
+LANG_1, LANG_2 = "en", "fr"
+ALLOWED_SEQ_LENGTH = 500
+VOCAB_SIZE = 10000
+D_MODEL = 256
+D_FF = 1048
+N_LAYERS = 2
+N_HEADS = 4
+EPOCHS = 246
+L_RATE = 1e-4
+BETA_1 = 0.9
+BETA_2 = 0.98
+EPS = 1e-9
+EPS_LS = 0.1
+SEED = 5012025
+
+NUM_SAMPLES=40000
+
+PATH="config_1/"
+MODEL="Config 1 (d_model=256, d_ff=1048, layers=2, heads=4)"

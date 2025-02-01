@@ -224,4 +224,3 @@ class Transformer(Module):
                 break
 
         return generated
-

@@ -43,6 +43,6 @@ os.environ["TOKENIZERS_PARALLELISM"] = "true"
 tokenizer.train(["tokenizer/common_data.txt"], trainer=trainer)
 
 print("Saving tokenizer...")
-tokenizer.save('tokenizer/bpe-test.json')
+tokenizer.save('tokenizer/bpe.json')
 
 print("Finished.")

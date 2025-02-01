@@ -1,0 +1,57 @@
+Script started on 2025-01-26 12:16:14+00:00 [COMMAND="python test.py" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="79" LINES="47"]
+Loading testing set from saved...
+Processing dataset...
+Map:   0%|                                     | 0/3003 [00:00<?, ? examples/s]Map:  23%|█████▊                   | 694/3003 [00:00<00:00, 6903.96 examples/s]Map:  57%|█████████████▌          | 1702/3003 [00:00<00:00, 6517.76 examples/s]Map:  90%|█████████████████████▋  | 2716/3003 [00:00<00:00, 6524.12 examples/s]Map: 100%|████████████████████████| 3003/3003 [00:00<00:00, 6439.31 examples/s]
+Evaluating the model...
+Batch 0: loss 4.100954055786133
+Batch 1: loss 4.1350998878479
+Batch 2: loss 4.082978248596191
+Batch 3: loss 4.282537937164307
+Batch 4: loss 4.166691780090332
+Batch 5: loss 4.286822319030762
+Batch 6: loss 4.2076544761657715
+Batch 7: loss 4.061501979827881
+Batch 8: loss 3.921799659729004
+Batch 9: loss 4.083000183105469
+Batch 10: loss 4.150784015655518
+Batch 11: loss 4.1930694580078125
+Batch 12: loss 4.2186198234558105
+Batch 13: loss 4.042976379394531
+Batch 14: loss 4.084247589111328
+Batch 15: loss 4.0536885261535645
+Batch 16: loss 4.159369468688965
+Batch 17: loss 4.2292609214782715
+Batch 18: loss 4.162986755371094
+Batch 19: loss 4.096236705780029
+Batch 20: loss 3.8591461181640625
+Batch 21: loss 4.1746296882629395
+Batch 22: loss 4.159284591674805
+Batch 23: loss 4.126284599304199
+Batch 24: loss 4.236164569854736
+Batch 25: loss 3.9910755157470703
+Batch 26: loss 4.094902038574219
+Batch 27: loss 4.147893905639648
+Batch 28: loss 4.2096662521362305
+Batch 29: loss 4.159886837005615
+Batch 30: loss 4.032639026641846
+Batch 31: loss 3.9643449783325195
+Batch 32: loss 3.9748265743255615
+Batch 33: loss 4.075586318969727
+Batch 34: loss 4.0966339111328125
+Batch 35: loss 4.128417491912842
+Batch 36: loss 4.017282485961914
+Batch 37: loss 4.150317192077637
+Batch 38: loss 4.1416215896606445
+Batch 39: loss 4.062780857086182
+Batch 40: loss 4.097831726074219
+Batch 41: loss 4.170202732086182
+Batch 42: loss 4.262124061584473
+Batch 43: loss 4.097029209136963
+Batch 44: loss 4.169869899749756
+Batch 45: loss 4.165622711181641
+Batch 46: loss 4.012996673583984
+Calculating BLEU Score...
+Average test Loss: 4.1170
+Token-Level BLEU Score: 0.0667
+
+Script done on 2025-01-26 12:16:23+00:00 [COMMAND_EXIT_CODE="0"]

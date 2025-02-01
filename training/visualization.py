@@ -18,4 +18,4 @@ sum_time = sum(df['Time'].tolist())
 print(sum_time)
 
 # Plot the metrics
-#plot_metrics(train_losses, val_losses)
+plot_metrics(train_losses, val_losses)

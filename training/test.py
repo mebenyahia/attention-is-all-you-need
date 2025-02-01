@@ -8,9 +8,11 @@ from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 import config
 
 # Initialize the accelerator
-output_dir = "saved_model"
+output_dir = f"saved_model"
 accelerator = Accelerator()
-tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
+tokenizer = Tokenizer.from_file(f"tokenizer/bpe.json")
+tokenizer.enable_truncation(max_length=config.ALLOWED_SEQ_LENGTH)
+
 vocab = tokenizer.get_vocab()
 sos = vocab["[START]"]
 end = vocab["[END]"]
@@ -44,12 +46,12 @@ def calculate_bleu_score(references, hypotheses):
         sentence_bleu([ref.split()], hyp.split(), smoothing_function=smoothie)
         for ref, hyp in zip(references, hypotheses)
     ]
-    return sum(bleu_scores) / len(bleu_scores)
+    return sum(bleu_scores) / len(bleu_scores), bleu_scores
 
 
 # Load test data
-test_dataset = load_from_json(f'data/{config.LANGS}-test_data.json')
-test_dlp = DataloaderProvider(test_dataset, config.BATCH_SIZE, tokenizer, "dataloader/tokenized_test_dataset.json", lang_1=config.LANG_1, lang_2=config.LANG_2, load_dataset=False)
+test_dataset = load_from_json(f"data/{config.LANGS}-test_data.json")
+test_dlp = DataloaderProvider(test_dataset, config.BATCH_SIZE, tokenizer, f"dataloader/tokenized_test_dataset.json", lang_1=config.LANG_1, lang_2=config.LANG_2, load_dataset=False)
 test_dataloader = test_dlp.dataloader
 
 loss_function = torch.nn.CrossEntropyLoss(ignore_index=test_dlp.pad, label_smoothing=config.EPS_LS)
@@ -61,6 +63,7 @@ num_batches = 0
 references = []
 hypotheses = []
 full_sentence_hypotheses = []
+full_sentence_references = []
 
 with torch.no_grad():
     print("Evaluating the model...")
@@ -70,8 +73,13 @@ with torch.no_grad():
 
         print("Generating whole sentence predictions..")
         generated = model.generate(sources, max_length=config.ALLOWED_SEQ_LENGTH, start_token=sos, end_token=end)
-        generated_text = tokenizer.decode(generated[0].tolist(), skip_special_tokens=True)
-        full_sentence_hypotheses.append(generated_text)
+        
+        generated_seqs = [seq.tolist() for seq in generated]
+        decoded_batch = tokenizer.decode_batch(generated_seqs, skip_special_tokens=True)
+        full_sentence_hypotheses.extend(decoded_batch)
+
+        batch_references = tokenizer.decode_batch([t.tolist() for t in targets], skip_special_tokens=True)
+        full_sentence_references.extend(batch_references)
 
         print("Calculating loss and token-level prediction..")
         # Calculate token-level loss
@@ -92,13 +100,24 @@ with torch.no_grad():
             target_str = tokenizer.decode(target, skip_special_tokens=True)
             hypotheses.append(pred_str)
             references.append(target_str)
+        
 
 # Calculate Metrics
 avg_test_loss = test_loss / num_batches
-token_level_bleu = calculate_bleu_score(references, hypotheses)
-sentence_level_bleu = calculate_bleu_score(references, full_sentence_hypotheses)
+token_level_bleu, token_level_bleu_list = calculate_bleu_score(references, hypotheses)
+sentence_level_bleu, sentence_level_bleu_list = calculate_bleu_score(full_sentence_references, full_sentence_hypotheses)
 
 # Print Results
 print(f"Average test Loss: {avg_test_loss:.4f}")
 print(f"Token-Level BLEU Score: {token_level_bleu:.4f}")
 print(f"Full-Sentence BLEU Score: {sentence_level_bleu:.4f}")
+
+results = {
+    "avg_test_loss": avg_test_loss,
+    "avg_token_level_bleu": token_level_bleu,
+    "avg_sentence_level_bleu": sentence_level_bleu,
+    "token_level_bleu_list": token_level_bleu_list,
+    "sentence_level_bleu_list": sentence_level_bleu_list
+}
+with open(f"results.json", "w") as f:
+                json.dump(results, f) 

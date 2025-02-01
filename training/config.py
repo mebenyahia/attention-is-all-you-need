@@ -1,3 +1,5 @@
+# more configurations can be found in configs/
+
 BATCH_SIZE = 32
 LANGS = "de-en"
 LANG_1, LANG_2 = "en", "de"

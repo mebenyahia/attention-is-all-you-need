@@ -1,0 +1,153 @@
+Script started on 2025-01-27 21:15:44+00:00 [COMMAND="python test.py" TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="150" LINES="47"]
+Loading testing set from saved...
+Processing dataset...
+Map:   0%|                                                                                                            | 0/3003 [00:00<?, ? examples/s]Map:  28%|███████████████████████████▎                                                                    | 854/3003 [00:00<00:00, 8491.80 examples/s]Map:  65%|█████████████████████████████████████████████████████████████▊                                 | 1955/3003 [00:00<00:00, 7703.99 examples/s]Map:  93%|████████████████████████████████████████████████████████████████████████████████████████▏      | 2786/3003 [00:00<00:00, 7938.85 examples/s]Map: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 3003/3003 [00:00<00:00, 7832.77 examples/s]
+Evaluating the model...
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 0: loss 4.2334771156311035
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 1: loss 3.918133497238159
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 2: loss 4.064099311828613
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 3: loss 4.191275596618652
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 4: loss 4.003636360168457
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 5: loss 4.019250392913818
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 6: loss 4.097792625427246
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 7: loss 4.185092926025391
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 8: loss 4.178219795227051
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 9: loss 4.253326892852783
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 10: loss 3.926942825317383
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 11: loss 4.1456828117370605
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 12: loss 4.151690483093262
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 13: loss 4.093572616577148
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 14: loss 4.10812520980835
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 15: loss 4.237762451171875
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 16: loss 4.044003486633301
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 17: loss 4.014627456665039
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 18: loss 4.1922101974487305
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 19: loss 4.219983100891113
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 20: loss 4.086004257202148
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 21: loss 4.068794250488281
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 22: loss 4.201551914215088
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 23: loss 3.934694290161133
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 24: loss 4.2253098487854
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 25: loss 4.200286388397217
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 26: loss 4.110083103179932
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 27: loss 4.309261798858643
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 28: loss 4.1830244064331055
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 29: loss 4.083378791809082
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 30: loss 4.180606365203857
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 31: loss 3.9549951553344727
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 32: loss 4.183956623077393
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 33: loss 4.310730934143066
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 34: loss 4.048738479614258
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 35: loss 4.227019309997559
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 36: loss 4.142285346984863
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 37: loss 4.007796764373779
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 38: loss 3.979959487915039
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 39: loss 4.087727069854736
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 40: loss 4.20176362991333
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 41: loss 4.0702009201049805
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 42: loss 4.082996368408203
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 43: loss 4.15010929107666
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 44: loss 4.002445220947266
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 45: loss 4.076046943664551
+Generating whole sentence predictions..
+Calculating loss and token-level prediction..
+Batch 46: loss 4.058925628662109
+Calculating BLEU Score...
+Calculating BLEU Score...
+Average test Loss: 4.1159
+Token-Level BLEU Score: 0.0673
+Full-Sentence BLEU Score: 0.0161
+
+Script done on 2025-01-27 21:36:57+00:00 [COMMAND_EXIT_CODE="0"]

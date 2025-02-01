@@ -1,0 +1,2920 @@
+Script started on 2025-01-26 08:34:43+00:00 [COMMAND="python train.py" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="79" LINES="47"]
+Loading training set from saved...
+Dataset size: 40000
+Loading validation set from saved...
+Loading tokenizer from saved...
+Loading processed dataset...
+Loading processed dataset...
+Preparing model...
+Loading accelerator state...
+Training: 
+Epoch 1: Average Training Loss: 3.9903433990478514, Average Validation Loss: 4.722832121747605
+Batch 30: training loss 3.9804956912994385
+Batch 60: training loss 3.92940616607666
+Batch 90: training loss 3.943593978881836
+Batch 120: training loss 3.881970167160034
+Batch 150: training loss 4.013824462890625
+Batch 180: training loss 4.082565784454346
+Batch 210: training loss 3.8756165504455566
+Batch 240: training loss 3.9028208255767822
+Batch 270: training loss 4.114034175872803
+Batch 300: training loss 3.8083794116973877
+Saving checkpoint to accelerator_checkpoints_1...
+Batch 330: training loss 4.028589725494385
+Batch 360: training loss 4.1045966148376465
+Batch 390: training loss 4.1676435470581055
+Batch 420: training loss 3.9716053009033203
+Batch 450: training loss 4.089248180389404
+Batch 480: training loss 4.039243698120117
+Batch 510: training loss 3.990119457244873
+Batch 540: training loss 4.047821998596191
+Batch 570: training loss 3.8875787258148193
+Batch 600: training loss 3.927913188934326
+Saving checkpoint to accelerator_checkpoints_1...
+Epoch 2: Average Training Loss: 4.003711359024048, Average Validation Loss: 4.6912345378956894
+Batch 30: training loss 4.03499698638916
+Batch 60: training loss 3.8889524936676025
+Batch 90: training loss 3.8727827072143555
+Batch 120: training loss 3.8367514610290527
+Batch 150: training loss 3.945202112197876
+Batch 180: training loss 3.880458354949951
+Batch 210: training loss 3.757840156555176
+Batch 240: training loss 4.013724327087402
+Batch 270: training loss 3.7506723403930664
+Batch 300: training loss 3.98455548286438
+Saving checkpoint to accelerator_checkpoints_1...
+Batch 330: training loss 4.036459922790527
+Batch 360: training loss 3.9146523475646973
+Batch 390: training loss 3.9837632179260254
+Batch 420: training loss 3.8412508964538574
+Batch 450: training loss 4.0232157707214355
+Batch 480: training loss 3.909165382385254
+Batch 510: training loss 3.831900119781494
+Batch 540: training loss 3.9197473526000977
+Batch 570: training loss 4.010524749755859
+Batch 600: training loss 3.94568133354187
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 3: Average Training Loss: 3.985812216949463, Average Validation Loss: 4.685075110577523
+Batch 30: training loss 4.003207206726074
+Batch 60: training loss 3.9205379486083984
+Batch 90: training loss 4.285879611968994
+Batch 120: training loss 3.9472672939300537
+Batch 150: training loss 4.309622287750244
+Batch 180: training loss 3.874363422393799
+Batch 210: training loss 3.968569755554199
+Batch 240: training loss 4.0692572593688965
+Batch 270: training loss 4.085400104522705
+Batch 300: training loss 3.8208842277526855
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.9162659645080566
+Batch 360: training loss 3.887937068939209
+Batch 390: training loss 3.913640022277832
+Batch 420: training loss 4.050204277038574
+Batch 450: training loss 4.074528694152832
+Batch 480: training loss 3.9843039512634277
+Batch 510: training loss 4.0285325050354
+Batch 540: training loss 3.9251604080200195
+Batch 570: training loss 3.7373433113098145
+Batch 600: training loss 3.8339955806732178
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 4: Average Training Loss: 3.970689306640625, Average Validation Loss: 4.668502990235674
+Batch 30: training loss 4.13309907913208
+Batch 60: training loss 3.9049017429351807
+Batch 90: training loss 3.993208885192871
+Batch 120: training loss 4.068145751953125
+Batch 150: training loss 3.7074403762817383
+Batch 180: training loss 3.872276782989502
+Batch 210: training loss 3.8365020751953125
+Batch 240: training loss 3.841677188873291
+Batch 270: training loss 3.9974679946899414
+Batch 300: training loss 3.9721055030822754
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.9191460609436035
+Batch 360: training loss 3.8846569061279297
+Batch 390: training loss 3.8866724967956543
+Batch 420: training loss 4.107720375061035
+Batch 450: training loss 4.006159782409668
+Batch 480: training loss 3.9650566577911377
+Batch 510: training loss 3.865095615386963
+Batch 540: training loss 3.8833203315734863
+Batch 570: training loss 3.9901065826416016
+Batch 600: training loss 3.927122116088867
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 5: Average Training Loss: 3.954554789352417, Average Validation Loss: 4.663135985110668
+Batch 30: training loss 3.928990602493286
+Batch 60: training loss 4.053981304168701
+Batch 90: training loss 3.754268169403076
+Batch 120: training loss 4.0638861656188965
+Batch 150: training loss 3.8822500705718994
+Batch 180: training loss 3.860316514968872
+Batch 210: training loss 3.7822299003601074
+Batch 240: training loss 3.788461685180664
+Batch 270: training loss 3.769059896469116
+Batch 300: training loss 4.060856342315674
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.819244384765625
+Batch 360: training loss 4.037858486175537
+Batch 390: training loss 4.024478435516357
+Batch 420: training loss 4.016749382019043
+Batch 450: training loss 4.069249153137207
+Batch 480: training loss 3.959026575088501
+Batch 510: training loss 3.8908870220184326
+Batch 540: training loss 3.927677631378174
+Batch 570: training loss 4.057476997375488
+Batch 600: training loss 3.810110092163086
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 6: Average Training Loss: 3.93917493019104, Average Validation Loss: 4.656811572135763
+Batch 30: training loss 3.815382957458496
+Batch 60: training loss 3.8903985023498535
+Batch 90: training loss 4.103619575500488
+Batch 120: training loss 3.923692226409912
+Batch 150: training loss 4.083616256713867
+Batch 180: training loss 3.8496408462524414
+Batch 210: training loss 3.923321008682251
+Batch 240: training loss 3.9847538471221924
+Batch 270: training loss 3.6392107009887695
+Batch 300: training loss 4.082826137542725
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 4.057373046875
+Batch 360: training loss 4.120606422424316
+Batch 390: training loss 4.017434120178223
+Batch 420: training loss 3.742272138595581
+Batch 450: training loss 4.018272399902344
+Batch 480: training loss 3.758121967315674
+Batch 510: training loss 3.8261237144470215
+Batch 540: training loss 3.7465298175811768
+Batch 570: training loss 3.980872631072998
+Batch 600: training loss 4.036394119262695
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 7: Average Training Loss: 3.924249431228638, Average Validation Loss: 4.639707220361588
+Batch 30: training loss 3.7779030799865723
+Batch 60: training loss 4.00981330871582
+Batch 90: training loss 3.846064567565918
+Batch 120: training loss 3.7919769287109375
+Batch 150: training loss 3.856773853302002
+Batch 180: training loss 3.891188144683838
+Batch 210: training loss 3.764178514480591
+Batch 240: training loss 4.150655746459961
+Batch 270: training loss 3.898113489151001
+Batch 300: training loss 3.8678817749023438
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.919654369354248
+Batch 360: training loss 3.9738502502441406
+Batch 390: training loss 3.759113311767578
+Batch 420: training loss 3.7641897201538086
+Batch 450: training loss 3.728419542312622
+Batch 480: training loss 3.7808003425598145
+Batch 510: training loss 3.860602855682373
+Batch 540: training loss 3.8891563415527344
+Batch 570: training loss 3.911388874053955
+Batch 600: training loss 3.8540966510772705
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 8: Average Training Loss: 3.9093342212677, Average Validation Loss: 4.6332028267231395
+Batch 30: training loss 3.910081148147583
+Batch 60: training loss 3.8114776611328125
+Batch 90: training loss 4.057689666748047
+Batch 120: training loss 3.8657732009887695
+Batch 150: training loss 4.028906345367432
+Batch 180: training loss 3.88057804107666
+Batch 210: training loss 3.9733057022094727
+Batch 240: training loss 4.064779758453369
+Batch 270: training loss 3.8095664978027344
+Batch 300: training loss 3.841320514678955
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.9592413902282715
+Batch 360: training loss 3.8041882514953613
+Batch 390: training loss 4.151841163635254
+Batch 420: training loss 3.759505033493042
+Batch 450: training loss 3.9034423828125
+Batch 480: training loss 4.011374473571777
+Batch 510: training loss 4.036019325256348
+Batch 540: training loss 3.795032501220703
+Batch 570: training loss 4.161906719207764
+Batch 600: training loss 4.028686046600342
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 9: Average Training Loss: 3.8958359745025635, Average Validation Loss: 4.622340689314172
+Batch 30: training loss 3.967968463897705
+Batch 60: training loss 3.928805351257324
+Batch 90: training loss 3.8064494132995605
+Batch 120: training loss 3.9489221572875977
+Batch 150: training loss 3.8378725051879883
+Batch 180: training loss 3.8066999912261963
+Batch 210: training loss 3.841867446899414
+Batch 240: training loss 3.949948787689209
+Batch 270: training loss 3.9655942916870117
+Batch 300: training loss 3.788151264190674
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.839015007019043
+Batch 360: training loss 4.101484298706055
+Batch 390: training loss 3.887777090072632
+Batch 420: training loss 4.028838157653809
+Batch 450: training loss 4.101946830749512
+Batch 480: training loss 4.04625940322876
+Batch 510: training loss 3.9806931018829346
+Batch 540: training loss 3.8976924419403076
+Batch 570: training loss 3.84144926071167
+Batch 600: training loss 3.71049165725708
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 10: Average Training Loss: 3.8808416423797607, Average Validation Loss: 4.608264314367416
+Batch 30: training loss 3.82657527923584
+Batch 60: training loss 3.712500810623169
+Batch 90: training loss 3.776017189025879
+Batch 120: training loss 3.997218608856201
+Batch 150: training loss 3.96494722366333
+Batch 180: training loss 3.7346129417419434
+Batch 210: training loss 3.8306241035461426
+Batch 240: training loss 3.8093135356903076
+Batch 270: training loss 3.8215832710266113
+Batch 300: training loss 3.989539623260498
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.833731174468994
+Batch 360: training loss 3.8992252349853516
+Batch 390: training loss 3.937723398208618
+Batch 420: training loss 3.9246249198913574
+Batch 450: training loss 4.015997886657715
+Batch 480: training loss 3.911836862564087
+Batch 510: training loss 3.7968599796295166
+Batch 540: training loss 3.8472437858581543
+Batch 570: training loss 3.6610615253448486
+Batch 600: training loss 3.8441720008850098
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 11: Average Training Loss: 3.867007576370239, Average Validation Loss: 4.5995105073807085
+Batch 30: training loss 3.9519643783569336
+Batch 60: training loss 3.8305859565734863
+Batch 90: training loss 3.8459854125976562
+Batch 120: training loss 3.679957866668701
+Batch 150: training loss 3.764808177947998
+Batch 180: training loss 3.816823959350586
+Batch 210: training loss 3.962427854537964
+Batch 240: training loss 3.8141374588012695
+Batch 270: training loss 3.976789951324463
+Batch 300: training loss 3.978003978729248
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.8375861644744873
+Batch 360: training loss 3.959137439727783
+Batch 390: training loss 3.896960496902466
+Batch 420: training loss 4.050423622131348
+Batch 450: training loss 3.7941458225250244
+Batch 480: training loss 3.86332106590271
+Batch 510: training loss 3.877164602279663
+Batch 540: training loss 3.9443492889404297
+Batch 570: training loss 3.851750612258911
+Batch 600: training loss 3.875809669494629
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 12: Average Training Loss: 3.8541406044006346, Average Validation Loss: 4.588537317641238
+Batch 30: training loss 3.7651355266571045
+Batch 60: training loss 3.8379178047180176
+Batch 90: training loss 3.8985772132873535
+Batch 120: training loss 4.060876369476318
+Batch 150: training loss 3.93546724319458
+Batch 180: training loss 3.6651735305786133
+Batch 210: training loss 3.7787749767303467
+Batch 240: training loss 3.7988598346710205
+Batch 270: training loss 3.866132974624634
+Batch 300: training loss 3.855922222137451
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.693546772003174
+Batch 360: training loss 3.795482635498047
+Batch 390: training loss 3.8179755210876465
+Batch 420: training loss 3.998311996459961
+Batch 450: training loss 3.954899549484253
+Batch 480: training loss 3.6748805046081543
+Batch 510: training loss 3.5596933364868164
+Batch 540: training loss 4.042047023773193
+Batch 570: training loss 4.008798599243164
+Batch 600: training loss 3.914006233215332
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 13: Average Training Loss: 3.8403461254119873, Average Validation Loss: 4.579332919830971
+Batch 30: training loss 3.8167920112609863
+Batch 60: training loss 3.8376576900482178
+Batch 90: training loss 3.8677542209625244
+Batch 120: training loss 3.7824015617370605
+Batch 150: training loss 3.932563304901123
+Batch 180: training loss 3.691136360168457
+Batch 210: training loss 3.8460693359375
+Batch 240: training loss 3.928860664367676
+Batch 270: training loss 3.838939905166626
+Batch 300: training loss 3.9927659034729004
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.75032901763916
+Batch 360: training loss 3.9039218425750732
+Batch 390: training loss 3.804372549057007
+Batch 420: training loss 3.9607725143432617
+Batch 450: training loss 3.949587106704712
+Batch 480: training loss 3.726527452468872
+Batch 510: training loss 3.943131923675537
+Batch 540: training loss 3.8354544639587402
+Batch 570: training loss 3.7629146575927734
+Batch 600: training loss 3.780302047729492
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 14: Average Training Loss: 3.826692744064331, Average Validation Loss: 4.5789782950218685
+Batch 30: training loss 3.886241912841797
+Batch 60: training loss 3.794613838195801
+Batch 90: training loss 3.7636284828186035
+Batch 120: training loss 3.864856481552124
+Batch 150: training loss 3.7469279766082764
+Batch 180: training loss 3.7458527088165283
+Batch 210: training loss 3.855151414871216
+Batch 240: training loss 3.6510441303253174
+Batch 270: training loss 3.697303295135498
+Batch 300: training loss 3.9117021560668945
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.7493085861206055
+Batch 360: training loss 3.7294259071350098
+Batch 390: training loss 3.8612349033355713
+Batch 420: training loss 3.9714815616607666
+Batch 450: training loss 3.7649612426757812
+Batch 480: training loss 3.6679482460021973
+Batch 510: training loss 3.6692564487457275
+Batch 540: training loss 3.8381094932556152
+Batch 570: training loss 3.922743558883667
+Batch 600: training loss 3.6427106857299805
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 15: Average Training Loss: 3.81437639541626, Average Validation Loss: 4.559440420029011
+Batch 30: training loss 3.5794010162353516
+Batch 60: training loss 3.8189239501953125
+Batch 90: training loss 3.7136850357055664
+Batch 120: training loss 3.9592604637145996
+Batch 150: training loss 3.7413620948791504
+Batch 180: training loss 3.7370059490203857
+Batch 210: training loss 4.009403228759766
+Batch 240: training loss 3.6880927085876465
+Batch 270: training loss 3.596226692199707
+Batch 300: training loss 3.7241978645324707
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.901517152786255
+Batch 360: training loss 3.940427303314209
+Batch 390: training loss 3.679293155670166
+Batch 420: training loss 4.109505653381348
+Batch 450: training loss 3.8721890449523926
+Batch 480: training loss 3.821892023086548
+Batch 510: training loss 3.9776196479797363
+Batch 540: training loss 3.669536590576172
+Batch 570: training loss 3.761964797973633
+Batch 600: training loss 3.992370843887329
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 16: Average Training Loss: 3.8006737842559812, Average Validation Loss: 4.5528164518640395
+Batch 30: training loss 3.5218935012817383
+Batch 60: training loss 3.688594341278076
+Batch 90: training loss 3.6760027408599854
+Batch 120: training loss 3.8196654319763184
+Batch 150: training loss 3.918264389038086
+Batch 180: training loss 3.7459845542907715
+Batch 210: training loss 3.804325580596924
+Batch 240: training loss 3.751865863800049
+Batch 270: training loss 3.7315070629119873
+Batch 300: training loss 3.92683744430542
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.65689754486084
+Batch 360: training loss 3.7256808280944824
+Batch 390: training loss 3.7696375846862793
+Batch 420: training loss 4.004383087158203
+Batch 450: training loss 3.786090850830078
+Batch 480: training loss 3.7600927352905273
+Batch 510: training loss 3.7690234184265137
+Batch 540: training loss 3.8998169898986816
+Batch 570: training loss 3.8080530166625977
+Batch 600: training loss 3.676403760910034
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 17: Average Training Loss: 3.788028038787842, Average Validation Loss: 4.547351269011802
+Batch 30: training loss 3.435460329055786
+Batch 60: training loss 3.5981197357177734
+Batch 90: training loss 4.014475345611572
+Batch 120: training loss 3.8146777153015137
+Batch 150: training loss 3.6877899169921875
+Batch 180: training loss 3.5207996368408203
+Batch 210: training loss 3.675851821899414
+Batch 240: training loss 3.9360194206237793
+Batch 270: training loss 3.912607192993164
+Batch 300: training loss 3.7058568000793457
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.7520339488983154
+Batch 360: training loss 3.628923177719116
+Batch 390: training loss 3.564352512359619
+Batch 420: training loss 3.780616521835327
+Batch 450: training loss 3.4241580963134766
+Batch 480: training loss 3.6394448280334473
+Batch 510: training loss 3.78378963470459
+Batch 540: training loss 3.8897616863250732
+Batch 570: training loss 3.717902183532715
+Batch 600: training loss 3.7780587673187256
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 18: Average Training Loss: 3.7773206298828126, Average Validation Loss: 4.535400989207815
+Batch 30: training loss 3.807389497756958
+Batch 60: training loss 3.8945658206939697
+Batch 90: training loss 3.9030861854553223
+Batch 120: training loss 3.845942974090576
+Batch 150: training loss 3.820103406906128
+Batch 180: training loss 3.5702567100524902
+Batch 210: training loss 3.6693739891052246
+Batch 240: training loss 3.8485443592071533
+Batch 270: training loss 3.738678455352783
+Batch 300: training loss 3.687760829925537
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.744753360748291
+Batch 360: training loss 3.6644725799560547
+Batch 390: training loss 3.693237781524658
+Batch 420: training loss 3.7760801315307617
+Batch 450: training loss 3.855910539627075
+Batch 480: training loss 3.6267709732055664
+Batch 510: training loss 3.916557788848877
+Batch 540: training loss 3.6560146808624268
+Batch 570: training loss 3.73799991607666
+Batch 600: training loss 3.7710795402526855
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 19: Average Training Loss: 3.765983847808838, Average Validation Loss: 4.528815431797758
+Batch 30: training loss 3.7944679260253906
+Batch 60: training loss 3.6344168186187744
+Batch 90: training loss 3.895967960357666
+Batch 120: training loss 3.8101930618286133
+Batch 150: training loss 3.75453782081604
+Batch 180: training loss 3.651113510131836
+Batch 210: training loss 3.6067442893981934
+Batch 240: training loss 3.8467159271240234
+Batch 270: training loss 3.8129515647888184
+Batch 300: training loss 3.833041191101074
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.7109861373901367
+Batch 360: training loss 3.8302860260009766
+Batch 390: training loss 3.5791988372802734
+Batch 420: training loss 3.6784920692443848
+Batch 450: training loss 3.718353271484375
+Batch 480: training loss 3.7498812675476074
+Batch 510: training loss 4.0645751953125
+Batch 540: training loss 3.777251958847046
+Batch 570: training loss 3.6775288581848145
+Batch 600: training loss 3.7593331336975098
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 20: Average Training Loss: 3.7540497772216797, Average Validation Loss: 4.531870547761309
+Batch 30: training loss 3.697908401489258
+Batch 60: training loss 3.6307034492492676
+Batch 90: training loss 3.6391689777374268
+Batch 120: training loss 3.828803062438965
+Batch 150: training loss 3.6085290908813477
+Batch 180: training loss 3.7474751472473145
+Batch 210: training loss 3.758455753326416
+Batch 240: training loss 3.8459672927856445
+Batch 270: training loss 3.5637378692626953
+Batch 300: training loss 3.674630641937256
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.4990408420562744
+Batch 360: training loss 3.5369739532470703
+Batch 390: training loss 3.808323383331299
+Batch 420: training loss 3.5225658416748047
+Batch 450: training loss 3.7008533477783203
+Batch 480: training loss 3.808317184448242
+Batch 510: training loss 3.9241480827331543
+Batch 540: training loss 3.6405906677246094
+Batch 570: training loss 3.55755615234375
+Batch 600: training loss 3.734658718109131
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 21: Average Training Loss: 3.742316342163086, Average Validation Loss: 4.521523364046787
+Batch 30: training loss 3.76106333732605
+Batch 60: training loss 3.7235360145568848
+Batch 90: training loss 3.857975959777832
+Batch 120: training loss 3.7663979530334473
+Batch 150: training loss 3.7688796520233154
+Batch 180: training loss 3.6536660194396973
+Batch 210: training loss 3.572462558746338
+Batch 240: training loss 3.7469992637634277
+Batch 270: training loss 3.6968331336975098
+Batch 300: training loss 3.6286444664001465
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.560817241668701
+Batch 360: training loss 3.823892116546631
+Batch 390: training loss 3.724003791809082
+Batch 420: training loss 3.6978201866149902
+Batch 450: training loss 3.552889108657837
+Batch 480: training loss 3.6764678955078125
+Batch 510: training loss 3.6314573287963867
+Batch 540: training loss 3.643512725830078
+Batch 570: training loss 3.8509817123413086
+Batch 600: training loss 3.7731332778930664
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 22: Average Training Loss: 3.7311383853912354, Average Validation Loss: 4.515652301463675
+Batch 30: training loss 3.5955841541290283
+Batch 60: training loss 3.711655855178833
+Batch 90: training loss 3.540907382965088
+Batch 120: training loss 3.590963363647461
+Batch 150: training loss 3.6142048835754395
+Batch 180: training loss 3.6173598766326904
+Batch 210: training loss 3.773437261581421
+Batch 240: training loss 3.7085652351379395
+Batch 270: training loss 3.9935364723205566
+Batch 300: training loss 3.853466510772705
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 4.006627082824707
+Batch 360: training loss 3.7510194778442383
+Batch 390: training loss 3.781348466873169
+Batch 420: training loss 3.691707134246826
+Batch 450: training loss 3.5366923809051514
+Batch 480: training loss 3.642639636993408
+Batch 510: training loss 3.699857711791992
+Batch 540: training loss 3.6920738220214844
+Batch 570: training loss 3.9071996212005615
+Batch 600: training loss 3.5512051582336426
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 23: Average Training Loss: 3.718956531906128, Average Validation Loss: 4.498131143285873
+Batch 30: training loss 3.584200143814087
+Batch 60: training loss 3.9039549827575684
+Batch 90: training loss 3.8472166061401367
+Batch 120: training loss 3.647839069366455
+Batch 150: training loss 3.7675364017486572
+Batch 180: training loss 3.865732431411743
+Batch 210: training loss 3.8261475563049316
+Batch 240: training loss 3.6076788902282715
+Batch 270: training loss 3.7076520919799805
+Batch 300: training loss 3.7251100540161133
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.894976854324341
+Batch 360: training loss 3.735452890396118
+Batch 390: training loss 3.8250131607055664
+Batch 420: training loss 3.639132261276245
+Batch 450: training loss 3.5951666831970215
+Batch 480: training loss 3.829279899597168
+Batch 510: training loss 3.5187411308288574
+Batch 540: training loss 3.8145406246185303
+Batch 570: training loss 3.8619532585144043
+Batch 600: training loss 3.5900988578796387
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 24: Average Training Loss: 3.708602593231201, Average Validation Loss: 4.494895853894822
+Batch 30: training loss 3.721428871154785
+Batch 60: training loss 3.5885214805603027
+Batch 90: training loss 3.6922223567962646
+Batch 120: training loss 3.5931975841522217
+Batch 150: training loss 3.7236900329589844
+Batch 180: training loss 3.5609776973724365
+Batch 210: training loss 3.794821262359619
+Batch 240: training loss 3.585188865661621
+Batch 270: training loss 3.5155258178710938
+Batch 300: training loss 3.771735668182373
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.5485000610351562
+Batch 360: training loss 3.482417345046997
+Batch 390: training loss 3.8348031044006348
+Batch 420: training loss 3.847785234451294
+Batch 450: training loss 3.6828854084014893
+Batch 480: training loss 3.780986785888672
+Batch 510: training loss 3.8634958267211914
+Batch 540: training loss 3.600933074951172
+Batch 570: training loss 3.654005527496338
+Batch 600: training loss 3.721282482147217
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 25: Average Training Loss: 3.697540787124634, Average Validation Loss: 4.485354606141436
+Batch 30: training loss 3.492722749710083
+Batch 60: training loss 3.648712635040283
+Batch 90: training loss 3.831252336502075
+Batch 120: training loss 3.6471245288848877
+Batch 150: training loss 3.726222515106201
+Batch 180: training loss 3.6246933937072754
+Batch 210: training loss 3.8050122261047363
+Batch 240: training loss 3.7841930389404297
+Batch 270: training loss 3.549010992050171
+Batch 300: training loss 3.5921339988708496
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.4558026790618896
+Batch 360: training loss 3.9779090881347656
+Batch 390: training loss 3.8035264015197754
+Batch 420: training loss 3.8350143432617188
+Batch 450: training loss 3.684323787689209
+Batch 480: training loss 3.684204578399658
+Batch 510: training loss 3.6938536167144775
+Batch 540: training loss 3.898991107940674
+Batch 570: training loss 3.8256454467773438
+Batch 600: training loss 3.7711257934570312
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 26: Average Training Loss: 3.6882281551361085, Average Validation Loss: 4.48414568190879
+Batch 30: training loss 3.576132297515869
+Batch 60: training loss 3.6309804916381836
+Batch 90: training loss 3.734865665435791
+Batch 120: training loss 3.4688634872436523
+Batch 150: training loss 3.4330875873565674
+Batch 180: training loss 3.6177074909210205
+Batch 210: training loss 3.77632474899292
+Batch 240: training loss 3.5242552757263184
+Batch 270: training loss 3.8971123695373535
+Batch 300: training loss 3.900878429412842
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.781458616256714
+Batch 360: training loss 3.6111083030700684
+Batch 390: training loss 3.608250856399536
+Batch 420: training loss 3.5939016342163086
+Batch 450: training loss 3.793470859527588
+Batch 480: training loss 3.754823684692383
+Batch 510: training loss 3.58967924118042
+Batch 540: training loss 3.727076530456543
+Batch 570: training loss 3.566664695739746
+Batch 600: training loss 3.6449954509735107
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 27: Average Training Loss: 3.678471781921387, Average Validation Loss: 4.468185394368273
+Batch 30: training loss 3.7010676860809326
+Batch 60: training loss 3.721313953399658
+Batch 90: training loss 3.966963052749634
+Batch 120: training loss 3.5716142654418945
+Batch 150: training loss 3.6941604614257812
+Batch 180: training loss 3.562793254852295
+Batch 210: training loss 3.7482428550720215
+Batch 240: training loss 3.727566719055176
+Batch 270: training loss 3.659518003463745
+Batch 300: training loss 3.800598382949829
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.5317695140838623
+Batch 360: training loss 3.6586053371429443
+Batch 390: training loss 3.7792000770568848
+Batch 420: training loss 3.466526508331299
+Batch 450: training loss 3.661834239959717
+Batch 480: training loss 3.689639091491699
+Batch 510: training loss 3.8131189346313477
+Batch 540: training loss 3.8540334701538086
+Batch 570: training loss 3.584688901901245
+Batch 600: training loss 3.816129446029663
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 28: Average Training Loss: 3.6679511028289795, Average Validation Loss: 4.465349948152583
+Batch 30: training loss 3.4846463203430176
+Batch 60: training loss 3.7390060424804688
+Batch 90: training loss 3.7060513496398926
+Batch 120: training loss 3.5164217948913574
+Batch 150: training loss 3.625479221343994
+Batch 180: training loss 3.6552577018737793
+Batch 210: training loss 3.618589162826538
+Batch 240: training loss 3.75932240486145
+Batch 270: training loss 3.5618069171905518
+Batch 300: training loss 3.5457961559295654
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.394484519958496
+Batch 360: training loss 3.7378416061401367
+Batch 390: training loss 3.8721513748168945
+Batch 420: training loss 3.4962759017944336
+Batch 450: training loss 3.681072473526001
+Batch 480: training loss 3.834503650665283
+Batch 510: training loss 3.4960994720458984
+Batch 540: training loss 3.6621577739715576
+Batch 570: training loss 3.8825631141662598
+Batch 600: training loss 3.616166591644287
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 29: Average Training Loss: 3.6591703830718996, Average Validation Loss: 4.460546412366502
+Batch 30: training loss 3.4801950454711914
+Batch 60: training loss 3.4017715454101562
+Batch 90: training loss 3.6640067100524902
+Batch 120: training loss 3.6715331077575684
+Batch 150: training loss 3.5870158672332764
+Batch 180: training loss 3.655118942260742
+Batch 210: training loss 3.7045412063598633
+Batch 240: training loss 3.4712986946105957
+Batch 270: training loss 3.7303380966186523
+Batch 300: training loss 3.618096351623535
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.695919990539551
+Batch 360: training loss 3.5488789081573486
+Batch 390: training loss 3.749532699584961
+Batch 420: training loss 3.492800235748291
+Batch 450: training loss 3.6445672512054443
+Batch 480: training loss 3.8193531036376953
+Batch 510: training loss 3.5360302925109863
+Batch 540: training loss 3.7034740447998047
+Batch 570: training loss 3.712275266647339
+Batch 600: training loss 3.7817020416259766
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 30: Average Training Loss: 3.6475877967834474, Average Validation Loss: 4.4506389232392
+Batch 30: training loss 3.5765724182128906
+Batch 60: training loss 3.827620029449463
+Batch 90: training loss 3.584836959838867
+Batch 120: training loss 3.6823558807373047
+Batch 150: training loss 3.598910331726074
+Batch 180: training loss 3.6589789390563965
+Batch 210: training loss 3.6573245525360107
+Batch 240: training loss 3.548140048980713
+Batch 270: training loss 3.475922107696533
+Batch 300: training loss 3.3601267337799072
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.566519260406494
+Batch 360: training loss 3.743515968322754
+Batch 390: training loss 3.6137709617614746
+Batch 420: training loss 3.4795732498168945
+Batch 450: training loss 3.7119016647338867
+Batch 480: training loss 3.7194249629974365
+Batch 510: training loss 3.5775809288024902
+Batch 540: training loss 3.7956042289733887
+Batch 570: training loss 3.6838674545288086
+Batch 600: training loss 3.7888882160186768
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 31: Average Training Loss: 3.640341321563721, Average Validation Loss: 4.451833288720313
+Batch 30: training loss 3.824854850769043
+Batch 60: training loss 3.5009827613830566
+Batch 90: training loss 3.5070078372955322
+Batch 120: training loss 3.498035430908203
+Batch 150: training loss 3.492345094680786
+Batch 180: training loss 3.5925955772399902
+Batch 210: training loss 3.6271297931671143
+Batch 240: training loss 3.6924352645874023
+Batch 270: training loss 3.7044601440429688
+Batch 300: training loss 3.4378952980041504
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.30899715423584
+Batch 360: training loss 3.4628920555114746
+Batch 390: training loss 3.654797315597534
+Batch 420: training loss 3.535078525543213
+Batch 450: training loss 3.6365530490875244
+Batch 480: training loss 3.4947080612182617
+Batch 510: training loss 3.5739645957946777
+Batch 540: training loss 3.5587682723999023
+Batch 570: training loss 3.5628442764282227
+Batch 600: training loss 3.8912129402160645
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 32: Average Training Loss: 3.6298952346801756, Average Validation Loss: 4.44363497673197
+Batch 30: training loss 3.574671745300293
+Batch 60: training loss 3.6375458240509033
+Batch 90: training loss 3.5373964309692383
+Batch 120: training loss 3.82883882522583
+Batch 150: training loss 3.6788182258605957
+Batch 180: training loss 3.7096619606018066
+Batch 210: training loss 3.717801809310913
+Batch 240: training loss 3.6458683013916016
+Batch 270: training loss 3.47816801071167
+Batch 300: training loss 3.3877549171447754
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.5684399604797363
+Batch 360: training loss 3.8073368072509766
+Batch 390: training loss 3.6768765449523926
+Batch 420: training loss 3.701772451400757
+Batch 450: training loss 3.6756763458251953
+Batch 480: training loss 3.7459053993225098
+Batch 510: training loss 3.7312450408935547
+Batch 540: training loss 3.682091236114502
+Batch 570: training loss 3.5868983268737793
+Batch 600: training loss 3.825100898742676
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 33: Average Training Loss: 3.621082799911499, Average Validation Loss: 4.438799766784019
+Batch 30: training loss 3.839797258377075
+Batch 60: training loss 3.6434125900268555
+Batch 90: training loss 3.7000174522399902
+Batch 120: training loss 3.5147652626037598
+Batch 150: training loss 3.5236053466796875
+Batch 180: training loss 3.630993127822876
+Batch 210: training loss 3.6639277935028076
+Batch 240: training loss 3.691138744354248
+Batch 270: training loss 3.574899673461914
+Batch 300: training loss 3.3808298110961914
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.853463649749756
+Batch 360: training loss 3.333709955215454
+Batch 390: training loss 3.552651882171631
+Batch 420: training loss 3.5220577716827393
+Batch 450: training loss 3.547079086303711
+Batch 480: training loss 3.646000385284424
+Batch 510: training loss 3.7102091312408447
+Batch 540: training loss 3.7038960456848145
+Batch 570: training loss 3.7086338996887207
+Batch 600: training loss 3.5642223358154297
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 34: Average Training Loss: 3.6121809562683107, Average Validation Loss: 4.437637501574577
+Batch 30: training loss 3.5651912689208984
+Batch 60: training loss 3.6017518043518066
+Batch 90: training loss 3.765293598175049
+Batch 120: training loss 3.587860584259033
+Batch 150: training loss 3.5643150806427
+Batch 180: training loss 3.6605281829833984
+Batch 210: training loss 3.541088581085205
+Batch 240: training loss 3.486128330230713
+Batch 270: training loss 3.547605037689209
+Batch 300: training loss 3.4338581562042236
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.527904748916626
+Batch 360: training loss 3.867706298828125
+Batch 390: training loss 3.4131906032562256
+Batch 420: training loss 3.6806440353393555
+Batch 450: training loss 3.825850248336792
+Batch 480: training loss 3.580878257751465
+Batch 510: training loss 3.643219470977783
+Batch 540: training loss 3.7432219982147217
+Batch 570: training loss 3.589261054992676
+Batch 600: training loss 3.5618908405303955
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 35: Average Training Loss: 3.603209923171997, Average Validation Loss: 4.427234304712174
+Batch 30: training loss 3.491339683532715
+Batch 60: training loss 3.5665135383605957
+Batch 90: training loss 3.790379524230957
+Batch 120: training loss 3.575397491455078
+Batch 150: training loss 3.703740119934082
+Batch 180: training loss 3.686408042907715
+Batch 210: training loss 3.547722101211548
+Batch 240: training loss 3.6542856693267822
+Batch 270: training loss 3.5951473712921143
+Batch 300: training loss 3.4010403156280518
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.5909247398376465
+Batch 360: training loss 3.7131338119506836
+Batch 390: training loss 3.6116418838500977
+Batch 420: training loss 3.4675183296203613
+Batch 450: training loss 3.4016709327697754
+Batch 480: training loss 3.6156015396118164
+Batch 510: training loss 3.5440146923065186
+Batch 540: training loss 3.6670408248901367
+Batch 570: training loss 3.5338692665100098
+Batch 600: training loss 3.547438144683838
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 36: Average Training Loss: 3.5952132385253908, Average Validation Loss: 4.424389159425776
+Batch 30: training loss 3.5012502670288086
+Batch 60: training loss 3.400423049926758
+Batch 90: training loss 3.591125011444092
+Batch 120: training loss 3.6546778678894043
+Batch 150: training loss 3.555229663848877
+Batch 180: training loss 3.5003271102905273
+Batch 210: training loss 3.422344207763672
+Batch 240: training loss 3.665450096130371
+Batch 270: training loss 3.5956168174743652
+Batch 300: training loss 3.6678521633148193
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.799933433532715
+Batch 360: training loss 3.531214714050293
+Batch 390: training loss 3.6210858821868896
+Batch 420: training loss 3.812521457672119
+Batch 450: training loss 3.6511964797973633
+Batch 480: training loss 3.5911474227905273
+Batch 510: training loss 3.682020902633667
+Batch 540: training loss 3.4845528602600098
+Batch 570: training loss 3.6470417976379395
+Batch 600: training loss 3.547896385192871
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 37: Average Training Loss: 3.586583182144165, Average Validation Loss: 4.425067861029443
+Batch 30: training loss 3.6407673358917236
+Batch 60: training loss 3.3824472427368164
+Batch 90: training loss 3.572270154953003
+Batch 120: training loss 3.5364859104156494
+Batch 150: training loss 3.5154566764831543
+Batch 180: training loss 3.545548915863037
+Batch 210: training loss 3.6647236347198486
+Batch 240: training loss 3.674668788909912
+Batch 270: training loss 3.51069974899292
+Batch 300: training loss 3.879589557647705
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.522404670715332
+Batch 360: training loss 3.5968713760375977
+Batch 390: training loss 3.477372407913208
+Batch 420: training loss 3.6838669776916504
+Batch 450: training loss 3.3994946479797363
+Batch 480: training loss 3.7532355785369873
+Batch 510: training loss 3.5650622844696045
+Batch 540: training loss 3.7941362857818604
+Batch 570: training loss 3.5673556327819824
+Batch 600: training loss 3.413057804107666
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 38: Average Training Loss: 3.577846937561035, Average Validation Loss: 4.416550068145103
+Batch 30: training loss 3.6476573944091797
+Batch 60: training loss 3.5765442848205566
+Batch 90: training loss 3.4424057006835938
+Batch 120: training loss 3.44289493560791
+Batch 150: training loss 3.5510098934173584
+Batch 180: training loss 3.482867479324341
+Batch 210: training loss 3.4745993614196777
+Batch 240: training loss 3.4857177734375
+Batch 270: training loss 3.516918659210205
+Batch 300: training loss 3.463481903076172
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.3828067779541016
+Batch 360: training loss 3.6898040771484375
+Batch 390: training loss 3.6785478591918945
+Batch 420: training loss 3.5593855381011963
+Batch 450: training loss 3.733081817626953
+Batch 480: training loss 3.4931209087371826
+Batch 510: training loss 3.486560106277466
+Batch 540: training loss 3.6994643211364746
+Batch 570: training loss 3.5381627082824707
+Batch 600: training loss 3.6387929916381836
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 39: Average Training Loss: 3.569222172164917, Average Validation Loss: 4.413904108899705
+Batch 30: training loss 3.751997232437134
+Batch 60: training loss 3.3937501907348633
+Batch 90: training loss 3.475484848022461
+Batch 120: training loss 3.497318744659424
+Batch 150: training loss 3.389406681060791
+Batch 180: training loss 3.6149706840515137
+Batch 210: training loss 3.683262825012207
+Batch 240: training loss 3.684697151184082
+Batch 270: training loss 3.513493061065674
+Batch 300: training loss 3.6344194412231445
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.380600929260254
+Batch 360: training loss 3.5228891372680664
+Batch 390: training loss 3.7005629539489746
+Batch 420: training loss 3.5765509605407715
+Batch 450: training loss 3.653254270553589
+Batch 480: training loss 3.600128173828125
+Batch 510: training loss 3.6050469875335693
+Batch 540: training loss 3.693875551223755
+Batch 570: training loss 3.501803159713745
+Batch 600: training loss 3.502695083618164
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 40: Average Training Loss: 3.563177212524414, Average Validation Loss: 4.411643231168706
+Batch 30: training loss 3.468576431274414
+Batch 60: training loss 3.4462056159973145
+Batch 90: training loss 3.4835619926452637
+Batch 120: training loss 3.4489426612854004
+Batch 150: training loss 3.5294435024261475
+Batch 180: training loss 3.553257942199707
+Batch 210: training loss 3.3129630088806152
+Batch 240: training loss 3.7693657875061035
+Batch 270: training loss 3.4958338737487793
+Batch 300: training loss 3.5514440536499023
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.4932174682617188
+Batch 360: training loss 3.439330577850342
+Batch 390: training loss 3.5612807273864746
+Batch 420: training loss 3.5775279998779297
+Batch 450: training loss 3.330639123916626
+Batch 480: training loss 3.4957845211029053
+Batch 510: training loss 3.778625011444092
+Batch 540: training loss 3.7596960067749023
+Batch 570: training loss 3.5245683193206787
+Batch 600: training loss 3.6056466102600098
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 41: Average Training Loss: 3.5539584007263185, Average Validation Loss: 4.4058448203066565
+Batch 30: training loss 3.6003260612487793
+Batch 60: training loss 3.56390380859375
+Batch 90: training loss 3.4796671867370605
+Batch 120: training loss 3.5496068000793457
+Batch 150: training loss 3.8506393432617188
+Batch 180: training loss 3.763315200805664
+Batch 210: training loss 3.8645553588867188
+Batch 240: training loss 3.6634445190429688
+Batch 270: training loss 3.384467124938965
+Batch 300: training loss 3.468353748321533
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.6233625411987305
+Batch 360: training loss 3.697889566421509
+Batch 390: training loss 3.335988759994507
+Batch 420: training loss 3.4466400146484375
+Batch 450: training loss 3.493542194366455
+Batch 480: training loss 3.744288206100464
+Batch 510: training loss 3.433478355407715
+Batch 540: training loss 3.5022430419921875
+Batch 570: training loss 3.5326647758483887
+Batch 600: training loss 3.548543930053711
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 42: Average Training Loss: 3.547841022491455, Average Validation Loss: 4.388826197766243
+Batch 30: training loss 3.5110464096069336
+Batch 60: training loss 3.7052462100982666
+Batch 90: training loss 3.522735118865967
+Batch 120: training loss 3.630269765853882
+Batch 150: training loss 3.5726242065429688
+Batch 180: training loss 3.281322956085205
+Batch 210: training loss 3.579756021499634
+Batch 240: training loss 3.581498622894287
+Batch 270: training loss 3.620492935180664
+Batch 300: training loss 3.4832754135131836
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.5354347229003906
+Batch 360: training loss 3.5319976806640625
+Batch 390: training loss 3.3096094131469727
+Batch 420: training loss 3.6776905059814453
+Batch 450: training loss 3.492110013961792
+Batch 480: training loss 3.3460845947265625
+Batch 510: training loss 3.6435484886169434
+Batch 540: training loss 3.5802316665649414
+Batch 570: training loss 3.6121630668640137
+Batch 600: training loss 3.4324898719787598
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 43: Average Training Loss: 3.53972993888855, Average Validation Loss: 4.394273768080041
+Batch 30: training loss 3.5290117263793945
+Batch 60: training loss 3.560243844985962
+Batch 90: training loss 3.8093533515930176
+Batch 120: training loss 3.3597095012664795
+Batch 150: training loss 3.361417293548584
+Batch 180: training loss 3.4493424892425537
+Batch 210: training loss 3.6160354614257812
+Batch 240: training loss 3.4070358276367188
+Batch 270: training loss 3.7991111278533936
+Batch 300: training loss 3.494621753692627
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.5239973068237305
+Batch 360: training loss 3.667999505996704
+Batch 390: training loss 3.5836832523345947
+Batch 420: training loss 3.528513193130493
+Batch 450: training loss 3.555476188659668
+Batch 480: training loss 3.6393837928771973
+Batch 510: training loss 3.5745928287506104
+Batch 540: training loss 3.403778314590454
+Batch 570: training loss 3.397181987762451
+Batch 600: training loss 3.6105635166168213
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 44: Average Training Loss: 3.5314452812194825, Average Validation Loss: 4.3918599473669175
+Batch 30: training loss 3.4940738677978516
+Batch 60: training loss 3.6158175468444824
+Batch 90: training loss 3.6983394622802734
+Batch 120: training loss 3.236562967300415
+Batch 150: training loss 3.3924479484558105
+Batch 180: training loss 3.7425012588500977
+Batch 210: training loss 3.6633310317993164
+Batch 240: training loss 3.4312586784362793
+Batch 270: training loss 3.5206916332244873
+Batch 300: training loss 3.6774072647094727
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.6031112670898438
+Batch 360: training loss 3.6824889183044434
+Batch 390: training loss 3.40682053565979
+Batch 420: training loss 3.491044521331787
+Batch 450: training loss 3.6206493377685547
+Batch 480: training loss 3.3524930477142334
+Batch 510: training loss 3.4680564403533936
+Batch 540: training loss 3.6188278198242188
+Batch 570: training loss 3.5107264518737793
+Batch 600: training loss 3.574289560317993
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 45: Average Training Loss: 3.5253710414886474, Average Validation Loss: 4.393106227225446
+Batch 30: training loss 3.5511555671691895
+Batch 60: training loss 3.432004451751709
+Batch 90: training loss 3.422071695327759
+Batch 120: training loss 3.4153599739074707
+Batch 150: training loss 3.1804003715515137
+Batch 180: training loss 3.4664533138275146
+Batch 210: training loss 3.667562484741211
+Batch 240: training loss 3.5118863582611084
+Batch 270: training loss 3.5519328117370605
+Batch 300: training loss 3.5440468788146973
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.3703391551971436
+Batch 360: training loss 3.538785696029663
+Batch 390: training loss 3.664438009262085
+Batch 420: training loss 3.517740249633789
+Batch 450: training loss 3.5637924671173096
+Batch 480: training loss 3.4948394298553467
+Batch 510: training loss 3.529996395111084
+Batch 540: training loss 3.596714973449707
+Batch 570: training loss 3.5772109031677246
+Batch 600: training loss 3.461916446685791
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 46: Average Training Loss: 3.5178441261291504, Average Validation Loss: 4.38421896670727
+Batch 30: training loss 3.527456760406494
+Batch 60: training loss 3.61350679397583
+Batch 90: training loss 3.672410011291504
+Batch 120: training loss 3.401676893234253
+Batch 150: training loss 3.420848846435547
+Batch 180: training loss 3.5193028450012207
+Batch 210: training loss 3.623366355895996
+Batch 240: training loss 3.686433792114258
+Batch 270: training loss 3.5845963954925537
+Batch 300: training loss 3.597872734069824
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.4489314556121826
+Batch 360: training loss 3.5386109352111816
+Batch 390: training loss 3.8861231803894043
+Batch 420: training loss 3.5259222984313965
+Batch 450: training loss 3.6024484634399414
+Batch 480: training loss 3.527775764465332
+Batch 510: training loss 3.6836981773376465
+Batch 540: training loss 3.627420425415039
+Batch 570: training loss 3.3329923152923584
+Batch 600: training loss 3.54569149017334
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 47: Average Training Loss: 3.5110831897735597, Average Validation Loss: 4.380074085073268
+Batch 30: training loss 3.3389225006103516
+Batch 60: training loss 3.645872116088867
+Batch 90: training loss 3.4974236488342285
+Batch 120: training loss 3.4537158012390137
+Batch 150: training loss 3.503147602081299
+Batch 180: training loss 3.3533987998962402
+Batch 210: training loss 3.489889144897461
+Batch 240: training loss 3.500925064086914
+Batch 270: training loss 3.6243090629577637
+Batch 300: training loss 3.5645322799682617
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.2585935592651367
+Batch 360: training loss 3.8929548263549805
+Batch 390: training loss 3.2544503211975098
+Batch 420: training loss 3.462153196334839
+Batch 450: training loss 3.4872448444366455
+Batch 480: training loss 3.4093923568725586
+Batch 510: training loss 3.6958041191101074
+Batch 540: training loss 3.607534885406494
+Batch 570: training loss 3.553926944732666
+Batch 600: training loss 3.4730653762817383
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 48: Average Training Loss: 3.503148657989502, Average Validation Loss: 4.380018924144989
+Batch 30: training loss 3.5724353790283203
+Batch 60: training loss 3.444558620452881
+Batch 90: training loss 3.3369879722595215
+Batch 120: training loss 3.5084280967712402
+Batch 150: training loss 4.063977241516113
+Batch 180: training loss 3.6068320274353027
+Batch 210: training loss 3.4487709999084473
+Batch 240: training loss 3.5273993015289307
+Batch 270: training loss 3.296929359436035
+Batch 300: training loss 3.417590618133545
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.346489429473877
+Batch 360: training loss 3.3356211185455322
+Batch 390: training loss 3.4342236518859863
+Batch 420: training loss 3.5541586875915527
+Batch 450: training loss 3.5677764415740967
+Batch 480: training loss 3.4548816680908203
+Batch 510: training loss 3.579068422317505
+Batch 540: training loss 3.4787235260009766
+Batch 570: training loss 3.5892176628112793
+Batch 600: training loss 3.667388916015625
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 49: Average Training Loss: 3.4979025650024416, Average Validation Loss: 4.371564296965904
+Batch 30: training loss 3.5435614585876465
+Batch 60: training loss 3.300780773162842
+Batch 90: training loss 3.6279730796813965
+Batch 120: training loss 3.4018666744232178
+Batch 150: training loss 3.4750704765319824
+Batch 180: training loss 3.5133275985717773
+Batch 210: training loss 3.4354705810546875
+Batch 240: training loss 3.3805997371673584
+Batch 270: training loss 3.5479602813720703
+Batch 300: training loss 3.402663230895996
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.6369435787200928
+Batch 360: training loss 3.6580967903137207
+Batch 390: training loss 3.3284783363342285
+Batch 420: training loss 3.5600762367248535
+Batch 450: training loss 3.54526948928833
+Batch 480: training loss 3.532137393951416
+Batch 510: training loss 3.323990821838379
+Batch 540: training loss 3.7441577911376953
+Batch 570: training loss 3.379234790802002
+Batch 600: training loss 3.515348196029663
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 50: Average Training Loss: 3.4909058135986326, Average Validation Loss: 4.365111239412998
+Batch 30: training loss 3.4694323539733887
+Batch 60: training loss 3.368062973022461
+Batch 90: training loss 3.4933295249938965
+Batch 120: training loss 3.807684898376465
+Batch 150: training loss 3.5067882537841797
+Batch 180: training loss 3.5108494758605957
+Batch 210: training loss 3.3427951335906982
+Batch 240: training loss 3.446254253387451
+Batch 270: training loss 3.3105664253234863
+Batch 300: training loss 3.4664084911346436
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.497706890106201
+Batch 360: training loss 3.4417033195495605
+Batch 390: training loss 3.730158805847168
+Batch 420: training loss 3.4489188194274902
+Batch 450: training loss 3.43304705619812
+Batch 480: training loss 3.3437204360961914
+Batch 510: training loss 3.3971786499023438
+Batch 540: training loss 3.5707530975341797
+Batch 570: training loss 3.4623260498046875
+Batch 600: training loss 3.384439468383789
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 51: Average Training Loss: 3.484293193817139, Average Validation Loss: 4.365109819046994
+Batch 30: training loss 3.512328624725342
+Batch 60: training loss 3.4906606674194336
+Batch 90: training loss 3.314244270324707
+Batch 120: training loss 3.4127449989318848
+Batch 150: training loss 3.5440762042999268
+Batch 180: training loss 3.3536791801452637
+Batch 210: training loss 3.736783504486084
+Batch 240: training loss 3.4651882648468018
+Batch 270: training loss 3.5452451705932617
+Batch 300: training loss 3.6499898433685303
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.6642050743103027
+Batch 360: training loss 3.483025074005127
+Batch 390: training loss 3.4830660820007324
+Batch 420: training loss 3.532991409301758
+Batch 450: training loss 3.462662935256958
+Batch 480: training loss 3.6638717651367188
+Batch 510: training loss 3.358015298843384
+Batch 540: training loss 3.4153380393981934
+Batch 570: training loss 3.495579719543457
+Batch 600: training loss 3.6776843070983887
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 52: Average Training Loss: 3.4761981929779053, Average Validation Loss: 4.364261982288767
+Batch 30: training loss 3.5711073875427246
+Batch 60: training loss 3.362281560897827
+Batch 90: training loss 3.5383567810058594
+Batch 120: training loss 3.3747360706329346
+Batch 150: training loss 3.4558262825012207
+Batch 180: training loss 3.384143114089966
+Batch 210: training loss 3.408931255340576
+Batch 240: training loss 3.403336524963379
+Batch 270: training loss 3.5670323371887207
+Batch 300: training loss 3.5447959899902344
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.6336734294891357
+Batch 360: training loss 3.3786864280700684
+Batch 390: training loss 3.3534257411956787
+Batch 420: training loss 3.4506711959838867
+Batch 450: training loss 3.5493435859680176
+Batch 480: training loss 3.5192689895629883
+Batch 510: training loss 3.512578010559082
+Batch 540: training loss 3.488102912902832
+Batch 570: training loss 3.482616424560547
+Batch 600: training loss 3.7499098777770996
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 53: Average Training Loss: 3.4703019840240477, Average Validation Loss: 4.357190679996572
+Batch 30: training loss 3.5054125785827637
+Batch 60: training loss 3.3379933834075928
+Batch 90: training loss 3.4684810638427734
+Batch 120: training loss 3.1965694427490234
+Batch 150: training loss 3.4222912788391113
+Batch 180: training loss 3.525733470916748
+Batch 210: training loss 3.4738705158233643
+Batch 240: training loss 3.366255760192871
+Batch 270: training loss 3.4651260375976562
+Batch 300: training loss 3.552201747894287
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.6219496726989746
+Batch 360: training loss 3.49928617477417
+Batch 390: training loss 3.484389305114746
+Batch 420: training loss 3.4614996910095215
+Batch 450: training loss 3.5090556144714355
+Batch 480: training loss 3.314016342163086
+Batch 510: training loss 3.4156956672668457
+Batch 540: training loss 3.566337823867798
+Batch 570: training loss 3.5074496269226074
+Batch 600: training loss 3.3736815452575684
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 54: Average Training Loss: 3.46413660697937, Average Validation Loss: 4.35255038484614
+Batch 30: training loss 3.507059097290039
+Batch 60: training loss 3.414416790008545
+Batch 90: training loss 3.304875373840332
+Batch 120: training loss 3.5372657775878906
+Batch 150: training loss 3.4607620239257812
+Batch 180: training loss 3.4874463081359863
+Batch 210: training loss 3.4375572204589844
+Batch 240: training loss 3.3851828575134277
+Batch 270: training loss 3.3120415210723877
+Batch 300: training loss 3.4164562225341797
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.481898069381714
+Batch 360: training loss 3.6038756370544434
+Batch 390: training loss 3.5832343101501465
+Batch 420: training loss 3.405681610107422
+Batch 450: training loss 3.5625619888305664
+Batch 480: training loss 3.4149365425109863
+Batch 510: training loss 3.2658767700195312
+Batch 540: training loss 3.346681594848633
+Batch 570: training loss 3.35795259475708
+Batch 600: training loss 3.334477186203003
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 55: Average Training Loss: 3.459294430923462, Average Validation Loss: 4.349028627923194
+Batch 30: training loss 3.6292710304260254
+Batch 60: training loss 3.514580249786377
+Batch 90: training loss 3.5462465286254883
+Batch 120: training loss 3.419603109359741
+Batch 150: training loss 3.3088555335998535
+Batch 180: training loss 3.407163143157959
+Batch 210: training loss 3.4253644943237305
+Batch 240: training loss 3.4851155281066895
+Batch 270: training loss 3.5028648376464844
+Batch 300: training loss 3.505030870437622
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.3810393810272217
+Batch 360: training loss 3.4226174354553223
+Batch 390: training loss 3.4124770164489746
+Batch 420: training loss 3.48396372795105
+Batch 450: training loss 3.496453285217285
+Batch 480: training loss 3.4970107078552246
+Batch 510: training loss 3.5149810314178467
+Batch 540: training loss 3.5166821479797363
+Batch 570: training loss 3.3601956367492676
+Batch 600: training loss 3.5927672386169434
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 56: Average Training Loss: 3.4512409046173094, Average Validation Loss: 4.356083311933152
+Batch 30: training loss 3.3476436138153076
+Batch 60: training loss 3.4766316413879395
+Batch 90: training loss 3.3706419467926025
+Batch 120: training loss 3.355290651321411
+Batch 150: training loss 3.4226162433624268
+Batch 180: training loss 3.4145500659942627
+Batch 210: training loss 3.280844211578369
+Batch 240: training loss 3.42974853515625
+Batch 270: training loss 3.391177177429199
+Batch 300: training loss 3.642397403717041
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.384861946105957
+Batch 360: training loss 3.3574581146240234
+Batch 390: training loss 3.466672897338867
+Batch 420: training loss 3.6842823028564453
+Batch 450: training loss 3.2850818634033203
+Batch 480: training loss 3.3784990310668945
+Batch 510: training loss 3.4182207584381104
+Batch 540: training loss 3.3244571685791016
+Batch 570: training loss 3.4185519218444824
+Batch 600: training loss 3.222695827484131
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 57: Average Training Loss: 3.4456587238311767, Average Validation Loss: 4.345175245974926
+Batch 30: training loss 3.3209850788116455
+Batch 60: training loss 3.399301528930664
+Batch 90: training loss 3.374176025390625
+Batch 120: training loss 3.448361873626709
+Batch 150: training loss 3.2680106163024902
+Batch 180: training loss 3.5179100036621094
+Batch 210: training loss 3.4379334449768066
+Batch 240: training loss 3.4651618003845215
+Batch 270: training loss 3.589843273162842
+Batch 300: training loss 3.529226303100586
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.49403715133667
+Batch 360: training loss 3.3925256729125977
+Batch 390: training loss 3.5098774433135986
+Batch 420: training loss 3.437100887298584
+Batch 450: training loss 3.224769115447998
+Batch 480: training loss 3.341639757156372
+Batch 510: training loss 3.349090099334717
+Batch 540: training loss 3.28706431388855
+Batch 570: training loss 3.5006561279296875
+Batch 600: training loss 3.7323718070983887
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 58: Average Training Loss: 3.4407561462402345, Average Validation Loss: 4.351239387025225
+Batch 30: training loss 3.446511745452881
+Batch 60: training loss 3.3046505451202393
+Batch 90: training loss 3.3608717918395996
+Batch 120: training loss 3.408781051635742
+Batch 150: training loss 3.525453567504883
+Batch 180: training loss 3.501213550567627
+Batch 210: training loss 3.4988441467285156
+Batch 240: training loss 3.6007983684539795
+Batch 270: training loss 3.2251627445220947
+Batch 300: training loss 3.248823642730713
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.32252836227417
+Batch 360: training loss 3.438873291015625
+Batch 390: training loss 3.5114054679870605
+Batch 420: training loss 3.3379440307617188
+Batch 450: training loss 3.395270347595215
+Batch 480: training loss 3.2520484924316406
+Batch 510: training loss 3.34212589263916
+Batch 540: training loss 3.3072876930236816
+Batch 570: training loss 3.4517383575439453
+Batch 600: training loss 3.3255672454833984
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 59: Average Training Loss: 3.435556186294556, Average Validation Loss: 4.346173235710631
+Batch 30: training loss 3.354163646697998
+Batch 60: training loss 3.274332046508789
+Batch 90: training loss 3.4010910987854004
+Batch 120: training loss 3.3490843772888184
+Batch 150: training loss 3.3164801597595215
+Batch 180: training loss 3.3334147930145264
+Batch 210: training loss 3.425083637237549
+Batch 240: training loss 3.4449870586395264
+Batch 270: training loss 3.354431629180908
+Batch 300: training loss 3.390740394592285
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.490177869796753
+Batch 360: training loss 3.343745708465576
+Batch 390: training loss 3.5281152725219727
+Batch 420: training loss 3.3689651489257812
+Batch 450: training loss 3.4704408645629883
+Batch 480: training loss 3.32938289642334
+Batch 510: training loss 3.367586135864258
+Batch 540: training loss 3.5404601097106934
+Batch 570: training loss 3.4262051582336426
+Batch 600: training loss 3.447106122970581
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 60: Average Training Loss: 3.427861075210571, Average Validation Loss: 4.343723581192341
+Batch 30: training loss 3.5286123752593994
+Batch 60: training loss 3.244894027709961
+Batch 90: training loss 3.240821361541748
+Batch 120: training loss 3.199662685394287
+Batch 150: training loss 3.469289779663086
+Batch 180: training loss 3.359804153442383
+Batch 210: training loss 3.6431617736816406
+Batch 240: training loss 3.684401750564575
+Batch 270: training loss 3.4994845390319824
+Batch 300: training loss 3.5345191955566406
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.452361583709717
+Batch 360: training loss 3.2566604614257812
+Batch 390: training loss 3.3078598976135254
+Batch 420: training loss 3.463210105895996
+Batch 450: training loss 3.3004136085510254
+Batch 480: training loss 3.3371074199676514
+Batch 510: training loss 3.6471824645996094
+Batch 540: training loss 3.3732619285583496
+Batch 570: training loss 3.2928614616394043
+Batch 600: training loss 3.2762842178344727
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 61: Average Training Loss: 3.423992148208618, Average Validation Loss: 4.345039601021624
+Batch 30: training loss 3.4159789085388184
+Batch 60: training loss 3.4558053016662598
+Batch 90: training loss 3.485076904296875
+Batch 120: training loss 3.575643539428711
+Batch 150: training loss 3.2293031215667725
+Batch 180: training loss 3.2305877208709717
+Batch 210: training loss 3.449284076690674
+Batch 240: training loss 3.399641990661621
+Batch 270: training loss 3.306659698486328
+Batch 300: training loss 3.2855377197265625
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.613070487976074
+Batch 360: training loss 3.388444423675537
+Batch 390: training loss 3.391763687133789
+Batch 420: training loss 3.424327850341797
+Batch 450: training loss 3.575974464416504
+Batch 480: training loss 3.373849868774414
+Batch 510: training loss 3.4515600204467773
+Batch 540: training loss 3.4426684379577637
+Batch 570: training loss 3.373660087585449
+Batch 600: training loss 3.6269969940185547
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 62: Average Training Loss: 3.4173058670043943, Average Validation Loss: 4.335447575183625
+Batch 30: training loss 3.5201539993286133
+Batch 60: training loss 3.146915912628174
+Batch 90: training loss 3.2815427780151367
+Batch 120: training loss 3.4014344215393066
+Batch 150: training loss 3.3125929832458496
+Batch 180: training loss 3.3958663940429688
+Batch 210: training loss 3.346466541290283
+Batch 240: training loss 3.186976909637451
+Batch 270: training loss 3.35715651512146
+Batch 300: training loss 3.3429994583129883
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.3616623878479004
+Batch 360: training loss 3.336031913757324
+Batch 390: training loss 3.252108573913574
+Batch 420: training loss 3.5178890228271484
+Batch 450: training loss 3.649463176727295
+Batch 480: training loss 3.340562343597412
+Batch 510: training loss 3.5008692741394043
+Batch 540: training loss 3.553840160369873
+Batch 570: training loss 3.469608783721924
+Batch 600: training loss 3.4591760635375977
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 63: Average Training Loss: 3.410912670135498, Average Validation Loss: 4.328078706213769
+Batch 30: training loss 3.444429397583008
+Batch 60: training loss 3.410043716430664
+Batch 90: training loss 3.4773058891296387
+Batch 120: training loss 3.5947463512420654
+Batch 150: training loss 3.202702045440674
+Batch 180: training loss 3.2785191535949707
+Batch 210: training loss 3.328707218170166
+Batch 240: training loss 3.386687994003296
+Batch 270: training loss 3.375967025756836
+Batch 300: training loss 3.3571739196777344
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.3382129669189453
+Batch 360: training loss 3.289104461669922
+Batch 390: training loss 3.5504207611083984
+Batch 420: training loss 3.335829734802246
+Batch 450: training loss 3.4811906814575195
+Batch 480: training loss 3.4439468383789062
+Batch 510: training loss 3.3861706256866455
+Batch 540: training loss 3.347963333129883
+Batch 570: training loss 3.3816239833831787
+Batch 600: training loss 3.5048904418945312
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 64: Average Training Loss: 3.4067343612670897, Average Validation Loss: 4.3271883092028025
+Batch 30: training loss 3.5034232139587402
+Batch 60: training loss 3.533529758453369
+Batch 90: training loss 3.3328840732574463
+Batch 120: training loss 3.4739973545074463
+Batch 150: training loss 3.373220443725586
+Batch 180: training loss 3.6304216384887695
+Batch 210: training loss 3.2040786743164062
+Batch 240: training loss 3.398529291152954
+Batch 270: training loss 3.3704099655151367
+Batch 300: training loss 3.565986156463623
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.3288731575012207
+Batch 360: training loss 3.2788639068603516
+Batch 390: training loss 3.3066606521606445
+Batch 420: training loss 3.5110435485839844
+Batch 450: training loss 3.5037736892700195
+Batch 480: training loss 3.8951101303100586
+Batch 510: training loss 3.3320693969726562
+Batch 540: training loss 3.651214122772217
+Batch 570: training loss 3.380699634552002
+Batch 600: training loss 3.5457828044891357
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 65: Average Training Loss: 3.4010897506713866, Average Validation Loss: 4.328660224346405
+Batch 30: training loss 3.3463478088378906
+Batch 60: training loss 3.184906005859375
+Batch 90: training loss 3.3455071449279785
+Batch 120: training loss 3.4492604732513428
+Batch 150: training loss 3.1741762161254883
+Batch 180: training loss 3.3707962036132812
+Batch 210: training loss 3.149179458618164
+Batch 240: training loss 3.2988829612731934
+Batch 270: training loss 3.535024642944336
+Batch 300: training loss 3.5243608951568604
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.4611823558807373
+Batch 360: training loss 3.3576202392578125
+Batch 390: training loss 3.251852512359619
+Batch 420: training loss 3.474069356918335
+Batch 450: training loss 3.3946967124938965
+Batch 480: training loss 3.3341522216796875
+Batch 510: training loss 3.4535186290740967
+Batch 540: training loss 3.647022008895874
+Batch 570: training loss 3.4063608646392822
+Batch 600: training loss 3.5869884490966797
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 66: Average Training Loss: 3.396580879974365, Average Validation Loss: 4.324652925450751
+Batch 30: training loss 3.3918557167053223
+Batch 60: training loss 3.1852803230285645
+Batch 90: training loss 3.6904211044311523
+Batch 120: training loss 3.2855682373046875
+Batch 150: training loss 3.2961065769195557
+Batch 180: training loss 3.5122108459472656
+Batch 210: training loss 3.3661766052246094
+Batch 240: training loss 3.2814526557922363
+Batch 270: training loss 3.4293160438537598
+Batch 300: training loss 3.2664577960968018
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.288614273071289
+Batch 360: training loss 3.5152039527893066
+Batch 390: training loss 3.377272367477417
+Batch 420: training loss 3.5752243995666504
+Batch 450: training loss 3.4752111434936523
+Batch 480: training loss 3.268493413925171
+Batch 510: training loss 3.283884048461914
+Batch 540: training loss 3.5612239837646484
+Batch 570: training loss 3.4475154876708984
+Batch 600: training loss 3.450788974761963
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 67: Average Training Loss: 3.390622499847412, Average Validation Loss: 4.322173849065253
+Batch 30: training loss 3.411430835723877
+Batch 60: training loss 3.239079475402832
+Batch 90: training loss 3.3487162590026855
+Batch 120: training loss 3.2462446689605713
+Batch 150: training loss 3.6197404861450195
+Batch 180: training loss 3.281808614730835
+Batch 210: training loss 3.1859679222106934
+Batch 240: training loss 3.3406105041503906
+Batch 270: training loss 3.3382201194763184
+Batch 300: training loss 3.308502197265625
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.4106719493865967
+Batch 360: training loss 3.3843069076538086
+Batch 390: training loss 3.735705614089966
+Batch 420: training loss 3.4523682594299316
+Batch 450: training loss 3.203915596008301
+Batch 480: training loss 3.2765984535217285
+Batch 510: training loss 3.5419106483459473
+Batch 540: training loss 3.4185025691986084
+Batch 570: training loss 3.2933578491210938
+Batch 600: training loss 3.2275209426879883
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 68: Average Training Loss: 3.3865253128051758, Average Validation Loss: 4.320567323806438
+Batch 30: training loss 3.472215175628662
+Batch 60: training loss 3.197429895401001
+Batch 90: training loss 3.2128829956054688
+Batch 120: training loss 3.3857598304748535
+Batch 150: training loss 3.2996296882629395
+Batch 180: training loss 3.4525551795959473
+Batch 210: training loss 3.303603172302246
+Batch 240: training loss 3.3967885971069336
+Batch 270: training loss 3.2793455123901367
+Batch 300: training loss 3.359109401702881
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.3870062828063965
+Batch 360: training loss 3.3611361980438232
+Batch 390: training loss 3.388418674468994
+Batch 420: training loss 3.4909167289733887
+Batch 450: training loss 3.4133996963500977
+Batch 480: training loss 3.4583630561828613
+Batch 510: training loss 3.4449706077575684
+Batch 540: training loss 3.154790163040161
+Batch 570: training loss 3.2354581356048584
+Batch 600: training loss 3.6332225799560547
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 69: Average Training Loss: 3.3812469776153566, Average Validation Loss: 4.322865445563134
+Batch 30: training loss 3.435060501098633
+Batch 60: training loss 3.505032539367676
+Batch 90: training loss 3.5579307079315186
+Batch 120: training loss 3.1728439331054688
+Batch 150: training loss 3.38204288482666
+Batch 180: training loss 3.302854299545288
+Batch 210: training loss 3.192744255065918
+Batch 240: training loss 3.4281198978424072
+Batch 270: training loss 3.439556360244751
+Batch 300: training loss 3.2823245525360107
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.4839236736297607
+Batch 360: training loss 3.342109441757202
+Batch 390: training loss 3.4070515632629395
+Batch 420: training loss 3.3956339359283447
+Batch 450: training loss 3.4180126190185547
+Batch 480: training loss 3.232368230819702
+Batch 510: training loss 3.3945164680480957
+Batch 540: training loss 3.4300501346588135
+Batch 570: training loss 3.4902291297912598
+Batch 600: training loss 3.2686047554016113
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 70: Average Training Loss: 3.3758418128967285, Average Validation Loss: 4.31249782886911
+Batch 30: training loss 3.4267842769622803
+Batch 60: training loss 3.5166430473327637
+Batch 90: training loss 3.156893730163574
+Batch 120: training loss 3.2951090335845947
+Batch 150: training loss 3.3875346183776855
+Batch 180: training loss 3.574995994567871
+Batch 210: training loss 3.68009614944458
+Batch 240: training loss 3.3549962043762207
+Batch 270: training loss 3.3419203758239746
+Batch 300: training loss 3.3396105766296387
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.4226226806640625
+Batch 360: training loss 3.533066749572754
+Batch 390: training loss 3.19888973236084
+Batch 420: training loss 3.2783172130584717
+Batch 450: training loss 3.3582797050476074
+Batch 480: training loss 3.260603904724121
+Batch 510: training loss 3.291530132293701
+Batch 540: training loss 3.3888015747070312
+Batch 570: training loss 3.333167314529419
+Batch 600: training loss 3.2146730422973633
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 71: Average Training Loss: 3.3708938751220705, Average Validation Loss: 4.314844547434056
+Batch 30: training loss 3.432068347930908
+Batch 60: training loss 3.3462653160095215
+Batch 90: training loss 3.221884250640869
+Batch 120: training loss 3.342862606048584
+Batch 150: training loss 3.4021573066711426
+Batch 180: training loss 3.2603883743286133
+Batch 210: training loss 3.286989688873291
+Batch 240: training loss 3.506918430328369
+Batch 270: training loss 3.160794258117676
+Batch 300: training loss 3.398420810699463
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.5522780418395996
+Batch 360: training loss 3.3762245178222656
+Batch 390: training loss 3.3248958587646484
+Batch 420: training loss 3.3242180347442627
+Batch 450: training loss 3.2366080284118652
+Batch 480: training loss 3.0742554664611816
+Batch 510: training loss 3.30763578414917
+Batch 540: training loss 3.273658275604248
+Batch 570: training loss 3.434370994567871
+Batch 600: training loss 3.479865074157715
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 72: Average Training Loss: 3.365815763092041, Average Validation Loss: 4.314293009169559
+Batch 30: training loss 3.328112840652466
+Batch 60: training loss 3.253751277923584
+Batch 90: training loss 3.2441623210906982
+Batch 120: training loss 3.260161876678467
+Batch 150: training loss 3.4329988956451416
+Batch 180: training loss 3.361339569091797
+Batch 210: training loss 3.2001256942749023
+Batch 240: training loss 3.307542324066162
+Batch 270: training loss 3.2044596672058105
+Batch 300: training loss 3.2598743438720703
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.464200973510742
+Batch 360: training loss 3.333245277404785
+Batch 390: training loss 3.2441933155059814
+Batch 420: training loss 3.442469596862793
+Batch 450: training loss 3.597949504852295
+Batch 480: training loss 3.389292001724243
+Batch 510: training loss 3.447014331817627
+Batch 540: training loss 3.509206771850586
+Batch 570: training loss 3.213259696960449
+Batch 600: training loss 3.3588991165161133
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 73: Average Training Loss: 3.3608541835784913, Average Validation Loss: 4.310402413632008
+Batch 30: training loss 3.5040855407714844
+Batch 60: training loss 3.274315118789673
+Batch 90: training loss 3.358069896697998
+Batch 120: training loss 3.428569793701172
+Batch 150: training loss 3.3680033683776855
+Batch 180: training loss 3.434458017349243
+Batch 210: training loss 3.244466781616211
+Batch 240: training loss 3.467088222503662
+Batch 270: training loss 3.2240824699401855
+Batch 300: training loss 3.3836612701416016
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.291499614715576
+Batch 360: training loss 3.508225440979004
+Batch 390: training loss 3.149327278137207
+Batch 420: training loss 3.374688148498535
+Batch 450: training loss 3.3677072525024414
+Batch 480: training loss 3.362064838409424
+Batch 510: training loss 3.291306495666504
+Batch 540: training loss 3.527421712875366
+Batch 570: training loss 3.587836265563965
+Batch 600: training loss 3.289501190185547
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 74: Average Training Loss: 3.3558293342590333, Average Validation Loss: 4.30300081537125
+Batch 30: training loss 3.3458902835845947
+Batch 60: training loss 3.264976978302002
+Batch 90: training loss 3.245516300201416
+Batch 120: training loss 3.4728376865386963
+Batch 150: training loss 3.209113121032715
+Batch 180: training loss 3.2900052070617676
+Batch 210: training loss 3.254254102706909
+Batch 240: training loss 3.5914716720581055
+Batch 270: training loss 3.4128756523132324
+Batch 300: training loss 3.3271470069885254
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.5643014907836914
+Batch 360: training loss 3.2122440338134766
+Batch 390: training loss 3.3935346603393555
+Batch 420: training loss 3.281658172607422
+Batch 450: training loss 3.31943941116333
+Batch 480: training loss 3.2861180305480957
+Batch 510: training loss 3.3066396713256836
+Batch 540: training loss 3.3889148235321045
+Batch 570: training loss 3.4818263053894043
+Batch 600: training loss 3.3266854286193848
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 75: Average Training Loss: 3.34964831199646, Average Validation Loss: 4.311024371613848
+Batch 30: training loss 3.369474172592163
+Batch 60: training loss 3.145355224609375
+Batch 90: training loss 3.2164196968078613
+Batch 120: training loss 3.4437971115112305
+Batch 150: training loss 3.2536585330963135
+Batch 180: training loss 3.3461780548095703
+Batch 210: training loss 3.289297103881836
+Batch 240: training loss 3.2747342586517334
+Batch 270: training loss 3.3709306716918945
+Batch 300: training loss 3.3905510902404785
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.423652172088623
+Batch 360: training loss 3.360905647277832
+Batch 390: training loss 3.3596749305725098
+Batch 420: training loss 3.5577988624572754
+Batch 450: training loss 3.2156059741973877
+Batch 480: training loss 3.171998977661133
+Batch 510: training loss 3.2047624588012695
+Batch 540: training loss 3.285536289215088
+Batch 570: training loss 3.3661997318267822
+Batch 600: training loss 3.4466686248779297
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 76: Average Training Loss: 3.3466674007415773, Average Validation Loss: 4.304557495928825
+Batch 30: training loss 3.495227336883545
+Batch 60: training loss 3.4026012420654297
+Batch 90: training loss 3.2598910331726074
+Batch 120: training loss 3.3715739250183105
+Batch 150: training loss 3.1551156044006348
+Batch 180: training loss 3.2933287620544434
+Batch 210: training loss 3.366443634033203
+Batch 240: training loss 3.3202247619628906
+Batch 270: training loss 3.4015731811523438
+Batch 300: training loss 3.371553897857666
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.299923896789551
+Batch 360: training loss 3.2873802185058594
+Batch 390: training loss 3.364166259765625
+Batch 420: training loss 3.340651512145996
+Batch 450: training loss 3.138216018676758
+Batch 480: training loss 3.410249710083008
+Batch 510: training loss 3.3871569633483887
+Batch 540: training loss 3.2807605266571045
+Batch 570: training loss 3.394075870513916
+Batch 600: training loss 3.4036803245544434
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 77: Average Training Loss: 3.341483243942261, Average Validation Loss: 4.297515838704211
+Batch 30: training loss 3.461564779281616
+Batch 60: training loss 3.3263776302337646
+Batch 90: training loss 3.3249430656433105
+Batch 120: training loss 3.255889415740967
+Batch 150: training loss 3.3775999546051025
+Batch 180: training loss 3.1758036613464355
+Batch 210: training loss 3.159867763519287
+Batch 240: training loss 3.409944534301758
+Batch 270: training loss 3.643902540206909
+Batch 300: training loss 3.3275320529937744
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.492725372314453
+Batch 360: training loss 3.413600444793701
+Batch 390: training loss 3.21852970123291
+Batch 420: training loss 3.5445146560668945
+Batch 450: training loss 3.2997612953186035
+Batch 480: training loss 3.2676539421081543
+Batch 510: training loss 3.3201560974121094
+Batch 540: training loss 3.380955696105957
+Batch 570: training loss 3.4694647789001465
+Batch 600: training loss 3.2329201698303223
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 78: Average Training Loss: 3.337331429672241, Average Validation Loss: 4.301846625957083
+Batch 30: training loss 3.2408862113952637
+Batch 60: training loss 3.2749381065368652
+Batch 90: training loss 3.235626459121704
+Batch 120: training loss 3.113901138305664
+Batch 150: training loss 3.3836324214935303
+Batch 180: training loss 3.281956911087036
+Batch 210: training loss 3.29537296295166
+Batch 240: training loss 3.3511240482330322
+Batch 270: training loss 3.279405355453491
+Batch 300: training loss 3.726033926010132
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.451944351196289
+Batch 360: training loss 3.5041565895080566
+Batch 390: training loss 3.335721492767334
+Batch 420: training loss 3.2158939838409424
+Batch 450: training loss 3.3635220527648926
+Batch 480: training loss 3.1907057762145996
+Batch 510: training loss 3.515446901321411
+Batch 540: training loss 3.565356731414795
+Batch 570: training loss 3.3912055492401123
+Batch 600: training loss 3.2708990573883057
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 79: Average Training Loss: 3.3317806182861327, Average Validation Loss: 4.299480681723737
+Batch 30: training loss 3.294980525970459
+Batch 60: training loss 3.259244680404663
+Batch 90: training loss 3.3809733390808105
+Batch 120: training loss 3.1317522525787354
+Batch 150: training loss 3.236464500427246
+Batch 180: training loss 3.307969331741333
+Batch 210: training loss 3.181410074234009
+Batch 240: training loss 3.286384105682373
+Batch 270: training loss 3.3329074382781982
+Batch 300: training loss 3.1976399421691895
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.3350934982299805
+Batch 360: training loss 3.2863025665283203
+Batch 390: training loss 3.2574338912963867
+Batch 420: training loss 3.3434460163116455
+Batch 450: training loss 3.387451171875
+Batch 480: training loss 3.2462661266326904
+Batch 510: training loss 3.242588996887207
+Batch 540: training loss 3.320650100708008
+Batch 570: training loss 3.254755973815918
+Batch 600: training loss 3.2632505893707275
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 80: Average Training Loss: 3.3298472011566163, Average Validation Loss: 4.293011066761423
+Batch 30: training loss 3.229877471923828
+Batch 60: training loss 3.095216989517212
+Batch 90: training loss 3.379690647125244
+Batch 120: training loss 3.4077391624450684
+Batch 150: training loss 3.1755826473236084
+Batch 180: training loss 3.370500087738037
+Batch 210: training loss 3.4201717376708984
+Batch 240: training loss 3.147463798522949
+Batch 270: training loss 3.2387444972991943
+Batch 300: training loss 3.265072822570801
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.112849712371826
+Batch 360: training loss 3.665471315383911
+Batch 390: training loss 3.3672218322753906
+Batch 420: training loss 3.3059043884277344
+Batch 450: training loss 3.114716053009033
+Batch 480: training loss 3.2161130905151367
+Batch 510: training loss 3.3729593753814697
+Batch 540: training loss 3.457916736602783
+Batch 570: training loss 3.556751251220703
+Batch 600: training loss 3.4732134342193604
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 81: Average Training Loss: 3.3243601749420164, Average Validation Loss: 4.283253050865011
+Batch 30: training loss 3.2860755920410156
+Batch 60: training loss 3.0636963844299316
+Batch 90: training loss 3.3603663444519043
+Batch 120: training loss 3.3065085411071777
+Batch 150: training loss 3.296358585357666
+Batch 180: training loss 3.3659768104553223
+Batch 210: training loss 3.4033355712890625
+Batch 240: training loss 3.138514518737793
+Batch 270: training loss 3.3521251678466797
+Batch 300: training loss 3.162537097930908
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.4355721473693848
+Batch 360: training loss 3.2254862785339355
+Batch 390: training loss 3.2848868370056152
+Batch 420: training loss 3.4890189170837402
+Batch 450: training loss 3.323129653930664
+Batch 480: training loss 3.482076406478882
+Batch 510: training loss 3.343264579772949
+Batch 540: training loss 3.347928524017334
+Batch 570: training loss 3.438441276550293
+Batch 600: training loss 3.3417067527770996
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 82: Average Training Loss: 3.3197543590545653, Average Validation Loss: 4.288987372783905
+Batch 30: training loss 3.3348379135131836
+Batch 60: training loss 3.2676823139190674
+Batch 90: training loss 3.4328227043151855
+Batch 120: training loss 3.3065998554229736
+Batch 150: training loss 3.243988037109375
+Batch 180: training loss 3.2336955070495605
+Batch 210: training loss 3.1910810470581055
+Batch 240: training loss 3.2921576499938965
+Batch 270: training loss 3.4634125232696533
+Batch 300: training loss 3.1486246585845947
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.3389129638671875
+Batch 360: training loss 3.430614948272705
+Batch 390: training loss 3.3073883056640625
+Batch 420: training loss 3.3285908699035645
+Batch 450: training loss 3.413909673690796
+Batch 480: training loss 3.4003171920776367
+Batch 510: training loss 3.1626510620117188
+Batch 540: training loss 3.4615373611450195
+Batch 570: training loss 3.416480541229248
+Batch 600: training loss 3.1244826316833496
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 83: Average Training Loss: 3.3152088970184326, Average Validation Loss: 4.283821511775889
+Batch 30: training loss 3.137648582458496
+Batch 60: training loss 3.2184836864471436
+Batch 90: training loss 3.3608436584472656
+Batch 120: training loss 3.2440805435180664
+Batch 150: training loss 3.2034831047058105
+Batch 180: training loss 3.277127742767334
+Batch 210: training loss 3.747835159301758
+Batch 240: training loss 3.1387085914611816
+Batch 270: training loss 3.5067522525787354
+Batch 300: training loss 3.315160036087036
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.377323865890503
+Batch 360: training loss 3.208065986633301
+Batch 390: training loss 3.2341814041137695
+Batch 420: training loss 3.200758934020996
+Batch 450: training loss 3.469947338104248
+Batch 480: training loss 3.2927894592285156
+Batch 510: training loss 3.5679426193237305
+Batch 540: training loss 3.192990303039551
+Batch 570: training loss 3.5299229621887207
+Batch 600: training loss 3.313157081604004
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 84: Average Training Loss: 3.310852685928345, Average Validation Loss: 4.284084878069289
+Batch 30: training loss 3.271592617034912
+Batch 60: training loss 3.2699241638183594
+Batch 90: training loss 3.2657933235168457
+Batch 120: training loss 3.2997114658355713
+Batch 150: training loss 3.158869981765747
+Batch 180: training loss 3.321138381958008
+Batch 210: training loss 3.2325541973114014
+Batch 240: training loss 3.2327990531921387
+Batch 270: training loss 3.312659502029419
+Batch 300: training loss 3.481506824493408
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.2770938873291016
+Batch 360: training loss 3.2038028240203857
+Batch 390: training loss 3.3852338790893555
+Batch 420: training loss 3.503905773162842
+Batch 450: training loss 3.1793951988220215
+Batch 480: training loss 3.221703052520752
+Batch 510: training loss 3.2823050022125244
+Batch 540: training loss 3.367380142211914
+Batch 570: training loss 3.696013927459717
+Batch 600: training loss 3.22788667678833
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 85: Average Training Loss: 3.3077886379241943, Average Validation Loss: 4.287968879050397
+Batch 30: training loss 3.3129067420959473
+Batch 60: training loss 3.2391622066497803
+Batch 90: training loss 3.1968984603881836
+Batch 120: training loss 3.287161350250244
+Batch 150: training loss 3.3053293228149414
+Batch 180: training loss 3.392861843109131
+Batch 210: training loss 3.3100414276123047
+Batch 240: training loss 3.1726958751678467
+Batch 270: training loss 3.4359238147735596
+Batch 300: training loss 3.29872727394104
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.346663475036621
+Batch 360: training loss 3.2605113983154297
+Batch 390: training loss 3.307548999786377
+Batch 420: training loss 3.3830339908599854
+Batch 450: training loss 3.3000125885009766
+Batch 480: training loss 3.1463088989257812
+Batch 510: training loss 3.357262134552002
+Batch 540: training loss 3.3751978874206543
+Batch 570: training loss 3.165393829345703
+Batch 600: training loss 3.3449578285217285
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 86: Average Training Loss: 3.302717958831787, Average Validation Loss: 4.287678891039909
+Batch 30: training loss 3.3352136611938477
+Batch 60: training loss 3.2873282432556152
+Batch 90: training loss 3.3295412063598633
+Batch 120: training loss 3.3091812133789062
+Batch 150: training loss 3.1119160652160645
+Batch 180: training loss 3.2282865047454834
+Batch 210: training loss 3.397826671600342
+Batch 240: training loss 3.1759984493255615
+Batch 270: training loss 3.4363512992858887
+Batch 300: training loss 3.3353185653686523
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.250216007232666
+Batch 360: training loss 3.297614574432373
+Batch 390: training loss 3.3268609046936035
+Batch 420: training loss 3.415893077850342
+Batch 450: training loss 3.2527999877929688
+Batch 480: training loss 3.274919033050537
+Batch 510: training loss 3.4877147674560547
+Batch 540: training loss 3.2589893341064453
+Batch 570: training loss 3.5512945652008057
+Batch 600: training loss 3.325608968734741
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 87: Average Training Loss: 3.2986451747894288, Average Validation Loss: 4.285364019109847
+Batch 30: training loss 3.4184656143188477
+Batch 60: training loss 3.25602126121521
+Batch 90: training loss 3.3956477642059326
+Batch 120: training loss 3.472064733505249
+Batch 150: training loss 3.2224535942077637
+Batch 180: training loss 3.450202226638794
+Batch 210: training loss 3.1886067390441895
+Batch 240: training loss 3.5227909088134766
+Batch 270: training loss 3.2266693115234375
+Batch 300: training loss 3.344109535217285
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.237675905227661
+Batch 360: training loss 3.3713855743408203
+Batch 390: training loss 3.4964637756347656
+Batch 420: training loss 3.170180320739746
+Batch 450: training loss 3.3479530811309814
+Batch 480: training loss 3.4633193016052246
+Batch 510: training loss 3.1912264823913574
+Batch 540: training loss 3.2205491065979004
+Batch 570: training loss 3.4331161975860596
+Batch 600: training loss 3.131892681121826
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 88: Average Training Loss: 3.294815874862671, Average Validation Loss: 4.277957419131664
+Batch 30: training loss 3.244682788848877
+Batch 60: training loss 3.1931610107421875
+Batch 90: training loss 3.5276479721069336
+Batch 120: training loss 3.4219930171966553
+Batch 150: training loss 3.228482961654663
+Batch 180: training loss 3.254347324371338
+Batch 210: training loss 3.3079309463500977
+Batch 240: training loss 3.2589869499206543
+Batch 270: training loss 3.4127326011657715
+Batch 300: training loss 3.259570360183716
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.2780299186706543
+Batch 360: training loss 3.420667886734009
+Batch 390: training loss 3.1864895820617676
+Batch 420: training loss 3.371535301208496
+Batch 450: training loss 3.3280818462371826
+Batch 480: training loss 3.352536916732788
+Batch 510: training loss 3.3366777896881104
+Batch 540: training loss 3.2948646545410156
+Batch 570: training loss 3.186306953430176
+Batch 600: training loss 3.4116153717041016
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 89: Average Training Loss: 3.2907578464508056, Average Validation Loss: 4.274107983771791
+Batch 30: training loss 3.2337441444396973
+Batch 60: training loss 3.1852478981018066
+Batch 90: training loss 3.285850763320923
+Batch 120: training loss 3.429948091506958
+Batch 150: training loss 3.2862095832824707
+Batch 180: training loss 3.4341979026794434
+Batch 210: training loss 3.158161163330078
+Batch 240: training loss 3.259169578552246
+Batch 270: training loss 3.1815407276153564
+Batch 300: training loss 3.2410504817962646
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.3030829429626465
+Batch 360: training loss 3.1821765899658203
+Batch 390: training loss 3.1859054565429688
+Batch 420: training loss 3.3907833099365234
+Batch 450: training loss 3.2927441596984863
+Batch 480: training loss 3.373910903930664
+Batch 510: training loss 3.4057135581970215
+Batch 540: training loss 3.274059772491455
+Batch 570: training loss 3.112818956375122
+Batch 600: training loss 3.152163028717041
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 90: Average Training Loss: 3.286694528579712, Average Validation Loss: 4.275951050697489
+Batch 30: training loss 3.2587296962738037
+Batch 60: training loss 3.2986202239990234
+Batch 90: training loss 3.1519861221313477
+Batch 120: training loss 3.0737485885620117
+Batch 150: training loss 3.135537624359131
+Batch 180: training loss 3.16884183883667
+Batch 210: training loss 3.175057888031006
+Batch 240: training loss 3.1214356422424316
+Batch 270: training loss 3.085860252380371
+Batch 300: training loss 3.272289752960205
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.200838088989258
+Batch 360: training loss 3.2784359455108643
+Batch 390: training loss 3.3742523193359375
+Batch 420: training loss 3.3076112270355225
+Batch 450: training loss 3.5835165977478027
+Batch 480: training loss 3.3782505989074707
+Batch 510: training loss 3.3103342056274414
+Batch 540: training loss 3.4177703857421875
+Batch 570: training loss 3.2601828575134277
+Batch 600: training loss 3.1100807189941406
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 91: Average Training Loss: 3.2827812271118164, Average Validation Loss: 4.278544933237928
+Batch 30: training loss 3.16485595703125
+Batch 60: training loss 3.2199277877807617
+Batch 90: training loss 3.222182512283325
+Batch 120: training loss 3.1531014442443848
+Batch 150: training loss 3.1996521949768066
+Batch 180: training loss 3.138150453567505
+Batch 210: training loss 3.3460636138916016
+Batch 240: training loss 3.1870031356811523
+Batch 270: training loss 3.3122518062591553
+Batch 300: training loss 3.2965145111083984
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.2919602394104004
+Batch 360: training loss 3.0268263816833496
+Batch 390: training loss 3.426853656768799
+Batch 420: training loss 3.4201154708862305
+Batch 450: training loss 3.2030744552612305
+Batch 480: training loss 3.329637289047241
+Batch 510: training loss 3.39693284034729
+Batch 540: training loss 3.1527442932128906
+Batch 570: training loss 3.254560947418213
+Batch 600: training loss 3.219878911972046
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 92: Average Training Loss: 3.2794405006408693, Average Validation Loss: 4.267825720158029
+Batch 30: training loss 3.142577648162842
+Batch 60: training loss 3.5037217140197754
+Batch 90: training loss 3.238893985748291
+Batch 120: training loss 3.419400930404663
+Batch 150: training loss 3.250357151031494
+Batch 180: training loss 3.3142659664154053
+Batch 210: training loss 3.2610015869140625
+Batch 240: training loss 3.2081410884857178
+Batch 270: training loss 3.370514154434204
+Batch 300: training loss 3.2900099754333496
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.318767547607422
+Batch 360: training loss 3.2893612384796143
+Batch 390: training loss 3.3390610218048096
+Batch 420: training loss 3.3566975593566895
+Batch 450: training loss 3.3533129692077637
+Batch 480: training loss 3.2397751808166504
+Batch 510: training loss 3.238492727279663
+Batch 540: training loss 3.3895931243896484
+Batch 570: training loss 3.1214311122894287
+Batch 600: training loss 3.2847251892089844
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 93: Average Training Loss: 3.2752632232666015, Average Validation Loss: 4.285662022042782
+Batch 30: training loss 3.141338348388672
+Batch 60: training loss 3.127667188644409
+Batch 90: training loss 3.2965903282165527
+Batch 120: training loss 3.194615125656128
+Batch 150: training loss 3.3858346939086914
+Batch 180: training loss 3.1904239654541016
+Batch 210: training loss 3.0909054279327393
+Batch 240: training loss 3.058176040649414
+Batch 270: training loss 3.334961175918579
+Batch 300: training loss 3.3555450439453125
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.21475887298584
+Batch 360: training loss 3.345304012298584
+Batch 390: training loss 3.2481849193573
+Batch 420: training loss 3.2399725914001465
+Batch 450: training loss 3.348784923553467
+Batch 480: training loss 3.291097402572632
+Batch 510: training loss 3.35252046585083
+Batch 540: training loss 3.3922195434570312
+Batch 570: training loss 3.1093380451202393
+Batch 600: training loss 3.2499070167541504
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 94: Average Training Loss: 3.272655987930298, Average Validation Loss: 4.279541117079715
+Batch 30: training loss 3.4385623931884766
+Batch 60: training loss 3.146399974822998
+Batch 90: training loss 3.202913761138916
+Batch 120: training loss 3.2571287155151367
+Batch 150: training loss 3.188483238220215
+Batch 180: training loss 3.1423821449279785
+Batch 210: training loss 3.1972198486328125
+Batch 240: training loss 3.3845746517181396
+Batch 270: training loss 3.16682767868042
+Batch 300: training loss 3.3630928993225098
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.143618583679199
+Batch 360: training loss 3.4306180477142334
+Batch 390: training loss 3.259244441986084
+Batch 420: training loss 3.277397871017456
+Batch 450: training loss 3.469869613647461
+Batch 480: training loss 3.381284475326538
+Batch 510: training loss 3.3343753814697266
+Batch 540: training loss 3.2594032287597656
+Batch 570: training loss 3.2365882396698
+Batch 600: training loss 3.181999683380127
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 95: Average Training Loss: 3.2674443351745603, Average Validation Loss: 4.280172784277734
+Batch 30: training loss 3.0505523681640625
+Batch 60: training loss 3.2823636531829834
+Batch 90: training loss 3.1625709533691406
+Batch 120: training loss 3.3103761672973633
+Batch 150: training loss 3.3441953659057617
+Batch 180: training loss 3.116978168487549
+Batch 210: training loss 3.4455041885375977
+Batch 240: training loss 3.363170623779297
+Batch 270: training loss 3.4606168270111084
+Batch 300: training loss 3.062828779220581
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.201385021209717
+Batch 360: training loss 3.176192283630371
+Batch 390: training loss 3.1924452781677246
+Batch 420: training loss 3.164553165435791
+Batch 450: training loss 3.1902780532836914
+Batch 480: training loss 3.2363498210906982
+Batch 510: training loss 3.0848944187164307
+Batch 540: training loss 3.2104969024658203
+Batch 570: training loss 3.1662986278533936
+Batch 600: training loss 3.3740592002868652
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 96: Average Training Loss: 3.2634320911407473, Average Validation Loss: 4.26567628028545
+Batch 30: training loss 3.1787657737731934
+Batch 60: training loss 3.160627603530884
+Batch 90: training loss 3.2060723304748535
+Batch 120: training loss 3.1946868896484375
+Batch 150: training loss 3.5045814514160156
+Batch 180: training loss 3.289907217025757
+Batch 210: training loss 3.1048014163970947
+Batch 240: training loss 3.268385887145996
+Batch 270: training loss 3.4177799224853516
+Batch 300: training loss 3.137147903442383
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.2823050022125244
+Batch 360: training loss 3.1524391174316406
+Batch 390: training loss 3.298677921295166
+Batch 420: training loss 3.2131905555725098
+Batch 450: training loss 3.20228910446167
+Batch 480: training loss 3.380333423614502
+Batch 510: training loss 3.273019790649414
+Batch 540: training loss 3.4865713119506836
+Batch 570: training loss 3.2864274978637695
+Batch 600: training loss 3.800295829772949
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 97: Average Training Loss: 3.2600671474456786, Average Validation Loss: 4.269283132350191
+Batch 30: training loss 3.1942365169525146
+Batch 60: training loss 3.1467339992523193
+Batch 90: training loss 3.3505406379699707
+Batch 120: training loss 3.262341260910034
+Batch 150: training loss 2.999392032623291
+Batch 180: training loss 3.3049206733703613
+Batch 210: training loss 3.3347744941711426
+Batch 240: training loss 3.0808310508728027
+Batch 270: training loss 3.3003294467926025
+Batch 300: training loss 3.1544575691223145
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.439818859100342
+Batch 360: training loss 3.3966751098632812
+Batch 390: training loss 3.2087864875793457
+Batch 420: training loss 3.1867451667785645
+Batch 450: training loss 3.3462610244750977
+Batch 480: training loss 3.143251895904541
+Batch 510: training loss 3.160573959350586
+Batch 540: training loss 3.254565715789795
+Batch 570: training loss 3.4440360069274902
+Batch 600: training loss 3.1028966903686523
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 98: Average Training Loss: 3.256556784439087, Average Validation Loss: 4.2684159989052635
+Batch 30: training loss 3.254457712173462
+Batch 60: training loss 3.329242706298828
+Batch 90: training loss 3.3403358459472656
+Batch 120: training loss 3.237578868865967
+Batch 150: training loss 3.196694850921631
+Batch 180: training loss 3.472116470336914
+Batch 210: training loss 3.1410560607910156
+Batch 240: training loss 3.266970634460449
+Batch 270: training loss 3.3657360076904297
+Batch 300: training loss 3.2371439933776855
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.077085256576538
+Batch 360: training loss 3.3921656608581543
+Batch 390: training loss 3.3318228721618652
+Batch 420: training loss 3.145069122314453
+Batch 450: training loss 3.4088826179504395
+Batch 480: training loss 3.5020246505737305
+Batch 510: training loss 3.511077880859375
+Batch 540: training loss 3.2570159435272217
+Batch 570: training loss 3.256474494934082
+Batch 600: training loss 3.124882221221924
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 99: Average Training Loss: 3.253327770614624, Average Validation Loss: 4.272064411893804
+Batch 30: training loss 3.293801784515381
+Batch 60: training loss 3.320530652999878
+Batch 90: training loss 2.9870362281799316
+Batch 120: training loss 3.1221652030944824
+Batch 150: training loss 3.221011161804199
+Batch 180: training loss 3.110044002532959
+Batch 210: training loss 3.374279260635376
+Batch 240: training loss 3.1286611557006836
+Batch 270: training loss 3.3250441551208496
+Batch 300: training loss 3.355703830718994
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.124907970428467
+Batch 360: training loss 3.411013126373291
+Batch 390: training loss 3.2927932739257812
+Batch 420: training loss 3.325963020324707
+Batch 450: training loss 3.200000047683716
+Batch 480: training loss 3.1911122798919678
+Batch 510: training loss 3.238156795501709
+Batch 540: training loss 3.482424020767212
+Batch 570: training loss 3.2534217834472656
+Batch 600: training loss 3.5150203704833984
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 100: Average Training Loss: 3.2489987190246583, Average Validation Loss: 4.2727772935907895
+Batch 30: training loss 3.2434258460998535
+Batch 60: training loss 3.203550338745117
+Batch 90: training loss 3.2191147804260254
+Batch 120: training loss 3.363353729248047
+Batch 150: training loss 3.2945339679718018
+Batch 180: training loss 3.273327350616455
+Batch 210: training loss 3.3828506469726562
+Batch 240: training loss 3.1201586723327637
+Batch 270: training loss 3.23109769821167
+Batch 300: training loss 3.2007040977478027
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.2678496837615967
+Batch 360: training loss 3.191542625427246
+Batch 390: training loss 3.3077011108398438
+Batch 420: training loss 3.37898588180542
+Batch 450: training loss 3.1404428482055664
+Batch 480: training loss 3.3656463623046875
+Batch 510: training loss 3.328587293624878
+Batch 540: training loss 3.271702766418457
+Batch 570: training loss 3.0489282608032227
+Batch 600: training loss 3.2980363368988037
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 101: Average Training Loss: 3.245426623916626, Average Validation Loss: 4.272456321310489
+Batch 30: training loss 3.2705469131469727
+Batch 60: training loss 3.029374122619629
+Batch 90: training loss 3.165947437286377
+Batch 120: training loss 3.124256134033203
+Batch 150: training loss 3.46885085105896
+Batch 180: training loss 3.260908603668213
+Batch 210: training loss 3.127833843231201
+Batch 240: training loss 3.1017708778381348
+Batch 270: training loss 3.112546443939209
+Batch 300: training loss 3.107231616973877
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.4055075645446777
+Batch 360: training loss 3.2137675285339355
+Batch 390: training loss 3.206483840942383
+Batch 420: training loss 3.32224178314209
+Batch 450: training loss 3.3932225704193115
+Batch 480: training loss 3.3486270904541016
+Batch 510: training loss 3.2189698219299316
+Batch 540: training loss 3.3166239261627197
+Batch 570: training loss 3.167741537094116
+Batch 600: training loss 3.2378945350646973
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 102: Average Training Loss: 3.2426211181640623, Average Validation Loss: 4.274429909726407
+Batch 30: training loss 3.1275386810302734
+Batch 60: training loss 3.3911776542663574
+Batch 90: training loss 3.077812910079956
+Batch 120: training loss 2.925934076309204
+Batch 150: training loss 3.244081497192383
+Batch 180: training loss 3.2019906044006348
+Batch 210: training loss 3.1721060276031494
+Batch 240: training loss 3.124448776245117
+Batch 270: training loss 3.18241286277771
+Batch 300: training loss 3.0731987953186035
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.426361083984375
+Batch 360: training loss 3.2106823921203613
+Batch 390: training loss 3.2631678581237793
+Batch 420: training loss 3.1657519340515137
+Batch 450: training loss 3.440075635910034
+Batch 480: training loss 3.25504994392395
+Batch 510: training loss 3.2086472511291504
+Batch 540: training loss 3.151961088180542
+Batch 570: training loss 3.3689725399017334
+Batch 600: training loss 3.228809356689453
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 103: Average Training Loss: 3.2389200107574463, Average Validation Loss: 4.2606367456152086
+Batch 30: training loss 3.162252902984619
+Batch 60: training loss 3.1495678424835205
+Batch 90: training loss 3.1674115657806396
+Batch 120: training loss 2.951183319091797
+Batch 150: training loss 3.125185251235962
+Batch 180: training loss 3.150695323944092
+Batch 210: training loss 3.075657606124878
+Batch 240: training loss 3.077089786529541
+Batch 270: training loss 3.344989776611328
+Batch 300: training loss 3.1960196495056152
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.2803168296813965
+Batch 360: training loss 3.2478089332580566
+Batch 390: training loss 3.091944694519043
+Batch 420: training loss 3.4086222648620605
+Batch 450: training loss 3.2038540840148926
+Batch 480: training loss 3.4202208518981934
+Batch 510: training loss 3.5174503326416016
+Batch 540: training loss 2.946439266204834
+Batch 570: training loss 3.213996410369873
+Batch 600: training loss 3.1704792976379395
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 104: Average Training Loss: 3.235008058929443, Average Validation Loss: 4.256026227423486
+Batch 30: training loss 3.2515759468078613
+Batch 60: training loss 3.320338249206543
+Batch 90: training loss 3.1522889137268066
+Batch 120: training loss 3.251781463623047
+Batch 150: training loss 3.198486804962158
+Batch 180: training loss 3.3211827278137207
+Batch 210: training loss 3.0386781692504883
+Batch 240: training loss 3.1117098331451416
+Batch 270: training loss 3.428337812423706
+Batch 300: training loss 3.334578514099121
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.3034749031066895
+Batch 360: training loss 3.350109577178955
+Batch 390: training loss 3.199068307876587
+Batch 420: training loss 3.180927038192749
+Batch 450: training loss 3.2924985885620117
+Batch 480: training loss 3.381348133087158
+Batch 510: training loss 3.183574676513672
+Batch 540: training loss 3.248115301132202
+Batch 570: training loss 3.3128750324249268
+Batch 600: training loss 3.123772144317627
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 105: Average Training Loss: 3.231834171295166, Average Validation Loss: 4.26368100085157
+Batch 30: training loss 3.3248164653778076
+Batch 60: training loss 3.1945862770080566
+Batch 90: training loss 3.160386085510254
+Batch 120: training loss 3.0758419036865234
+Batch 150: training loss 3.2925498485565186
+Batch 180: training loss 3.168295383453369
+Batch 210: training loss 3.308985710144043
+Batch 240: training loss 3.1658120155334473
+Batch 270: training loss 3.1750235557556152
+Batch 300: training loss 3.128424644470215
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.374150037765503
+Batch 360: training loss 3.0992629528045654
+Batch 390: training loss 3.1699793338775635
+Batch 420: training loss 3.3534598350524902
+Batch 450: training loss 3.2052435874938965
+Batch 480: training loss 3.0134201049804688
+Batch 510: training loss 3.4711198806762695
+Batch 540: training loss 3.125645637512207
+Batch 570: training loss 3.2356009483337402
+Batch 600: training loss 3.3930840492248535
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 106: Average Training Loss: 3.227587236404419, Average Validation Loss: 4.267531415249439
+Batch 30: training loss 3.0280184745788574
+Batch 60: training loss 3.1332006454467773
+Batch 90: training loss 3.094864845275879
+Batch 120: training loss 3.0783019065856934
+Batch 150: training loss 3.222141742706299
+Batch 180: training loss 3.285409450531006
+Batch 210: training loss 3.2856106758117676
+Batch 240: training loss 3.33944034576416
+Batch 270: training loss 3.221189498901367
+Batch 300: training loss 3.028902769088745
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.1829750537872314
+Batch 360: training loss 3.142726421356201
+Batch 390: training loss 3.1976237297058105
+Batch 420: training loss 3.2687389850616455
+Batch 450: training loss 3.302532196044922
+Batch 480: training loss 3.200674295425415
+Batch 510: training loss 3.246880292892456
+Batch 540: training loss 3.4603800773620605
+Batch 570: training loss 3.2235960960388184
+Batch 600: training loss 3.4455671310424805
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 107: Average Training Loss: 3.2249180088043214, Average Validation Loss: 4.262708816122501
+Batch 30: training loss 3.179292678833008
+Batch 60: training loss 3.1857919692993164
+Batch 90: training loss 3.192310333251953
+Batch 120: training loss 3.02225399017334
+Batch 150: training loss 3.1730690002441406
+Batch 180: training loss 3.3482625484466553
+Batch 210: training loss 3.123814105987549
+Batch 240: training loss 3.1989030838012695
+Batch 270: training loss 3.1193220615386963
+Batch 300: training loss 3.2956361770629883
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.2683627605438232
+Batch 360: training loss 3.107013702392578
+Batch 390: training loss 3.1601524353027344
+Batch 420: training loss 3.0981388092041016
+Batch 450: training loss 3.1324338912963867
+Batch 480: training loss 3.3143839836120605
+Batch 510: training loss 3.1288294792175293
+Batch 540: training loss 3.227386951446533
+Batch 570: training loss 3.080416679382324
+Batch 600: training loss 3.2660586833953857
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 108: Average Training Loss: 3.2210433700561523, Average Validation Loss: 4.256019262557334
+Batch 30: training loss 3.342776298522949
+Batch 60: training loss 3.309831142425537
+Batch 90: training loss 3.000576972961426
+Batch 120: training loss 3.1561412811279297
+Batch 150: training loss 3.2218918800354004
+Batch 180: training loss 3.149495840072632
+Batch 210: training loss 3.324981689453125
+Batch 240: training loss 3.2164034843444824
+Batch 270: training loss 3.1528868675231934
+Batch 300: training loss 3.1563024520874023
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.0896952152252197
+Batch 360: training loss 3.1053271293640137
+Batch 390: training loss 3.181400775909424
+Batch 420: training loss 3.2046761512756348
+Batch 450: training loss 3.1754322052001953
+Batch 480: training loss 3.218118190765381
+Batch 510: training loss 3.1740338802337646
+Batch 540: training loss 3.3921120166778564
+Batch 570: training loss 3.3833699226379395
+Batch 600: training loss 3.0739927291870117
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 109: Average Training Loss: 3.217595184326172, Average Validation Loss: 4.256705355136953
+Batch 30: training loss 3.5030574798583984
+Batch 60: training loss 3.0822219848632812
+Batch 90: training loss 3.1627275943756104
+Batch 120: training loss 3.2231388092041016
+Batch 150: training loss 3.2877118587493896
+Batch 180: training loss 3.1114721298217773
+Batch 210: training loss 3.656742572784424
+Batch 240: training loss 3.2609596252441406
+Batch 270: training loss 3.1325087547302246
+Batch 300: training loss 3.3864951133728027
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.280034303665161
+Batch 360: training loss 3.1329798698425293
+Batch 390: training loss 3.2562732696533203
+Batch 420: training loss 3.278697967529297
+Batch 450: training loss 3.4069478511810303
+Batch 480: training loss 3.294020175933838
+Batch 510: training loss 3.146345615386963
+Batch 540: training loss 3.1722137928009033
+Batch 570: training loss 3.117852210998535
+Batch 600: training loss 3.296840190887451
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 110: Average Training Loss: 3.2138220718383788, Average Validation Loss: 4.255502284841334
+Batch 30: training loss 3.1565725803375244
+Batch 60: training loss 3.311161756515503
+Batch 90: training loss 3.131929874420166
+Batch 120: training loss 3.3300294876098633
+Batch 150: training loss 3.160055637359619
+Batch 180: training loss 3.2288098335266113
+Batch 210: training loss 3.1348154544830322
+Batch 240: training loss 3.122298002243042
+Batch 270: training loss 3.2322020530700684
+Batch 300: training loss 3.1948046684265137
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.182457685470581
+Batch 360: training loss 3.477260112762451
+Batch 390: training loss 3.1723227500915527
+Batch 420: training loss 3.1612095832824707
+Batch 450: training loss 3.2338125705718994
+Batch 480: training loss 3.1622960567474365
+Batch 510: training loss 3.304442882537842
+Batch 540: training loss 3.3643746376037598
+Batch 570: training loss 3.052738904953003
+Batch 600: training loss 3.3685054779052734
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 111: Average Training Loss: 3.2114952892303466, Average Validation Loss: 4.250950082819513
+Batch 30: training loss 3.34051775932312
+Batch 60: training loss 3.24743390083313
+Batch 90: training loss 3.4656553268432617
+Batch 120: training loss 3.0798847675323486
+Batch 150: training loss 3.248866081237793
+Batch 180: training loss 3.125188112258911
+Batch 210: training loss 3.136538028717041
+Batch 240: training loss 3.251169204711914
+Batch 270: training loss 3.443441867828369
+Batch 300: training loss 3.1982626914978027
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.2012481689453125
+Batch 360: training loss 3.1900267601013184
+Batch 390: training loss 3.1875171661376953
+Batch 420: training loss 2.9694437980651855
+Batch 450: training loss 3.094329357147217
+Batch 480: training loss 3.0406346321105957
+Batch 510: training loss 3.344776153564453
+Batch 540: training loss 3.313443899154663
+Batch 570: training loss 3.164900541305542
+Batch 600: training loss 3.045875310897827
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 112: Average Training Loss: 3.2089515354156495, Average Validation Loss: 4.258790635048075
+Batch 30: training loss 3.254223585128784
+Batch 60: training loss 3.120357036590576
+Batch 90: training loss 3.021113872528076
+Batch 120: training loss 2.9925966262817383
+Batch 150: training loss 3.2213070392608643
+Batch 180: training loss 3.1692795753479004
+Batch 210: training loss 3.161710262298584
+Batch 240: training loss 3.147571086883545
+Batch 270: training loss 3.174083709716797
+Batch 300: training loss 3.0943355560302734
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.2281546592712402
+Batch 360: training loss 3.246457576751709
+Batch 390: training loss 3.413907527923584
+Batch 420: training loss 3.1527628898620605
+Batch 450: training loss 3.2798995971679688
+Batch 480: training loss 3.2548532485961914
+Batch 510: training loss 3.216630697250366
+Batch 540: training loss 3.3781561851501465
+Batch 570: training loss 3.2469592094421387
+Batch 600: training loss 3.539740800857544
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 113: Average Training Loss: 3.2069651580810548, Average Validation Loss: 4.249567863789011
+Batch 30: training loss 3.3173670768737793
+Batch 60: training loss 3.235304832458496
+Batch 90: training loss 3.0765843391418457
+Batch 120: training loss 3.105196475982666
+Batch 150: training loss 2.955995559692383
+Batch 180: training loss 3.091278553009033
+Batch 210: training loss 3.387477397918701
+Batch 240: training loss 3.143911600112915
+Batch 270: training loss 3.139819622039795
+Batch 300: training loss 3.351510524749756
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.0275909900665283
+Batch 360: training loss 3.4751744270324707
+Batch 390: training loss 3.355254650115967
+Batch 420: training loss 3.0138869285583496
+Batch 450: training loss 3.2787630558013916
+Batch 480: training loss 3.2147560119628906
+Batch 510: training loss 3.248650550842285
+Batch 540: training loss 3.1980113983154297
+Batch 570: training loss 3.1146302223205566
+Batch 600: training loss 3.0469207763671875
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 114: Average Training Loss: 3.2023065910339357, Average Validation Loss: 4.253371857582255
+Batch 30: training loss 3.2804932594299316
+Batch 60: training loss 3.283163547515869
+Batch 90: training loss 3.199464797973633
+Batch 120: training loss 3.1087331771850586
+Batch 150: training loss 3.0078775882720947
+Batch 180: training loss 3.191362142562866
+Batch 210: training loss 3.2744922637939453
+Batch 240: training loss 3.1501989364624023
+Batch 270: training loss 3.128244638442993
+Batch 300: training loss 3.250974655151367
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.0857863426208496
+Batch 360: training loss 3.3003296852111816
+Batch 390: training loss 3.060546875
+Batch 420: training loss 3.1145730018615723
+Batch 450: training loss 3.1817402839660645
+Batch 480: training loss 3.1379899978637695
+Batch 510: training loss 3.282557487487793
+Batch 540: training loss 3.3661201000213623
+Batch 570: training loss 3.1312453746795654
+Batch 600: training loss 3.2318758964538574
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 115: Average Training Loss: 3.199108236694336, Average Validation Loss: 4.249204133419281
+Batch 30: training loss 3.1901378631591797
+Batch 60: training loss 3.1445608139038086
+Batch 90: training loss 3.2412705421447754
+Batch 120: training loss 3.0813074111938477
+Batch 150: training loss 2.97792649269104
+Batch 180: training loss 3.1053617000579834
+Batch 210: training loss 3.1309075355529785
+Batch 240: training loss 3.294602632522583
+Batch 270: training loss 3.1602401733398438
+Batch 300: training loss 3.2779016494750977
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.086069107055664
+Batch 360: training loss 3.119020938873291
+Batch 390: training loss 2.914337158203125
+Batch 420: training loss 3.3060269355773926
+Batch 450: training loss 3.07466983795166
+Batch 480: training loss 3.411823272705078
+Batch 510: training loss 3.3407442569732666
+Batch 540: training loss 3.2716479301452637
+Batch 570: training loss 3.2575855255126953
+Batch 600: training loss 3.0853958129882812
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 116: Average Training Loss: 3.196037969207764, Average Validation Loss: 4.2548179778646915
+Batch 30: training loss 3.028420925140381
+Batch 60: training loss 3.0765814781188965
+Batch 90: training loss 3.313702344894409
+Batch 120: training loss 3.1633999347686768
+Batch 150: training loss 3.142009735107422
+Batch 180: training loss 3.092278003692627
+Batch 210: training loss 3.179673194885254
+Batch 240: training loss 3.0489964485168457
+Batch 270: training loss 3.0458126068115234
+Batch 300: training loss 3.3042774200439453
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 330: training loss 3.141110897064209
+Batch 360: training loss 3.3349876403808594
+Batch 390: training loss 3.2245607376098633
+Batch 420: training loss 3.337167263031006
+Batch 450: training loss 3.3311896324157715
+Batch 480: training loss 3.345918655395508
+Batch 510: training loss 3.2989795207977295
+Batch 540: training loss 3.2559828758239746
+Batch 570: training loss 3.2439448833465576
+Batch 600: training loss 3.084702253341675
+Saving checkpoint to accelerator_checkpoints_1...
+Deleting 1 checkpoints to make room for new checkpoint.
+Epoch 117: Average Training Loss: 3.1923206897735596, Average Validation Loss: 4.2486096443013945
+Batch 30: training loss 3.238102912902832
+^CSaving model...
+Traceback (most recent call last):
+  File "/home/e11824039/groups/192.039-2024W/capybaras/training_en_fr/train.py", line 174, in <module>
+    train_loss, val_loss = train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/e11824039/groups/192.039-2024W/capybaras/training_en_fr/train.py", line 131, in train_epoch
+    train_loss += loss.item()
+                  ^^^^^^^^^^^
+KeyboardInterrupt
+
+Script done on 2025-01-26 10:54:34+00:00 [COMMAND_EXIT_CODE="130"]

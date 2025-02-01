@@ -1,0 +1,4 @@
+Script started on 2025-01-26 22:19:58+00:00 [COMMAND="python visualisation.py" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="153" LINES="47"]
+26218.709999999992
+
+Script done on 2025-01-26 22:20:01+00:00 [COMMAND_EXIT_CODE="0"]

@@ -11,10 +11,9 @@ from tokenizers import Tokenizer
 import config
 import os
 import json
-import math
 
-resume = True
-train_count = 1 #used for the checkpoint directory name
+resume = False
+train_count = 0 #used for the checkpoint directory name
 
 # only for mac, remove for training on cuda or cpu
 if torch.backends.mps.is_available():
@@ -31,7 +30,6 @@ def load_from_json(filename):
 train_dataset = load_from_json(f'data/{config.LANGS}-train_data.json')
 print(f'Dataset size: {len(train_dataset)}')
 
-
 print("Loading validation set from saved...")
 validation_dataset = load_from_json(f'data/{config.LANGS}-validation_data.json')
 
@@ -39,6 +37,7 @@ validation_dataset = load_from_json(f'data/{config.LANGS}-validation_data.json')
 print("Loading tokenizer from saved...")
 tokenizer = Tokenizer.from_file('tokenizer/bpe.json')
 tokenizer.enable_truncation(max_length=config.ALLOWED_SEQ_LENGTH)
+
 vocab = tokenizer.get_vocab()
 pad = vocab["[PAD]"]
 
@@ -81,7 +80,7 @@ last_batch = 0  # use last batch to continue tr aining from that point
 if resume:
     print("Loading accelerator state...")
     previous_run_dir = f"accelerator_checkpoints_{train_count - 1}"
-    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_91" #change the directory name to the desired checkpoint
+    checkpoint_dir = f"{previous_run_dir}/checkpoints/checkpoint_306" #change the directory name to the desired checkpoint
     accelerator.load_state(checkpoint_dir)
     with open(f"{previous_run_dir}/metadata.json", "r") as f:
         metadata = json.load(f)
@@ -119,8 +118,8 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
     
     for batch in train_dataloader:
 
-        sources = batch['sources']
-        targets = batch['targets']
+        sources = batch['sources'].to(model.device)
+        targets = batch['targets'].to(model.device)
 
         optimizer.zero_grad()
         predictions = model(sources, targets[:, :-1])
@@ -135,9 +134,9 @@ def train_epoch(model, train_dataloader, optimizer, loss_function, sheduler, acc
         num_batches += 1
         ind_num_batches += 1
         
-        if num_batches % 30 == 0:
-            print(f'Batch {num_batches}: training loss {loss.item()}')
-        if num_batches % 300 == 0:
+        if num_batches % 100 == 0:
+            print(f'Batch {num_batches}: tr loss {loss.item()}; avg tr loss {train_loss/num_batches}')
+        if num_batches % 1000 == 0:
             print(f"Saving checkpoint to {output_dir}...")
             accelerator.save_state()
             # Save progress
@@ -170,7 +169,7 @@ try:
         start_time = time.time()
         if epoch == 0 and resume:
             train_dataloader = skipped_dataloader
-        elif epoch != 0:
+        elif epoch == 1 and resume:
             last_batch = 0
             train_dataloader = train_dataloader_backup
         train_loss, val_loss = train_epoch(model=model, train_dataloader=train_dataloader, optimizer=optimizer, loss_function=loss_function,

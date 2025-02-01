@@ -1,0 +1,2348 @@
+Script started on 2025-01-27 00:53:00+00:00 [COMMAND="python train.py" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="141" LINES="47"]
+Loading training set from saved...
+Dataset size: 300000
+Loading validation set from saved...
+Loading tokenizer from saved...
+Loading processed dataset...
+Loading processed dataset...
+Preparing model...
+Training: 
+Batch 100: training loss 7.283003330230713
+Batch 200: training loss 6.773786544799805
+Batch 300: training loss 6.711048126220703
+Batch 400: training loss 6.49776554107666
+Batch 500: training loss 6.4756975173950195
+Saving checkpoint to accelerator_checkpoints_0...
+Batch 600: training loss 6.246504306793213
+Batch 700: training loss 6.397951602935791
+Batch 800: training loss 6.114733695983887
+Batch 900: training loss 5.973271369934082
+Batch 1000: training loss 6.187572956085205
+Saving checkpoint to accelerator_checkpoints_0...
+Batch 1100: training loss 6.0025858879089355
+Batch 1200: training loss 5.964437484741211
+Batch 1300: training loss 5.910526275634766
+Batch 1400: training loss 5.788591384887695
+Batch 1500: training loss 5.877373695373535
+Saving checkpoint to accelerator_checkpoints_0...
+Batch 1600: training loss 5.891528606414795
+Batch 1700: training loss 5.880754470825195
+Batch 1800: training loss 5.8956217765808105
+Batch 1900: training loss 5.658551216125488
+Batch 2000: training loss 5.730679988861084
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 5.741921424865723
+Batch 2200: training loss 5.560319423675537
+Batch 2300: training loss 5.545083522796631
+Epoch 1: Average Training Loss: 6.122630556085411, Average Validation Loss: 5.848713258902232
+Batch 100: training loss 5.447861671447754
+Batch 200: training loss 5.511453151702881
+Batch 300: training loss 5.657431602478027
+Batch 400: training loss 5.464748382568359
+Batch 500: training loss 5.453420639038086
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 5.354922294616699
+Batch 700: training loss 5.3625102043151855
+Batch 800: training loss 5.480630874633789
+Batch 900: training loss 5.458632469177246
+Batch 1000: training loss 5.211418151855469
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 5.248638153076172
+Batch 1200: training loss 5.2820940017700195
+Batch 1300: training loss 5.4623026847839355
+Batch 1400: training loss 5.200235366821289
+Batch 1500: training loss 5.12955379486084
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 5.126708984375
+Batch 1700: training loss 5.389167308807373
+Batch 1800: training loss 5.140702247619629
+Batch 1900: training loss 5.090157508850098
+Batch 2000: training loss 4.999670028686523
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 5.116709232330322
+Batch 2200: training loss 5.2170491218566895
+Batch 2300: training loss 5.140476226806641
+Epoch 2: Average Training Loss: 5.3165315867690905, Average Validation Loss: 5.39279301961263
+Batch 100: training loss 5.029492378234863
+Batch 200: training loss 5.161283493041992
+Batch 300: training loss 5.1656413078308105
+Batch 400: training loss 4.958862781524658
+Batch 500: training loss 4.937150478363037
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 5.134011268615723
+Batch 700: training loss 4.926103591918945
+Batch 800: training loss 4.985680103302002
+Batch 900: training loss 4.93505859375
+Batch 1000: training loss 4.951005935668945
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 4.943730354309082
+Batch 1200: training loss 4.864908218383789
+Batch 1300: training loss 4.802032470703125
+Batch 1400: training loss 4.964345455169678
+Batch 1500: training loss 4.757146835327148
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 4.981853485107422
+Batch 1700: training loss 4.7997283935546875
+Batch 1800: training loss 4.971662521362305
+Batch 1900: training loss 4.847820281982422
+Batch 2000: training loss 4.718448638916016
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 4.87003755569458
+Batch 2200: training loss 4.9197821617126465
+Batch 2300: training loss 4.873108386993408
+Epoch 3: Average Training Loss: 4.936037684463397, Average Validation Loss: 5.1076487104098005
+Batch 100: training loss 4.762022495269775
+Batch 200: training loss 4.790748596191406
+Batch 300: training loss 4.725717544555664
+Batch 400: training loss 4.92598819732666
+Batch 500: training loss 4.812292575836182
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 4.650146484375
+Batch 700: training loss 4.594291687011719
+Batch 800: training loss 4.759118556976318
+Batch 900: training loss 4.626570701599121
+Batch 1000: training loss 4.667698860168457
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 4.707895278930664
+Batch 1200: training loss 4.759128570556641
+Batch 1300: training loss 4.658404350280762
+Batch 1400: training loss 4.507235050201416
+Batch 1500: training loss 4.776394367218018
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 4.360994338989258
+Batch 1700: training loss 4.5909624099731445
+Batch 1800: training loss 4.5842366218566895
+Batch 1900: training loss 4.536565780639648
+Batch 2000: training loss 4.657982349395752
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 4.610503196716309
+Batch 2200: training loss 4.712148189544678
+Batch 2300: training loss 4.769902229309082
+Epoch 4: Average Training Loss: 4.68489529004276, Average Validation Loss: 4.9017171661059065
+Batch 100: training loss 4.547388553619385
+Batch 200: training loss 4.6448845863342285
+Batch 300: training loss 4.607868194580078
+Batch 400: training loss 4.464543342590332
+Batch 500: training loss 4.447524070739746
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 4.300294399261475
+Batch 700: training loss 4.41536808013916
+Batch 800: training loss 4.596283435821533
+Batch 900: training loss 4.542904376983643
+Batch 1000: training loss 4.470730304718018
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 4.616284370422363
+Batch 1200: training loss 4.472411632537842
+Batch 1300: training loss 4.495285511016846
+Batch 1400: training loss 4.458333492279053
+Batch 1500: training loss 4.394755840301514
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 4.268693447113037
+Batch 1700: training loss 4.403331756591797
+Batch 1800: training loss 4.473104476928711
+Batch 1900: training loss 4.7146406173706055
+Batch 2000: training loss 4.363137722015381
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 4.518268585205078
+Batch 2200: training loss 4.334290027618408
+Batch 2300: training loss 4.315741539001465
+Epoch 5: Average Training Loss: 4.496230758294311, Average Validation Loss: 4.7439210414886475
+Batch 100: training loss 4.390573978424072
+Batch 200: training loss 4.35809326171875
+Batch 300: training loss 4.350244045257568
+Batch 400: training loss 4.281055450439453
+Batch 500: training loss 4.296212196350098
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 4.44759464263916
+Batch 700: training loss 4.265772819519043
+Batch 800: training loss 4.256854057312012
+Batch 900: training loss 4.261415481567383
+Batch 1000: training loss 4.274987697601318
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 4.435943603515625
+Batch 1200: training loss 4.384852886199951
+Batch 1300: training loss 4.210327625274658
+Batch 1400: training loss 4.501216888427734
+Batch 1500: training loss 4.354586601257324
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 4.32551383972168
+Batch 1700: training loss 4.441396713256836
+Batch 1800: training loss 4.242602348327637
+Batch 1900: training loss 4.079143047332764
+Batch 2000: training loss 4.234883785247803
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 4.17974853515625
+Batch 2200: training loss 4.221946716308594
+Batch 2300: training loss 4.541296005249023
+Epoch 6: Average Training Loss: 4.342665466025421, Average Validation Loss: 4.58633553981781
+Batch 100: training loss 4.2152204513549805
+Batch 200: training loss 4.133660316467285
+Batch 300: training loss 4.3943586349487305
+Batch 400: training loss 4.258949279785156
+Batch 500: training loss 4.117449760437012
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 4.192910194396973
+Batch 700: training loss 4.208750247955322
+Batch 800: training loss 4.116185188293457
+Batch 900: training loss 4.16278076171875
+Batch 1000: training loss 4.498803615570068
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 4.120184898376465
+Batch 1200: training loss 4.324702262878418
+Batch 1300: training loss 4.274864196777344
+Batch 1400: training loss 4.205312252044678
+Batch 1500: training loss 4.260082721710205
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 4.308350563049316
+Batch 1700: training loss 4.074102401733398
+Batch 1800: training loss 4.005741596221924
+Batch 1900: training loss 4.138129234313965
+Batch 2000: training loss 4.178205966949463
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 4.114099502563477
+Batch 2200: training loss 4.207440376281738
+Batch 2300: training loss 4.096590995788574
+Epoch 7: Average Training Loss: 4.216603970059762, Average Validation Loss: 4.4775174260139465
+Batch 100: training loss 4.135940074920654
+Batch 200: training loss 4.353862762451172
+Batch 300: training loss 4.089646339416504
+Batch 400: training loss 4.115418434143066
+Batch 500: training loss 4.175265312194824
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 4.212743759155273
+Batch 700: training loss 4.174419403076172
+Batch 800: training loss 3.9557199478149414
+Batch 900: training loss 4.1143999099731445
+Batch 1000: training loss 4.046056747436523
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 4.046226978302002
+Batch 1200: training loss 4.196059226989746
+Batch 1300: training loss 4.093817710876465
+Batch 1400: training loss 3.956799030303955
+Batch 1500: training loss 3.9840474128723145
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 4.197400093078613
+Batch 1700: training loss 4.364721298217773
+Batch 1800: training loss 3.9981112480163574
+Batch 1900: training loss 4.164906024932861
+Batch 2000: training loss 4.13483190536499
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 4.109187602996826
+Batch 2200: training loss 4.054851531982422
+Batch 2300: training loss 4.073744773864746
+Epoch 8: Average Training Loss: 4.1126603852359915, Average Validation Loss: 4.364392399787903
+Batch 100: training loss 4.029240131378174
+Batch 200: training loss 4.107776165008545
+Batch 300: training loss 4.115857124328613
+Batch 400: training loss 4.173208236694336
+Batch 500: training loss 4.024176597595215
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.7563109397888184
+Batch 700: training loss 4.13073205947876
+Batch 800: training loss 3.9860620498657227
+Batch 900: training loss 4.042912483215332
+Batch 1000: training loss 4.06156063079834
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.973785400390625
+Batch 1200: training loss 4.029904365539551
+Batch 1300: training loss 4.1512579917907715
+Batch 1400: training loss 4.007655620574951
+Batch 1500: training loss 4.290215015411377
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.975719451904297
+Batch 1700: training loss 3.906926155090332
+Batch 1800: training loss 4.038298606872559
+Batch 1900: training loss 3.879908800125122
+Batch 2000: training loss 4.157354831695557
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 4.053147792816162
+Batch 2200: training loss 3.964489459991455
+Batch 2300: training loss 4.074763774871826
+Epoch 9: Average Training Loss: 4.023546295056164, Average Validation Loss: 4.29878568649292
+Batch 100: training loss 3.904428005218506
+Batch 200: training loss 3.8972036838531494
+Batch 300: training loss 3.9550538063049316
+Batch 400: training loss 4.079406261444092
+Batch 500: training loss 4.0163445472717285
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.933567523956299
+Batch 700: training loss 3.915963888168335
+Batch 800: training loss 4.156679153442383
+Batch 900: training loss 4.116440773010254
+Batch 1000: training loss 3.9462180137634277
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.914788246154785
+Batch 1200: training loss 3.877758264541626
+Batch 1300: training loss 3.9496474266052246
+Batch 1400: training loss 4.028990745544434
+Batch 1500: training loss 3.9079575538635254
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 4.094363212585449
+Batch 1700: training loss 3.8401570320129395
+Batch 1800: training loss 3.881087064743042
+Batch 1900: training loss 3.9704625606536865
+Batch 2000: training loss 3.9423959255218506
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 4.116352558135986
+Batch 2200: training loss 3.9670610427856445
+Batch 2300: training loss 3.9926180839538574
+Epoch 10: Average Training Loss: 3.946705131807425, Average Validation Loss: 4.209761261940002
+Batch 100: training loss 3.9422249794006348
+Batch 200: training loss 4.164031982421875
+Batch 300: training loss 3.948450803756714
+Batch 400: training loss 3.959113836288452
+Batch 500: training loss 3.7864742279052734
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.839293956756592
+Batch 700: training loss 3.790407657623291
+Batch 800: training loss 4.04896354675293
+Batch 900: training loss 3.8772337436676025
+Batch 1000: training loss 3.8883612155914307
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.782355546951294
+Batch 1200: training loss 3.964585781097412
+Batch 1300: training loss 4.047571182250977
+Batch 1400: training loss 3.7671942710876465
+Batch 1500: training loss 3.784203290939331
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.686028480529785
+Batch 1700: training loss 4.002240180969238
+Batch 1800: training loss 3.7891926765441895
+Batch 1900: training loss 3.9830093383789062
+Batch 2000: training loss 3.9201202392578125
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.8544933795928955
+Batch 2200: training loss 3.887427806854248
+Batch 2300: training loss 3.755800485610962
+Epoch 11: Average Training Loss: 3.8792072763418584, Average Validation Loss: 4.1438530286153155
+Batch 100: training loss 4.108307838439941
+Batch 200: training loss 3.585984706878662
+Batch 300: training loss 3.922773599624634
+Batch 400: training loss 3.793646812438965
+Batch 500: training loss 3.948915958404541
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.7119269371032715
+Batch 700: training loss 3.740692615509033
+Batch 800: training loss 3.751540184020996
+Batch 900: training loss 3.818425416946411
+Batch 1000: training loss 3.903794765472412
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.799227237701416
+Batch 1200: training loss 3.7354726791381836
+Batch 1300: training loss 3.9893484115600586
+Batch 1400: training loss 3.7579879760742188
+Batch 1500: training loss 4.072882652282715
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.7586960792541504
+Batch 1700: training loss 3.8312106132507324
+Batch 1800: training loss 3.82928729057312
+Batch 1900: training loss 3.9687612056732178
+Batch 2000: training loss 3.725109577178955
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.8058905601501465
+Batch 2200: training loss 3.8193836212158203
+Batch 2300: training loss 3.9388551712036133
+Epoch 12: Average Training Loss: 3.8181008521607303, Average Validation Loss: 4.076678514480591
+Batch 100: training loss 3.7512364387512207
+Batch 200: training loss 3.7179055213928223
+Batch 300: training loss 3.8271734714508057
+Batch 400: training loss 3.8785300254821777
+Batch 500: training loss 3.783628463745117
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.7187612056732178
+Batch 700: training loss 3.7119228839874268
+Batch 800: training loss 3.8841428756713867
+Batch 900: training loss 3.903012752532959
+Batch 1000: training loss 3.8924753665924072
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.806309223175049
+Batch 1200: training loss 3.623823642730713
+Batch 1300: training loss 3.667470932006836
+Batch 1400: training loss 3.824124813079834
+Batch 1500: training loss 3.6557457447052
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.7918777465820312
+Batch 1700: training loss 3.7982850074768066
+Batch 1800: training loss 3.9196629524230957
+Batch 1900: training loss 3.7876830101013184
+Batch 2000: training loss 3.7204527854919434
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.653547763824463
+Batch 2200: training loss 3.6626815795898438
+Batch 2300: training loss 3.8224635124206543
+Epoch 13: Average Training Loss: 3.7634588217572547, Average Validation Loss: 4.031512310107549
+Batch 100: training loss 3.6476645469665527
+Batch 200: training loss 3.720754623413086
+Batch 300: training loss 3.8732805252075195
+Batch 400: training loss 3.760298252105713
+Batch 500: training loss 3.51076602935791
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.7267351150512695
+Batch 700: training loss 3.7483372688293457
+Batch 800: training loss 3.8259117603302
+Batch 900: training loss 3.6514933109283447
+Batch 1000: training loss 3.6418917179107666
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.6209611892700195
+Batch 1200: training loss 3.7622132301330566
+Batch 1300: training loss 3.7515106201171875
+Batch 1400: training loss 3.711456298828125
+Batch 1500: training loss 3.5412118434906006
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.74668550491333
+Batch 1700: training loss 3.6386585235595703
+Batch 1800: training loss 3.703786849975586
+Batch 1900: training loss 3.9095826148986816
+Batch 2000: training loss 3.697965145111084
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.943127155303955
+Batch 2200: training loss 3.6568453311920166
+Batch 2300: training loss 3.7915282249450684
+Epoch 14: Average Training Loss: 3.7136420924915794, Average Validation Loss: 3.9797987242539725
+Batch 100: training loss 3.6653246879577637
+Batch 200: training loss 3.626337766647339
+Batch 300: training loss 3.677497148513794
+Batch 400: training loss 3.6158690452575684
+Batch 500: training loss 3.746216297149658
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.6419897079467773
+Batch 700: training loss 3.5607094764709473
+Batch 800: training loss 3.559504985809326
+Batch 900: training loss 3.6761295795440674
+Batch 1000: training loss 3.6155056953430176
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.69205379486084
+Batch 1200: training loss 3.5810065269470215
+Batch 1300: training loss 3.5393354892730713
+Batch 1400: training loss 3.728264331817627
+Batch 1500: training loss 3.7461371421813965
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.8494486808776855
+Batch 1700: training loss 3.7065329551696777
+Batch 1800: training loss 3.676337718963623
+Batch 1900: training loss 3.675518035888672
+Batch 2000: training loss 3.6408660411834717
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.6021409034729004
+Batch 2200: training loss 3.671563148498535
+Batch 2300: training loss 3.661994457244873
+Epoch 15: Average Training Loss: 3.668401606864083, Average Validation Loss: 3.9255890349547067
+Batch 100: training loss 3.6462111473083496
+Batch 200: training loss 3.680968761444092
+Batch 300: training loss 3.5968751907348633
+Batch 400: training loss 3.7058358192443848
+Batch 500: training loss 3.624584674835205
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.728628635406494
+Batch 700: training loss 3.6968095302581787
+Batch 800: training loss 3.7393240928649902
+Batch 900: training loss 3.6838464736938477
+Batch 1000: training loss 3.5672755241394043
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.636784553527832
+Batch 1200: training loss 3.644590377807617
+Batch 1300: training loss 3.6380436420440674
+Batch 1400: training loss 3.6581554412841797
+Batch 1500: training loss 3.6831021308898926
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.669078826904297
+Batch 1700: training loss 3.511284351348877
+Batch 1800: training loss 3.5763354301452637
+Batch 1900: training loss 3.7616541385650635
+Batch 2000: training loss 3.6318235397338867
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.562346935272217
+Batch 2200: training loss 3.5304903984069824
+Batch 2300: training loss 3.669093132019043
+Epoch 16: Average Training Loss: 3.6254918094177704, Average Validation Loss: 3.8904172480106354
+Batch 100: training loss 3.55212664604187
+Batch 200: training loss 3.582639694213867
+Batch 300: training loss 3.7574658393859863
+Batch 400: training loss 3.4262313842773438
+Batch 500: training loss 3.531038761138916
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.507213592529297
+Batch 700: training loss 3.637972831726074
+Batch 800: training loss 3.5775976181030273
+Batch 900: training loss 3.4849040508270264
+Batch 1000: training loss 3.7147459983825684
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.3691844940185547
+Batch 1200: training loss 3.5785694122314453
+Batch 1300: training loss 3.4987447261810303
+Batch 1400: training loss 3.630629539489746
+Batch 1500: training loss 3.7288217544555664
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.735464572906494
+Batch 1700: training loss 3.604896068572998
+Batch 1800: training loss 3.683692693710327
+Batch 1900: training loss 3.4662368297576904
+Batch 2000: training loss 3.4803285598754883
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.6658689975738525
+Batch 2200: training loss 3.6845977306365967
+Batch 2300: training loss 3.472165822982788
+Epoch 17: Average Training Loss: 3.586626383835138, Average Validation Loss: 3.854856848716736
+Batch 100: training loss 3.6719837188720703
+Batch 200: training loss 3.567483425140381
+Batch 300: training loss 3.618234157562256
+Batch 400: training loss 3.514775514602661
+Batch 500: training loss 3.4912004470825195
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.5322365760803223
+Batch 700: training loss 3.5473685264587402
+Batch 800: training loss 3.599071741104126
+Batch 900: training loss 3.589803695678711
+Batch 1000: training loss 3.388796329498291
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.45829176902771
+Batch 1200: training loss 3.443636417388916
+Batch 1300: training loss 3.4295272827148438
+Batch 1400: training loss 3.4900708198547363
+Batch 1500: training loss 3.5261268615722656
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.7180583477020264
+Batch 1700: training loss 3.510244846343994
+Batch 1800: training loss 3.631958484649658
+Batch 1900: training loss 3.410269260406494
+Batch 2000: training loss 3.5382018089294434
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.538144111633301
+Batch 2200: training loss 3.707181930541992
+Batch 2300: training loss 3.55342435836792
+Epoch 18: Average Training Loss: 3.5505763553718657, Average Validation Loss: 3.8145426909128823
+Batch 100: training loss 3.4014463424682617
+Batch 200: training loss 3.3951032161712646
+Batch 300: training loss 3.5863680839538574
+Batch 400: training loss 3.533539295196533
+Batch 500: training loss 3.5694150924682617
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.4780073165893555
+Batch 700: training loss 3.374904155731201
+Batch 800: training loss 3.6940038204193115
+Batch 900: training loss 3.6321053504943848
+Batch 1000: training loss 3.6171321868896484
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.526876926422119
+Batch 1200: training loss 3.479480028152466
+Batch 1300: training loss 3.47623348236084
+Batch 1400: training loss 3.6038620471954346
+Batch 1500: training loss 3.3891642093658447
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.6743063926696777
+Batch 1700: training loss 3.4324073791503906
+Batch 1800: training loss 3.464931011199951
+Batch 1900: training loss 3.5105233192443848
+Batch 2000: training loss 3.653242588043213
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.3826708793640137
+Batch 2200: training loss 3.4551925659179688
+Batch 2300: training loss 3.368495464324951
+Epoch 19: Average Training Loss: 3.516772356863315, Average Validation Loss: 3.774348030487696
+Batch 100: training loss 3.54834246635437
+Batch 200: training loss 3.3064446449279785
+Batch 300: training loss 3.407320976257324
+Batch 400: training loss 3.333745002746582
+Batch 500: training loss 3.511598587036133
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.3737597465515137
+Batch 700: training loss 3.605715751647949
+Batch 800: training loss 3.5349180698394775
+Batch 900: training loss 3.579829692840576
+Batch 1000: training loss 3.585873603820801
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.5881540775299072
+Batch 1200: training loss 3.485349655151367
+Batch 1300: training loss 3.4247934818267822
+Batch 1400: training loss 3.3487796783447266
+Batch 1500: training loss 3.5045838356018066
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.3926048278808594
+Batch 1700: training loss 3.540109634399414
+Batch 1800: training loss 3.565338134765625
+Batch 1900: training loss 3.4607653617858887
+Batch 2000: training loss 3.562647819519043
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.4347939491271973
+Batch 2200: training loss 3.423672676086426
+Batch 2300: training loss 3.4668946266174316
+Epoch 20: Average Training Loss: 3.4862675897700797, Average Validation Loss: 3.7554764250914254
+Batch 100: training loss 3.4490315914154053
+Batch 200: training loss 3.2627410888671875
+Batch 300: training loss 3.379456043243408
+Batch 400: training loss 3.388627529144287
+Batch 500: training loss 3.555116891860962
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.420490264892578
+Batch 700: training loss 3.585679531097412
+Batch 800: training loss 3.4936816692352295
+Batch 900: training loss 3.2690887451171875
+Batch 1000: training loss 3.6228270530700684
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.3911452293395996
+Batch 1200: training loss 3.4261679649353027
+Batch 1300: training loss 3.750613212585449
+Batch 1400: training loss 3.4440293312072754
+Batch 1500: training loss 3.428788423538208
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.39441180229187
+Batch 1700: training loss 3.531095266342163
+Batch 1800: training loss 3.6006579399108887
+Batch 1900: training loss 3.5063791275024414
+Batch 2000: training loss 3.574291706085205
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.5507616996765137
+Batch 2200: training loss 3.348280906677246
+Batch 2300: training loss 3.482478618621826
+Epoch 21: Average Training Loss: 3.4573713297933444, Average Validation Loss: 3.72360568245252
+Batch 100: training loss 3.4471726417541504
+Batch 200: training loss 3.428654909133911
+Batch 300: training loss 3.4698095321655273
+Batch 400: training loss 3.4702377319335938
+Batch 500: training loss 3.365466594696045
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.567002296447754
+Batch 700: training loss 3.475625514984131
+Batch 800: training loss 3.5717625617980957
+Batch 900: training loss 3.565945625305176
+Batch 1000: training loss 3.270181894302368
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.3865299224853516
+Batch 1200: training loss 3.4046175479888916
+Batch 1300: training loss 3.3733177185058594
+Batch 1400: training loss 3.511784076690674
+Batch 1500: training loss 3.3774845600128174
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.2729592323303223
+Batch 1700: training loss 3.2037129402160645
+Batch 1800: training loss 3.4503583908081055
+Batch 1900: training loss 3.3523244857788086
+Batch 2000: training loss 3.391646385192871
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.3454627990722656
+Batch 2200: training loss 3.2775325775146484
+Batch 2300: training loss 3.5333287715911865
+Epoch 22: Average Training Loss: 3.430229364808509, Average Validation Loss: 3.6850182910760245
+Batch 100: training loss 3.321218729019165
+Batch 200: training loss 3.3156332969665527
+Batch 300: training loss 3.4523799419403076
+Batch 400: training loss 3.2614428997039795
+Batch 500: training loss 3.361171007156372
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.386216163635254
+Batch 700: training loss 3.3524770736694336
+Batch 800: training loss 3.5714383125305176
+Batch 900: training loss 3.37030291557312
+Batch 1000: training loss 3.5056519508361816
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.453883171081543
+Batch 1200: training loss 3.414158344268799
+Batch 1300: training loss 3.393782138824463
+Batch 1400: training loss 3.362639904022217
+Batch 1500: training loss 3.400789260864258
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.315643548965454
+Batch 1700: training loss 3.473862648010254
+Batch 1800: training loss 3.4099225997924805
+Batch 1900: training loss 3.487062454223633
+Batch 2000: training loss 3.463864803314209
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.411397933959961
+Batch 2200: training loss 3.277329683303833
+Batch 2300: training loss 3.365649461746216
+Epoch 23: Average Training Loss: 3.4058330865646793, Average Validation Loss: 3.6650438706080117
+Batch 100: training loss 3.285046100616455
+Batch 200: training loss 3.4946422576904297
+Batch 300: training loss 3.551560878753662
+Batch 400: training loss 3.4033782482147217
+Batch 500: training loss 3.4263927936553955
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.415775775909424
+Batch 700: training loss 3.3269548416137695
+Batch 800: training loss 3.381873846054077
+Batch 900: training loss 3.335207939147949
+Batch 1000: training loss 3.424731969833374
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.436833143234253
+Batch 1200: training loss 3.423283576965332
+Batch 1300: training loss 3.3918075561523438
+Batch 1400: training loss 3.3910555839538574
+Batch 1500: training loss 3.4215378761291504
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.405322313308716
+Batch 1700: training loss 3.2592835426330566
+Batch 1800: training loss 3.281698226928711
+Batch 1900: training loss 3.3519911766052246
+Batch 2000: training loss 3.2572383880615234
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.261178493499756
+Batch 2200: training loss 3.4785399436950684
+Batch 2300: training loss 3.3097448348999023
+Epoch 24: Average Training Loss: 3.3828328688193507, Average Validation Loss: 3.6471977134545646
+Batch 100: training loss 3.276346206665039
+Batch 200: training loss 3.483151435852051
+Batch 300: training loss 3.423428535461426
+Batch 400: training loss 3.3134608268737793
+Batch 500: training loss 3.194296360015869
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.350379467010498
+Batch 700: training loss 3.5138583183288574
+Batch 800: training loss 3.3307442665100098
+Batch 900: training loss 3.319835901260376
+Batch 1000: training loss 3.299590587615967
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.3069119453430176
+Batch 1200: training loss 3.363320827484131
+Batch 1300: training loss 3.3672609329223633
+Batch 1400: training loss 3.3766703605651855
+Batch 1500: training loss 3.3715178966522217
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.4631359577178955
+Batch 1700: training loss 3.4504284858703613
+Batch 1800: training loss 3.466156482696533
+Batch 1900: training loss 3.329501152038574
+Batch 2000: training loss 3.5490708351135254
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.3084912300109863
+Batch 2200: training loss 3.3330283164978027
+Batch 2300: training loss 3.1540141105651855
+Epoch 25: Average Training Loss: 3.361025506217325, Average Validation Loss: 3.630812337001165
+Batch 100: training loss 3.30838680267334
+Batch 200: training loss 3.3269519805908203
+Batch 300: training loss 3.19644832611084
+Batch 400: training loss 3.272294044494629
+Batch 500: training loss 3.3866190910339355
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.5707058906555176
+Batch 700: training loss 3.3395326137542725
+Batch 800: training loss 3.2763359546661377
+Batch 900: training loss 3.3295655250549316
+Batch 1000: training loss 3.3013339042663574
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.207009792327881
+Batch 1200: training loss 3.3309712409973145
+Batch 1300: training loss 3.3836135864257812
+Batch 1400: training loss 3.4234046936035156
+Batch 1500: training loss 3.3865673542022705
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.3285231590270996
+Batch 1700: training loss 3.285586357116699
+Batch 1800: training loss 3.3132081031799316
+Batch 1900: training loss 3.32778000831604
+Batch 2000: training loss 3.3424766063690186
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.449713706970215
+Batch 2200: training loss 3.2894511222839355
+Batch 2300: training loss 3.2740490436553955
+Epoch 26: Average Training Loss: 3.3412280399034455, Average Validation Loss: 3.6069495181242623
+Batch 100: training loss 3.248274803161621
+Batch 200: training loss 3.371493339538574
+Batch 300: training loss 3.290922164916992
+Batch 400: training loss 3.3092379570007324
+Batch 500: training loss 3.3350043296813965
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.534332752227783
+Batch 700: training loss 3.4680492877960205
+Batch 800: training loss 3.1821041107177734
+Batch 900: training loss 3.2235023975372314
+Batch 1000: training loss 3.3067736625671387
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.2336883544921875
+Batch 1200: training loss 3.324855327606201
+Batch 1300: training loss 3.408480644226074
+Batch 1400: training loss 3.2369728088378906
+Batch 1500: training loss 3.3348541259765625
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.3895750045776367
+Batch 1700: training loss 3.338096857070923
+Batch 1800: training loss 3.288059711456299
+Batch 1900: training loss 3.200265407562256
+Batch 2000: training loss 3.415553092956543
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.3564352989196777
+Batch 2200: training loss 3.372807025909424
+Batch 2300: training loss 3.26589298248291
+Epoch 27: Average Training Loss: 3.322545349292788, Average Validation Loss: 3.6046381294727325
+Batch 100: training loss 3.374879837036133
+Batch 200: training loss 3.161674976348877
+Batch 300: training loss 3.4009485244750977
+Batch 400: training loss 3.1961233615875244
+Batch 500: training loss 3.2997255325317383
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.2673990726470947
+Batch 700: training loss 3.28720760345459
+Batch 800: training loss 3.1986708641052246
+Batch 900: training loss 3.363457202911377
+Batch 1000: training loss 3.220712661743164
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.3496193885803223
+Batch 1200: training loss 3.380277156829834
+Batch 1300: training loss 3.190725803375244
+Batch 1400: training loss 3.1722004413604736
+Batch 1500: training loss 3.276914358139038
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.2925190925598145
+Batch 1700: training loss 3.186598539352417
+Batch 1800: training loss 3.305202007293701
+Batch 1900: training loss 3.3050951957702637
+Batch 2000: training loss 3.400639533996582
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.3400912284851074
+Batch 2200: training loss 3.1877877712249756
+Batch 2300: training loss 3.4183716773986816
+Epoch 28: Average Training Loss: 3.3043994875084417, Average Validation Loss: 3.580950081348419
+Batch 100: training loss 3.338350772857666
+Batch 200: training loss 3.2876663208007812
+Batch 300: training loss 3.217578411102295
+Batch 400: training loss 3.336665153503418
+Batch 500: training loss 3.302678108215332
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.3671798706054688
+Batch 700: training loss 3.237013101577759
+Batch 800: training loss 3.2449965476989746
+Batch 900: training loss 3.287888526916504
+Batch 1000: training loss 3.3412673473358154
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.2423043251037598
+Batch 1200: training loss 3.272125720977783
+Batch 1300: training loss 3.2955162525177
+Batch 1400: training loss 3.1762478351593018
+Batch 1500: training loss 3.2278337478637695
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.319424629211426
+Batch 1700: training loss 3.2673726081848145
+Batch 1800: training loss 3.42067289352417
+Batch 1900: training loss 3.2391536235809326
+Batch 2000: training loss 3.211428642272949
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.3567276000976562
+Batch 2200: training loss 3.1701836585998535
+Batch 2300: training loss 3.2642407417297363
+Epoch 29: Average Training Loss: 3.288125181869435, Average Validation Loss: 3.568178653717041
+Batch 100: training loss 3.4515910148620605
+Batch 200: training loss 3.3144826889038086
+Batch 300: training loss 3.2171685695648193
+Batch 400: training loss 3.2253129482269287
+Batch 500: training loss 3.1723227500915527
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.4055871963500977
+Batch 700: training loss 3.125831127166748
+Batch 800: training loss 3.2197837829589844
+Batch 900: training loss 3.2720537185668945
+Batch 1000: training loss 3.483534812927246
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.3306307792663574
+Batch 1200: training loss 3.428805351257324
+Batch 1300: training loss 3.2677388191223145
+Batch 1400: training loss 3.3112504482269287
+Batch 1500: training loss 3.5147223472595215
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.3332061767578125
+Batch 1700: training loss 3.391712188720703
+Batch 1800: training loss 3.2069954872131348
+Batch 1900: training loss 3.3125226497650146
+Batch 2000: training loss 3.2131552696228027
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1233105659484863
+Batch 2200: training loss 3.4071617126464844
+Batch 2300: training loss 3.376255989074707
+Epoch 30: Average Training Loss: 3.272567443676776, Average Validation Loss: 3.559717118740082
+Batch 100: training loss 3.250244140625
+Batch 200: training loss 3.249526023864746
+Batch 300: training loss 3.167065143585205
+Batch 400: training loss 3.255131721496582
+Batch 500: training loss 3.2371113300323486
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.2586820125579834
+Batch 700: training loss 3.3232643604278564
+Batch 800: training loss 3.2775509357452393
+Batch 900: training loss 3.4112982749938965
+Batch 1000: training loss 3.2144808769226074
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1266603469848633
+Batch 1200: training loss 3.2404870986938477
+Batch 1300: training loss 3.2737929821014404
+Batch 1400: training loss 3.330967426300049
+Batch 1500: training loss 3.2363386154174805
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.1591744422912598
+Batch 1700: training loss 3.333670139312744
+Batch 1800: training loss 3.151244878768921
+Batch 1900: training loss 3.146296739578247
+Batch 2000: training loss 3.1028010845184326
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1195735931396484
+Batch 2200: training loss 3.2175369262695312
+Batch 2300: training loss 3.215816020965576
+Epoch 31: Average Training Loss: 3.258160144700939, Average Validation Loss: 3.549353132645289
+Batch 100: training loss 3.3215088844299316
+Batch 200: training loss 3.165881872177124
+Batch 300: training loss 3.2515580654144287
+Batch 400: training loss 3.107809066772461
+Batch 500: training loss 3.3348379135131836
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.153763771057129
+Batch 700: training loss 3.1978139877319336
+Batch 800: training loss 3.2622740268707275
+Batch 900: training loss 3.24747371673584
+Batch 1000: training loss 3.3006162643432617
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1496987342834473
+Batch 1200: training loss 3.1213021278381348
+Batch 1300: training loss 3.1759674549102783
+Batch 1400: training loss 3.13165283203125
+Batch 1500: training loss 3.3537561893463135
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.283087968826294
+Batch 1700: training loss 3.0787439346313477
+Batch 1800: training loss 3.1709203720092773
+Batch 1900: training loss 3.193138599395752
+Batch 2000: training loss 3.146191358566284
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1904444694519043
+Batch 2200: training loss 3.1941280364990234
+Batch 2300: training loss 3.2634692192077637
+Epoch 32: Average Training Loss: 3.244304078227424, Average Validation Loss: 3.530753582715988
+Batch 100: training loss 3.2255964279174805
+Batch 200: training loss 3.395761728286743
+Batch 300: training loss 3.1244661808013916
+Batch 400: training loss 3.2354559898376465
+Batch 500: training loss 3.268167018890381
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.267298698425293
+Batch 700: training loss 3.148534059524536
+Batch 800: training loss 3.3285155296325684
+Batch 900: training loss 3.2661359310150146
+Batch 1000: training loss 3.217890977859497
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1876325607299805
+Batch 1200: training loss 3.1599173545837402
+Batch 1300: training loss 3.2771353721618652
+Batch 1400: training loss 3.0871760845184326
+Batch 1500: training loss 3.2866811752319336
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.303297519683838
+Batch 1700: training loss 3.1831133365631104
+Batch 1800: training loss 3.176034450531006
+Batch 1900: training loss 3.157689094543457
+Batch 2000: training loss 3.3254857063293457
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.284658432006836
+Batch 2200: training loss 3.2671027183532715
+Batch 2300: training loss 3.2222065925598145
+Epoch 33: Average Training Loss: 3.231669140452004, Average Validation Loss: 3.513024518887202
+Batch 100: training loss 3.1553502082824707
+Batch 200: training loss 3.0319528579711914
+Batch 300: training loss 3.170445680618286
+Batch 400: training loss 3.2435131072998047
+Batch 500: training loss 3.3860960006713867
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.0481133460998535
+Batch 700: training loss 3.204174518585205
+Batch 800: training loss 3.195492744445801
+Batch 900: training loss 3.2009105682373047
+Batch 1000: training loss 3.1722412109375
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.0748119354248047
+Batch 1200: training loss 3.208665370941162
+Batch 1300: training loss 3.0949299335479736
+Batch 1400: training loss 3.1796202659606934
+Batch 1500: training loss 3.10676908493042
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.1136679649353027
+Batch 1700: training loss 3.0534915924072266
+Batch 1800: training loss 3.161790370941162
+Batch 1900: training loss 3.2444889545440674
+Batch 2000: training loss 3.186691999435425
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1637983322143555
+Batch 2200: training loss 3.248450517654419
+Batch 2300: training loss 3.1487865447998047
+Epoch 34: Average Training Loss: 3.218841560362956, Average Validation Loss: 3.5027777949968972
+Batch 100: training loss 3.277447462081909
+Batch 200: training loss 3.1816725730895996
+Batch 300: training loss 3.1774563789367676
+Batch 400: training loss 3.101522445678711
+Batch 500: training loss 3.1058616638183594
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.242098808288574
+Batch 700: training loss 3.2389912605285645
+Batch 800: training loss 3.384554624557495
+Batch 900: training loss 3.205980062484741
+Batch 1000: training loss 3.186551332473755
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.069840431213379
+Batch 1200: training loss 3.1868433952331543
+Batch 1300: training loss 3.270331382751465
+Batch 1400: training loss 3.158512592315674
+Batch 1500: training loss 3.0872178077697754
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0690524578094482
+Batch 1700: training loss 3.2772741317749023
+Batch 1800: training loss 3.228311777114868
+Batch 1900: training loss 3.2810802459716797
+Batch 2000: training loss 3.177610397338867
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1759681701660156
+Batch 2200: training loss 3.1499452590942383
+Batch 2300: training loss 3.1972131729125977
+Epoch 35: Average Training Loss: 3.207364288613251, Average Validation Loss: 3.4921351174513497
+Batch 100: training loss 3.161393165588379
+Batch 200: training loss 3.1455695629119873
+Batch 300: training loss 2.881640672683716
+Batch 400: training loss 3.1278228759765625
+Batch 500: training loss 3.0396523475646973
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.1735901832580566
+Batch 700: training loss 3.3540663719177246
+Batch 800: training loss 3.262913465499878
+Batch 900: training loss 3.113079309463501
+Batch 1000: training loss 3.0963191986083984
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.0682871341705322
+Batch 1200: training loss 3.165785312652588
+Batch 1300: training loss 3.14546799659729
+Batch 1400: training loss 3.3726816177368164
+Batch 1500: training loss 3.132262706756592
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.2785749435424805
+Batch 1700: training loss 3.297717571258545
+Batch 1800: training loss 3.2941393852233887
+Batch 1900: training loss 3.2373294830322266
+Batch 2000: training loss 3.258225440979004
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1856682300567627
+Batch 2200: training loss 3.2596960067749023
+Batch 2300: training loss 3.2900729179382324
+Epoch 36: Average Training Loss: 3.1958326562069383, Average Validation Loss: 3.494556963443756
+Batch 100: training loss 3.286080837249756
+Batch 200: training loss 3.078016757965088
+Batch 300: training loss 3.1582489013671875
+Batch 400: training loss 3.1453893184661865
+Batch 500: training loss 3.069000720977783
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.2159881591796875
+Batch 700: training loss 3.2188448905944824
+Batch 800: training loss 3.2509052753448486
+Batch 900: training loss 3.1315903663635254
+Batch 1000: training loss 3.100524425506592
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1326818466186523
+Batch 1200: training loss 3.188230514526367
+Batch 1300: training loss 3.0523881912231445
+Batch 1400: training loss 3.1431515216827393
+Batch 1500: training loss 3.1762516498565674
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.3447976112365723
+Batch 1700: training loss 3.317412853240967
+Batch 1800: training loss 3.1909728050231934
+Batch 1900: training loss 3.09838604927063
+Batch 2000: training loss 3.1338086128234863
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.117176055908203
+Batch 2200: training loss 3.2731943130493164
+Batch 2300: training loss 3.278231620788574
+Epoch 37: Average Training Loss: 3.1848941692516664, Average Validation Loss: 3.479582041501999
+Batch 100: training loss 3.0348098278045654
+Batch 200: training loss 3.1576027870178223
+Batch 300: training loss 3.213512897491455
+Batch 400: training loss 3.129267930984497
+Batch 500: training loss 3.3250808715820312
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.1070215702056885
+Batch 700: training loss 3.105041980743408
+Batch 800: training loss 3.1039505004882812
+Batch 900: training loss 3.2776436805725098
+Batch 1000: training loss 3.192906618118286
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.0587635040283203
+Batch 1200: training loss 3.164977550506592
+Batch 1300: training loss 3.3688788414001465
+Batch 1400: training loss 3.142793655395508
+Batch 1500: training loss 3.1044325828552246
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.208179473876953
+Batch 1700: training loss 3.060011386871338
+Batch 1800: training loss 3.2012643814086914
+Batch 1900: training loss 3.003572702407837
+Batch 2000: training loss 3.131291389465332
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.2724900245666504
+Batch 2200: training loss 2.8633882999420166
+Batch 2300: training loss 3.1847610473632812
+Epoch 38: Average Training Loss: 3.175015956366835, Average Validation Loss: 3.47414223353068
+Batch 100: training loss 3.0569472312927246
+Batch 200: training loss 3.067185401916504
+Batch 300: training loss 3.146843433380127
+Batch 400: training loss 3.126924514770508
+Batch 500: training loss 3.088646411895752
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.0807976722717285
+Batch 700: training loss 3.058438777923584
+Batch 800: training loss 3.1436405181884766
+Batch 900: training loss 3.172220468521118
+Batch 1000: training loss 3.084373950958252
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1045632362365723
+Batch 1200: training loss 3.118313789367676
+Batch 1300: training loss 3.064479351043701
+Batch 1400: training loss 3.281773567199707
+Batch 1500: training loss 3.209831953048706
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.1658926010131836
+Batch 1700: training loss 3.221738338470459
+Batch 1800: training loss 3.29764986038208
+Batch 1900: training loss 3.205761432647705
+Batch 2000: training loss 3.148794651031494
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1507179737091064
+Batch 2200: training loss 3.196075439453125
+Batch 2300: training loss 3.183755874633789
+Epoch 39: Average Training Loss: 3.1653675227441886, Average Validation Loss: 3.4555159906546273
+Batch 100: training loss 3.157024383544922
+Batch 200: training loss 3.0435633659362793
+Batch 300: training loss 3.122529983520508
+Batch 400: training loss 3.1516776084899902
+Batch 500: training loss 3.2714896202087402
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.037637948989868
+Batch 700: training loss 3.2828304767608643
+Batch 800: training loss 2.9987330436706543
+Batch 900: training loss 3.077070474624634
+Batch 1000: training loss 3.135025978088379
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.0832815170288086
+Batch 1200: training loss 3.2351174354553223
+Batch 1300: training loss 3.0156867504119873
+Batch 1400: training loss 3.1790084838867188
+Batch 1500: training loss 3.2076241970062256
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0762271881103516
+Batch 1700: training loss 3.2229127883911133
+Batch 1800: training loss 3.1530442237854004
+Batch 1900: training loss 3.0514330863952637
+Batch 2000: training loss 3.266122341156006
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1120526790618896
+Batch 2200: training loss 3.1194677352905273
+Batch 2300: training loss 3.155263900756836
+Epoch 40: Average Training Loss: 3.1554985414592887, Average Validation Loss: 3.4527119795481362
+Batch 100: training loss 3.0675253868103027
+Batch 200: training loss 3.285824775695801
+Batch 300: training loss 3.062392234802246
+Batch 400: training loss 3.20613431930542
+Batch 500: training loss 3.1291933059692383
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 2.9629359245300293
+Batch 700: training loss 3.0472445487976074
+Batch 800: training loss 3.198007106781006
+Batch 900: training loss 3.1548855304718018
+Batch 1000: training loss 3.0501770973205566
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.007030487060547
+Batch 1200: training loss 3.5140204429626465
+Batch 1300: training loss 3.3491287231445312
+Batch 1400: training loss 3.074662685394287
+Batch 1500: training loss 3.0158305168151855
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.094249725341797
+Batch 1700: training loss 3.04077410697937
+Batch 1800: training loss 3.242105484008789
+Batch 1900: training loss 3.055957078933716
+Batch 2000: training loss 3.128735065460205
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1451237201690674
+Batch 2200: training loss 3.2441518306732178
+Batch 2300: training loss 3.1070361137390137
+Epoch 41: Average Training Loss: 3.1465673962347336, Average Validation Loss: 3.4458169440428414
+Batch 100: training loss 3.05245304107666
+Batch 200: training loss 3.078429698944092
+Batch 300: training loss 3.0912041664123535
+Batch 400: training loss 3.115955352783203
+Batch 500: training loss 2.9739410877227783
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.0359740257263184
+Batch 700: training loss 3.3114800453186035
+Batch 800: training loss 3.0744199752807617
+Batch 900: training loss 3.3625850677490234
+Batch 1000: training loss 3.133235216140747
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.0171403884887695
+Batch 1200: training loss 3.278110980987549
+Batch 1300: training loss 3.039950370788574
+Batch 1400: training loss 3.044699192047119
+Batch 1500: training loss 3.209670066833496
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.1394474506378174
+Batch 1700: training loss 3.204843521118164
+Batch 1800: training loss 3.0198731422424316
+Batch 1900: training loss 3.242351531982422
+Batch 2000: training loss 3.0840375423431396
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1060216426849365
+Batch 2200: training loss 3.090467691421509
+Batch 2300: training loss 3.10476016998291
+Epoch 42: Average Training Loss: 3.137988538668831, Average Validation Loss: 3.4317168593406677
+Batch 100: training loss 3.1637661457061768
+Batch 200: training loss 3.008873701095581
+Batch 300: training loss 3.4704065322875977
+Batch 400: training loss 3.009148120880127
+Batch 500: training loss 3.0065360069274902
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.143479585647583
+Batch 700: training loss 3.1721224784851074
+Batch 800: training loss 3.0738635063171387
+Batch 900: training loss 3.233055591583252
+Batch 1000: training loss 3.0753989219665527
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1725211143493652
+Batch 1200: training loss 3.109426498413086
+Batch 1300: training loss 3.258885622024536
+Batch 1400: training loss 2.9988975524902344
+Batch 1500: training loss 3.176821231842041
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0813841819763184
+Batch 1700: training loss 3.096036195755005
+Batch 1800: training loss 3.1322476863861084
+Batch 1900: training loss 3.1429500579833984
+Batch 2000: training loss 3.096975803375244
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.060117244720459
+Batch 2200: training loss 3.0753531455993652
+Batch 2300: training loss 3.105727195739746
+Epoch 43: Average Training Loss: 3.1291053540267226, Average Validation Loss: 3.427573502063751
+Batch 100: training loss 3.043811798095703
+Batch 200: training loss 2.964345932006836
+Batch 300: training loss 3.0409533977508545
+Batch 400: training loss 3.027040958404541
+Batch 500: training loss 2.9901490211486816
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 2.91691517829895
+Batch 700: training loss 3.0278446674346924
+Batch 800: training loss 2.933345079421997
+Batch 900: training loss 3.1625425815582275
+Batch 1000: training loss 3.1672616004943848
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1128227710723877
+Batch 1200: training loss 3.08249568939209
+Batch 1300: training loss 3.1837315559387207
+Batch 1400: training loss 3.0639185905456543
+Batch 1500: training loss 2.9696290493011475
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.16020131111145
+Batch 1700: training loss 3.104593515396118
+Batch 1800: training loss 3.1492435932159424
+Batch 1900: training loss 3.0270862579345703
+Batch 2000: training loss 3.1984424591064453
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.4364306926727295
+Batch 2200: training loss 3.1983156204223633
+Batch 2300: training loss 3.0275516510009766
+Epoch 44: Average Training Loss: 3.1214760479870103, Average Validation Loss: 3.422038326660792
+Batch 100: training loss 3.1001131534576416
+Batch 200: training loss 3.021514892578125
+Batch 300: training loss 3.157780647277832
+Batch 400: training loss 2.9417929649353027
+Batch 500: training loss 3.1199069023132324
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.25388765335083
+Batch 700: training loss 3.2312746047973633
+Batch 800: training loss 3.1055424213409424
+Batch 900: training loss 3.1031205654144287
+Batch 1000: training loss 3.1075892448425293
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.189211368560791
+Batch 1200: training loss 3.132023334503174
+Batch 1300: training loss 3.192837715148926
+Batch 1400: training loss 3.154020309448242
+Batch 1500: training loss 3.056427001953125
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0374324321746826
+Batch 1700: training loss 3.1405184268951416
+Batch 1800: training loss 3.107588768005371
+Batch 1900: training loss 3.2225751876831055
+Batch 2000: training loss 3.1703996658325195
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.2370405197143555
+Batch 2200: training loss 3.165853977203369
+Batch 2300: training loss 3.1095218658447266
+Epoch 45: Average Training Loss: 3.113674981907366, Average Validation Loss: 3.4208827515443168
+Batch 100: training loss 2.9974637031555176
+Batch 200: training loss 3.1973977088928223
+Batch 300: training loss 3.1239891052246094
+Batch 400: training loss 3.0054209232330322
+Batch 500: training loss 3.049091339111328
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.251720666885376
+Batch 700: training loss 3.047513484954834
+Batch 800: training loss 3.1641547679901123
+Batch 900: training loss 3.118291139602661
+Batch 1000: training loss 3.093045949935913
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1236767768859863
+Batch 1200: training loss 3.033168315887451
+Batch 1300: training loss 3.024435043334961
+Batch 1400: training loss 3.3471407890319824
+Batch 1500: training loss 3.199705123901367
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 2.9319257736206055
+Batch 1700: training loss 3.1195120811462402
+Batch 1800: training loss 3.1420254707336426
+Batch 1900: training loss 3.0413098335266113
+Batch 2000: training loss 3.085444927215576
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.9585018157958984
+Batch 2200: training loss 3.0150699615478516
+Batch 2300: training loss 3.1099696159362793
+Epoch 46: Average Training Loss: 3.105825611348852, Average Validation Loss: 3.4133630891640983
+Batch 100: training loss 3.145047664642334
+Batch 200: training loss 2.912827491760254
+Batch 300: training loss 3.0674099922180176
+Batch 400: training loss 2.9354238510131836
+Batch 500: training loss 3.1578290462493896
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.233015537261963
+Batch 700: training loss 2.9974472522735596
+Batch 800: training loss 3.0215563774108887
+Batch 900: training loss 3.155529499053955
+Batch 1000: training loss 3.0575685501098633
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1731934547424316
+Batch 1200: training loss 3.2485694885253906
+Batch 1300: training loss 3.262437343597412
+Batch 1400: training loss 2.984496593475342
+Batch 1500: training loss 3.1169381141662598
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.1267905235290527
+Batch 1700: training loss 3.2112579345703125
+Batch 1800: training loss 3.0856499671936035
+Batch 1900: training loss 3.144814968109131
+Batch 2000: training loss 3.0554792881011963
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.005155324935913
+Batch 2200: training loss 3.051442861557007
+Batch 2300: training loss 3.2606282234191895
+Epoch 47: Average Training Loss: 3.0989998410179345, Average Validation Loss: 3.4063932398955026
+Batch 100: training loss 2.9303574562072754
+Batch 200: training loss 3.141068935394287
+Batch 300: training loss 3.056154727935791
+Batch 400: training loss 3.1965525150299072
+Batch 500: training loss 3.054203987121582
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.0351483821868896
+Batch 700: training loss 3.045170307159424
+Batch 800: training loss 3.0528767108917236
+Batch 900: training loss 3.074774742126465
+Batch 1000: training loss 2.970701217651367
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1199731826782227
+Batch 1200: training loss 3.1354212760925293
+Batch 1300: training loss 3.1745734214782715
+Batch 1400: training loss 3.1972131729125977
+Batch 1500: training loss 3.1340808868408203
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.1231682300567627
+Batch 1700: training loss 3.0346503257751465
+Batch 1800: training loss 3.2040598392486572
+Batch 1900: training loss 3.0124707221984863
+Batch 2000: training loss 3.089005947113037
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1571528911590576
+Batch 2200: training loss 2.9689269065856934
+Batch 2300: training loss 3.1873528957366943
+Epoch 48: Average Training Loss: 3.091627135415126, Average Validation Loss: 3.4008822242418923
+Batch 100: training loss 2.9645378589630127
+Batch 200: training loss 3.232038974761963
+Batch 300: training loss 3.0696802139282227
+Batch 400: training loss 3.241939067840576
+Batch 500: training loss 3.114671230316162
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.0661821365356445
+Batch 700: training loss 3.1718130111694336
+Batch 800: training loss 3.179152011871338
+Batch 900: training loss 3.0667426586151123
+Batch 1000: training loss 3.310173988342285
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.047738790512085
+Batch 1200: training loss 3.1319949626922607
+Batch 1300: training loss 3.1243696212768555
+Batch 1400: training loss 3.014873504638672
+Batch 1500: training loss 2.9593725204467773
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 2.9862987995147705
+Batch 1700: training loss 3.0950307846069336
+Batch 1800: training loss 3.1291685104370117
+Batch 1900: training loss 3.090212345123291
+Batch 2000: training loss 2.9212563037872314
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.0814356803894043
+Batch 2200: training loss 3.180126667022705
+Batch 2300: training loss 3.028137683868408
+Epoch 49: Average Training Loss: 3.0851229003061613, Average Validation Loss: 3.3933575550715127
+Batch 100: training loss 3.156851291656494
+Batch 200: training loss 2.996192693710327
+Batch 300: training loss 3.1015005111694336
+Batch 400: training loss 3.1125833988189697
+Batch 500: training loss 3.1484017372131348
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.0932376384735107
+Batch 700: training loss 3.088379383087158
+Batch 800: training loss 3.080939292907715
+Batch 900: training loss 3.0575520992279053
+Batch 1000: training loss 3.2083492279052734
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.038954257965088
+Batch 1200: training loss 3.0298454761505127
+Batch 1300: training loss 3.1426303386688232
+Batch 1400: training loss 2.9838802814483643
+Batch 1500: training loss 2.9280238151550293
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0475006103515625
+Batch 1700: training loss 3.050729751586914
+Batch 1800: training loss 3.115664482116699
+Batch 1900: training loss 3.1012802124023438
+Batch 2000: training loss 3.005608081817627
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.924362897872925
+Batch 2200: training loss 2.9560201168060303
+Batch 2300: training loss 3.131969928741455
+Epoch 50: Average Training Loss: 3.0787368763632337, Average Validation Loss: 3.387326627969742
+Batch 100: training loss 3.1169486045837402
+Batch 200: training loss 2.9951910972595215
+Batch 300: training loss 3.0102500915527344
+Batch 400: training loss 3.0015971660614014
+Batch 500: training loss 3.1154074668884277
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.115415096282959
+Batch 700: training loss 3.106062412261963
+Batch 800: training loss 3.0155086517333984
+Batch 900: training loss 3.128139019012451
+Batch 1000: training loss 3.0748181343078613
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.093137264251709
+Batch 1200: training loss 3.250990390777588
+Batch 1300: training loss 3.058586359024048
+Batch 1400: training loss 3.034212589263916
+Batch 1500: training loss 3.074300765991211
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.234342336654663
+Batch 1700: training loss 3.1949830055236816
+Batch 1800: training loss 3.055859327316284
+Batch 1900: training loss 3.296558380126953
+Batch 2000: training loss 3.033935546875
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.068406581878662
+Batch 2200: training loss 3.0195603370666504
+Batch 2300: training loss 3.0941178798675537
+Epoch 51: Average Training Loss: 3.0721913275051445, Average Validation Loss: 3.381289611260096
+Batch 100: training loss 3.0906848907470703
+Batch 200: training loss 2.9970831871032715
+Batch 300: training loss 3.0566704273223877
+Batch 400: training loss 3.1284189224243164
+Batch 500: training loss 2.888030529022217
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.0209169387817383
+Batch 700: training loss 2.8635354042053223
+Batch 800: training loss 2.893805980682373
+Batch 900: training loss 3.0222978591918945
+Batch 1000: training loss 3.1070504188537598
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1030564308166504
+Batch 1200: training loss 3.089047431945801
+Batch 1300: training loss 3.1545777320861816
+Batch 1400: training loss 3.0231144428253174
+Batch 1500: training loss 3.0460429191589355
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.042790651321411
+Batch 1700: training loss 3.037648916244507
+Batch 1800: training loss 3.021728038787842
+Batch 1900: training loss 3.0441322326660156
+Batch 2000: training loss 2.987521171569824
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.0382742881774902
+Batch 2200: training loss 3.1802964210510254
+Batch 2300: training loss 3.0550107955932617
+Epoch 52: Average Training Loss: 3.06565644442018, Average Validation Loss: 3.3829535444577536
+Batch 100: training loss 2.9386372566223145
+Batch 200: training loss 3.050050735473633
+Batch 300: training loss 3.029661178588867
+Batch 400: training loss 2.9224064350128174
+Batch 500: training loss 3.1980361938476562
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.054896831512451
+Batch 700: training loss 2.9945154190063477
+Batch 800: training loss 2.909853458404541
+Batch 900: training loss 3.0474352836608887
+Batch 1000: training loss 2.8682897090911865
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.2275261878967285
+Batch 1200: training loss 3.1306633949279785
+Batch 1300: training loss 3.044560432434082
+Batch 1400: training loss 2.962676525115967
+Batch 1500: training loss 3.034538745880127
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0486550331115723
+Batch 1700: training loss 3.0552611351013184
+Batch 1800: training loss 3.1588540077209473
+Batch 1900: training loss 3.0394351482391357
+Batch 2000: training loss 3.05483341217041
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1665968894958496
+Batch 2200: training loss 3.105132579803467
+Batch 2300: training loss 3.164400339126587
+Epoch 53: Average Training Loss: 3.059866311200243, Average Validation Loss: 3.377265383799871
+Batch 100: training loss 3.0202128887176514
+Batch 200: training loss 3.027643918991089
+Batch 300: training loss 3.1170568466186523
+Batch 400: training loss 2.8996896743774414
+Batch 500: training loss 3.0961036682128906
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 2.8543484210968018
+Batch 700: training loss 3.160886287689209
+Batch 800: training loss 3.2942771911621094
+Batch 900: training loss 3.126530408859253
+Batch 1000: training loss 3.024096965789795
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.211345672607422
+Batch 1200: training loss 3.0745604038238525
+Batch 1300: training loss 2.9961719512939453
+Batch 1400: training loss 3.0578787326812744
+Batch 1500: training loss 3.018317222595215
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.1434178352355957
+Batch 1700: training loss 2.918653964996338
+Batch 1800: training loss 3.1145145893096924
+Batch 1900: training loss 3.0368714332580566
+Batch 2000: training loss 3.180121898651123
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.041088104248047
+Batch 2200: training loss 2.858935832977295
+Batch 2300: training loss 2.951826572418213
+Epoch 54: Average Training Loss: 3.053997983806369, Average Validation Loss: 3.3708808521429696
+Batch 100: training loss 3.0751101970672607
+Batch 200: training loss 2.9464268684387207
+Batch 300: training loss 3.058596611022949
+Batch 400: training loss 3.0022435188293457
+Batch 500: training loss 3.1046643257141113
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.059983015060425
+Batch 700: training loss 3.0955119132995605
+Batch 800: training loss 3.0370664596557617
+Batch 900: training loss 3.0771563053131104
+Batch 1000: training loss 3.0445172786712646
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 2.976686954498291
+Batch 1200: training loss 3.054622173309326
+Batch 1300: training loss 3.0115180015563965
+Batch 1400: training loss 3.0878190994262695
+Batch 1500: training loss 3.05983304977417
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0052871704101562
+Batch 1700: training loss 3.0279273986816406
+Batch 1800: training loss 3.1838431358337402
+Batch 1900: training loss 3.0538809299468994
+Batch 2000: training loss 2.871613025665283
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1446783542633057
+Batch 2200: training loss 3.207335948944092
+Batch 2300: training loss 3.0707709789276123
+Epoch 55: Average Training Loss: 3.0482126341134617, Average Validation Loss: 3.364398260911306
+Batch 100: training loss 3.056464672088623
+Batch 200: training loss 3.189301013946533
+Batch 300: training loss 3.0055313110351562
+Batch 400: training loss 3.0618367195129395
+Batch 500: training loss 3.1295409202575684
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.0447139739990234
+Batch 700: training loss 2.9198429584503174
+Batch 800: training loss 3.0028350353240967
+Batch 900: training loss 3.0168704986572266
+Batch 1000: training loss 2.8323681354522705
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1025478839874268
+Batch 1200: training loss 3.0532584190368652
+Batch 1300: training loss 2.955854892730713
+Batch 1400: training loss 2.968574285507202
+Batch 1500: training loss 2.976020097732544
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 2.952522039413452
+Batch 1700: training loss 2.9287526607513428
+Batch 1800: training loss 3.0327696800231934
+Batch 1900: training loss 2.9914793968200684
+Batch 2000: training loss 3.220564603805542
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.883014678955078
+Batch 2200: training loss 3.310871124267578
+Batch 2300: training loss 3.1460964679718018
+Epoch 56: Average Training Loss: 3.0427194130908912, Average Validation Loss: 3.357161581516266
+Batch 100: training loss 3.1577746868133545
+Batch 200: training loss 3.129713535308838
+Batch 300: training loss 2.994215965270996
+Batch 400: training loss 2.9682679176330566
+Batch 500: training loss 3.047598123550415
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 2.9904284477233887
+Batch 700: training loss 3.0709614753723145
+Batch 800: training loss 3.040386915206909
+Batch 900: training loss 3.005524158477783
+Batch 1000: training loss 3.206645965576172
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 2.914581060409546
+Batch 1200: training loss 3.0423059463500977
+Batch 1300: training loss 3.0368309020996094
+Batch 1400: training loss 3.1499547958374023
+Batch 1500: training loss 2.9761180877685547
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0365304946899414
+Batch 1700: training loss 3.200930595397949
+Batch 1800: training loss 2.8589158058166504
+Batch 1900: training loss 3.0301599502563477
+Batch 2000: training loss 3.0625104904174805
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.9514760971069336
+Batch 2200: training loss 2.9804792404174805
+Batch 2300: training loss 3.0282201766967773
+Epoch 57: Average Training Loss: 3.037462170315277, Average Validation Loss: 3.35457843542099
+Batch 100: training loss 3.1131432056427
+Batch 200: training loss 3.043722152709961
+Batch 300: training loss 3.156987190246582
+Batch 400: training loss 2.9237046241760254
+Batch 500: training loss 3.1110198497772217
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.1030917167663574
+Batch 700: training loss 2.9458465576171875
+Batch 800: training loss 2.963095188140869
+Batch 900: training loss 3.044391632080078
+Batch 1000: training loss 3.015244960784912
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 2.8533403873443604
+Batch 1200: training loss 2.9903650283813477
+Batch 1300: training loss 2.8965134620666504
+Batch 1400: training loss 3.0157198905944824
+Batch 1500: training loss 3.0806965827941895
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 2.9579172134399414
+Batch 1700: training loss 2.9579243659973145
+Batch 1800: training loss 2.7758188247680664
+Batch 1900: training loss 3.0140552520751953
+Batch 2000: training loss 2.9704418182373047
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.0082716941833496
+Batch 2200: training loss 3.073702096939087
+Batch 2300: training loss 2.900834560394287
+Epoch 58: Average Training Loss: 3.0321077676966737, Average Validation Loss: 3.347786029179891
+Batch 100: training loss 3.098280191421509
+Batch 200: training loss 3.1241612434387207
+Batch 300: training loss 3.101386308670044
+Batch 400: training loss 3.0533745288848877
+Batch 500: training loss 3.161675453186035
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 2.8970203399658203
+Batch 700: training loss 2.922685146331787
+Batch 800: training loss 3.098884344100952
+Batch 900: training loss 2.9566783905029297
+Batch 1000: training loss 2.963606595993042
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.0028159618377686
+Batch 1200: training loss 3.017702102661133
+Batch 1300: training loss 2.970066785812378
+Batch 1400: training loss 3.032247543334961
+Batch 1500: training loss 3.0831360816955566
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 2.887146472930908
+Batch 1700: training loss 2.9313433170318604
+Batch 1800: training loss 3.012768030166626
+Batch 1900: training loss 3.0002613067626953
+Batch 2000: training loss 3.117793560028076
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.0043060779571533
+Batch 2200: training loss 3.0481653213500977
+Batch 2300: training loss 3.0852980613708496
+Epoch 59: Average Training Loss: 3.0268074176417277, Average Validation Loss: 3.34329221645991
+Batch 100: training loss 2.951977252960205
+Batch 200: training loss 2.956449508666992
+Batch 300: training loss 3.106563091278076
+Batch 400: training loss 2.9702281951904297
+Batch 500: training loss 2.9926412105560303
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.1379730701446533
+Batch 700: training loss 3.002608299255371
+Batch 800: training loss 3.085319995880127
+Batch 900: training loss 2.8830225467681885
+Batch 1000: training loss 2.949547052383423
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 2.9982666969299316
+Batch 1200: training loss 3.131110906600952
+Batch 1300: training loss 2.977726936340332
+Batch 1400: training loss 3.0444040298461914
+Batch 1500: training loss 2.9357829093933105
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0080127716064453
+Batch 1700: training loss 3.032454490661621
+Batch 1800: training loss 2.9530906677246094
+Batch 1900: training loss 3.0822291374206543
+Batch 2000: training loss 2.9313035011291504
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.106046676635742
+Batch 2200: training loss 3.1131162643432617
+Batch 2300: training loss 3.027114152908325
+Epoch 60: Average Training Loss: 3.0217170186417093, Average Validation Loss: 3.3412844936052957
+Batch 100: training loss 2.8800621032714844
+Batch 200: training loss 2.983285427093506
+Batch 300: training loss 2.9980807304382324
+Batch 400: training loss 2.8899524211883545
+Batch 500: training loss 2.973245143890381
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.046644687652588
+Batch 700: training loss 2.9615654945373535
+Batch 800: training loss 2.812832832336426
+Batch 900: training loss 3.1281609535217285
+Batch 1000: training loss 3.0203261375427246
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 2.925187349319458
+Batch 1200: training loss 3.2203569412231445
+Batch 1300: training loss 2.977189064025879
+Batch 1400: training loss 2.8076863288879395
+Batch 1500: training loss 3.0134148597717285
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.1669182777404785
+Batch 1700: training loss 3.1129283905029297
+Batch 1800: training loss 3.0118160247802734
+Batch 1900: training loss 2.864501953125
+Batch 2000: training loss 3.2749502658843994
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1988730430603027
+Batch 2200: training loss 3.1653072834014893
+Batch 2300: training loss 3.1907670497894287
+Epoch 61: Average Training Loss: 3.0169627955342317, Average Validation Loss: 3.3450552821159363
+Batch 100: training loss 2.8718109130859375
+Batch 200: training loss 2.9887795448303223
+Batch 300: training loss 2.9632062911987305
+Batch 400: training loss 2.947115898132324
+Batch 500: training loss 3.124992609024048
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.1640143394470215
+Batch 700: training loss 3.0402183532714844
+Batch 800: training loss 2.9298853874206543
+Batch 900: training loss 2.875826358795166
+Batch 1000: training loss 2.816612720489502
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.012359142303467
+Batch 1200: training loss 2.9799818992614746
+Batch 1300: training loss 3.1112353801727295
+Batch 1400: training loss 2.8767261505126953
+Batch 1500: training loss 2.8827643394470215
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 2.986581802368164
+Batch 1700: training loss 2.9358937740325928
+Batch 1800: training loss 2.973789691925049
+Batch 1900: training loss 3.0932583808898926
+Batch 2000: training loss 3.0311429500579834
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.9383602142333984
+Batch 2200: training loss 3.0179367065429688
+Batch 2300: training loss 2.888056755065918
+Epoch 62: Average Training Loss: 3.012076210243303, Average Validation Loss: 3.341767887274424
+Batch 100: training loss 3.04182505607605
+Batch 200: training loss 2.9045586585998535
+Batch 300: training loss 2.908867835998535
+Batch 400: training loss 2.869077682495117
+Batch 500: training loss 2.9307594299316406
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 2.9233922958374023
+Batch 700: training loss 3.0586791038513184
+Batch 800: training loss 3.086716651916504
+Batch 900: training loss 3.172818183898926
+Batch 1000: training loss 2.888897657394409
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.0203778743743896
+Batch 1200: training loss 3.121673107147217
+Batch 1300: training loss 3.180514335632324
+Batch 1400: training loss 3.061269760131836
+Batch 1500: training loss 3.1336185932159424
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 2.925969123840332
+Batch 1700: training loss 2.8806304931640625
+Batch 1800: training loss 2.9225308895111084
+Batch 1900: training loss 2.95945143699646
+Batch 2000: training loss 2.9078495502471924
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.9403486251831055
+Batch 2200: training loss 3.006716012954712
+Batch 2300: training loss 3.162285089492798
+Epoch 63: Average Training Loss: 3.0073839050714475, Average Validation Loss: 3.32985982298851
+Batch 100: training loss 2.8913259506225586
+Batch 200: training loss 3.009368896484375
+Batch 300: training loss 3.0077967643737793
+Batch 400: training loss 3.029491424560547
+Batch 500: training loss 3.064281702041626
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.1808128356933594
+Batch 700: training loss 3.0539236068725586
+Batch 800: training loss 2.9672341346740723
+Batch 900: training loss 2.9481048583984375
+Batch 1000: training loss 3.1836512088775635
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1029839515686035
+Batch 1200: training loss 3.051504135131836
+Batch 1300: training loss 3.022268533706665
+Batch 1400: training loss 3.025866985321045
+Batch 1500: training loss 3.1622843742370605
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.083827018737793
+Batch 1700: training loss 2.9385969638824463
+Batch 1800: training loss 2.938300609588623
+Batch 1900: training loss 3.036168098449707
+Batch 2000: training loss 2.9498367309570312
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.086756706237793
+Batch 2200: training loss 3.0417892932891846
+Batch 2300: training loss 2.852613925933838
+Epoch 64: Average Training Loss: 3.0028252349371796, Average Validation Loss: 3.325767934322357
+Batch 100: training loss 2.910238265991211
+Batch 200: training loss 2.928067445755005
+Batch 300: training loss 3.1115288734436035
+Batch 400: training loss 3.119736671447754
+Batch 500: training loss 2.9992294311523438
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.069969892501831
+Batch 700: training loss 2.9927024841308594
+Batch 800: training loss 3.0432662963867188
+Batch 900: training loss 2.8622570037841797
+Batch 1000: training loss 3.015693187713623
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.138902425765991
+Batch 1200: training loss 2.915435552597046
+Batch 1300: training loss 3.153977632522583
+Batch 1400: training loss 2.9556353092193604
+Batch 1500: training loss 2.882990837097168
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0980589389801025
+Batch 1700: training loss 3.064314365386963
+Batch 1800: training loss 2.801527976989746
+Batch 1900: training loss 3.142793893814087
+Batch 2000: training loss 2.9361495971679688
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.1143503189086914
+Batch 2200: training loss 2.916757106781006
+Batch 2300: training loss 3.0571162700653076
+Epoch 65: Average Training Loss: 2.9982173282131805, Average Validation Loss: 3.3309079110622406
+Batch 100: training loss 2.943216562271118
+Batch 200: training loss 2.963257312774658
+Batch 300: training loss 2.798349380493164
+Batch 400: training loss 3.010408401489258
+Batch 500: training loss 2.8717732429504395
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.053562641143799
+Batch 700: training loss 2.922394275665283
+Batch 800: training loss 2.875232458114624
+Batch 900: training loss 2.964033603668213
+Batch 1000: training loss 3.09674072265625
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.1011128425598145
+Batch 1200: training loss 2.8911402225494385
+Batch 1300: training loss 2.947782516479492
+Batch 1400: training loss 2.7897891998291016
+Batch 1500: training loss 2.8829782009124756
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.147348403930664
+Batch 1700: training loss 2.9148926734924316
+Batch 1800: training loss 2.92966890335083
+Batch 1900: training loss 3.044376850128174
+Batch 2000: training loss 3.151437282562256
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.068957805633545
+Batch 2200: training loss 2.992569923400879
+Batch 2300: training loss 2.846780300140381
+Epoch 66: Average Training Loss: 2.9944453468298344, Average Validation Loss: 3.3277975022792816
+Batch 100: training loss 3.0203535556793213
+Batch 200: training loss 3.0692572593688965
+Batch 300: training loss 2.9177498817443848
+Batch 400: training loss 3.0227174758911133
+Batch 500: training loss 2.830334186553955
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 2.9221434593200684
+Batch 700: training loss 2.9790232181549072
+Batch 800: training loss 2.948810577392578
+Batch 900: training loss 3.0850987434387207
+Batch 1000: training loss 3.0030078887939453
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.183511972427368
+Batch 1200: training loss 3.011472702026367
+Batch 1300: training loss 2.857344627380371
+Batch 1400: training loss 2.8193812370300293
+Batch 1500: training loss 2.9663166999816895
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 2.9874258041381836
+Batch 1700: training loss 2.986335515975952
+Batch 1800: training loss 2.9069643020629883
+Batch 1900: training loss 2.9827957153320312
+Batch 2000: training loss 2.809082508087158
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.9646246433258057
+Batch 2200: training loss 3.088156223297119
+Batch 2300: training loss 3.114760160446167
+Epoch 67: Average Training Loss: 2.9901507302559276, Average Validation Loss: 3.3171096543471017
+Batch 100: training loss 2.8011507987976074
+Batch 200: training loss 2.8989672660827637
+Batch 300: training loss 2.8882803916931152
+Batch 400: training loss 3.1222755908966064
+Batch 500: training loss 3.043470859527588
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.00199031829834
+Batch 700: training loss 2.8811426162719727
+Batch 800: training loss 3.045051097869873
+Batch 900: training loss 3.0254194736480713
+Batch 1000: training loss 3.016720771789551
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 2.9598114490509033
+Batch 1200: training loss 2.9405150413513184
+Batch 1300: training loss 3.1283931732177734
+Batch 1400: training loss 2.98498272895813
+Batch 1500: training loss 2.8822898864746094
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 2.924299716949463
+Batch 1700: training loss 3.0159149169921875
+Batch 1800: training loss 3.0078468322753906
+Batch 1900: training loss 3.0259177684783936
+Batch 2000: training loss 2.959188938140869
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.953648805618286
+Batch 2200: training loss 3.1108899116516113
+Batch 2300: training loss 3.1729040145874023
+Epoch 68: Average Training Loss: 2.985797301799364, Average Validation Loss: 3.316528042157491
+Batch 100: training loss 3.0864953994750977
+Batch 200: training loss 3.0072221755981445
+Batch 300: training loss 2.8435287475585938
+Batch 400: training loss 2.933816909790039
+Batch 500: training loss 3.13041615486145
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 2.9305009841918945
+Batch 700: training loss 2.95965576171875
+Batch 800: training loss 3.2422680854797363
+Batch 900: training loss 2.9196131229400635
+Batch 1000: training loss 3.0442912578582764
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 2.9163012504577637
+Batch 1200: training loss 2.9605536460876465
+Batch 1300: training loss 2.8846466541290283
+Batch 1400: training loss 2.9855751991271973
+Batch 1500: training loss 2.896378993988037
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0513908863067627
+Batch 1700: training loss 3.014221668243408
+Batch 1800: training loss 2.997532367706299
+Batch 1900: training loss 2.9028353691101074
+Batch 2000: training loss 3.02793025970459
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.8559322357177734
+Batch 2200: training loss 2.9874629974365234
+Batch 2300: training loss 2.8984861373901367
+Epoch 69: Average Training Loss: 2.9813238825814308, Average Validation Loss: 3.316021223862966
+Batch 100: training loss 2.988067626953125
+Batch 200: training loss 2.9271929264068604
+Batch 300: training loss 3.0096254348754883
+Batch 400: training loss 3.1090002059936523
+Batch 500: training loss 3.0760340690612793
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 2.6921160221099854
+Batch 700: training loss 3.0147969722747803
+Batch 800: training loss 3.0303597450256348
+Batch 900: training loss 2.9068636894226074
+Batch 1000: training loss 2.8994803428649902
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 2.834357976913452
+Batch 1200: training loss 2.9050350189208984
+Batch 1300: training loss 2.9850568771362305
+Batch 1400: training loss 2.9260659217834473
+Batch 1500: training loss 2.7834761142730713
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0127100944519043
+Batch 1700: training loss 3.0204615592956543
+Batch 1800: training loss 3.0084426403045654
+Batch 1900: training loss 2.985785961151123
+Batch 2000: training loss 2.990210771560669
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.960552215576172
+Batch 2200: training loss 2.9353184700012207
+Batch 2300: training loss 2.9705495834350586
+Epoch 70: Average Training Loss: 2.9776207798577006, Average Validation Loss: 3.3066894114017487
+Batch 100: training loss 2.938913106918335
+Batch 200: training loss 3.125418186187744
+Batch 300: training loss 2.881740093231201
+Batch 400: training loss 2.9633777141571045
+Batch 500: training loss 3.092550754547119
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 2.961129665374756
+Batch 700: training loss 2.784801483154297
+Batch 800: training loss 3.05635929107666
+Batch 900: training loss 2.9480295181274414
+Batch 1000: training loss 3.0714263916015625
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 2.9926390647888184
+Batch 1200: training loss 3.0848793983459473
+Batch 1300: training loss 2.995393753051758
+Batch 1400: training loss 3.0324454307556152
+Batch 1500: training loss 3.1029114723205566
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 3.0099525451660156
+Batch 1700: training loss 2.8515172004699707
+Batch 1800: training loss 2.896348237991333
+Batch 1900: training loss 3.0998120307922363
+Batch 2000: training loss 3.131584644317627
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.9513449668884277
+Batch 2200: training loss 3.1932806968688965
+Batch 2300: training loss 3.077604293823242
+Epoch 71: Average Training Loss: 2.973689248639162, Average Validation Loss: 3.3086720208326974
+Batch 100: training loss 3.1711626052856445
+Batch 200: training loss 2.9838428497314453
+Batch 300: training loss 2.9391062259674072
+Batch 400: training loss 2.9422082901000977
+Batch 500: training loss 2.9164063930511475
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 3.082340955734253
+Batch 700: training loss 2.9109046459198
+Batch 800: training loss 2.9562854766845703
+Batch 900: training loss 2.9999704360961914
+Batch 1000: training loss 3.0397748947143555
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 3.0363335609436035
+Batch 1200: training loss 2.9099483489990234
+Batch 1300: training loss 2.863147020339966
+Batch 1400: training loss 2.9705357551574707
+Batch 1500: training loss 2.967651844024658
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 2.95914888381958
+Batch 1700: training loss 2.9954371452331543
+Batch 1800: training loss 2.8406667709350586
+Batch 1900: training loss 2.947176456451416
+Batch 2000: training loss 3.0232491493225098
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 2.8882641792297363
+Batch 2200: training loss 2.8576860427856445
+Batch 2300: training loss 3.0540771484375
+Epoch 72: Average Training Loss: 2.9702996758063906, Average Validation Loss: 3.310080031553904
+Batch 100: training loss 2.9564597606658936
+Batch 200: training loss 2.901726722717285
+Batch 300: training loss 3.0105435848236084
+Batch 400: training loss 3.0366804599761963
+Batch 500: training loss 2.9069511890411377
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 600: training loss 2.88748836517334
+Batch 700: training loss 3.0264668464660645
+Batch 800: training loss 2.8438920974731445
+Batch 900: training loss 2.816497564315796
+Batch 1000: training loss 2.919093608856201
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1100: training loss 2.961984157562256
+Batch 1200: training loss 3.0055999755859375
+Batch 1300: training loss 3.0344581604003906
+Batch 1400: training loss 2.9935336112976074
+Batch 1500: training loss 2.8674683570861816
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 1600: training loss 2.981304168701172
+Batch 1700: training loss 3.1722187995910645
+Batch 1800: training loss 2.900916337966919
+Batch 1900: training loss 2.756038188934326
+Batch 2000: training loss 3.195021152496338
+Saving checkpoint to accelerator_checkpoints_0...
+Deleting 1 checkpoints to make room for new checkpoint.
+Batch 2100: training loss 3.312986373901367
+Batch 2200: training loss 3.012333631515503
+Batch 2300: training loss 2.9812827110290527
+Epoch 73: Average Training Loss: 2.9662892731993677, Average Validation Loss: 3.3100793858369193
+Batch 100: training loss 2.939340591430664
+Batch 200: training loss 2.898362159729004
+Batch 300: training loss 2.9612302780151367
+Batch 400: training loss 2.9162559509277344
+Batch 500: training loss 2.7821502685546875
+Saving checkpoint

@@ -1,0 +1,7 @@
+Script started on 2025-01-28 19:44:38+00:00 [COMMAND="python evaluate.py" TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="130" LINES="47"]
+[1, 675, 2208, 71, 36, 7458, 5476, 711, 1160, 41, 787, 769, 12246, 1006, 705, 11530, 8374, 1009, 721, 156, 683, 9265, 732, 672, 3451, 41, 769, 937, 88, 156, 79, 36, 2509, 711, 2208, 71, 36, 7458, 5476, 711, 1160, 43, 2]
+Input: The push comes as the country's Highway Trust Fund, financed with taxes Americans pay at the gas pump, is broke.
+Output: le fonds d ' affectation spéciale du pays , qui est financé avec des impôts américains pay ant à la pom pe de gaz , est cour u à l ' égard du fonds d ' affectation spéciale du pays .
+Actual: La pression vient du fait que le Highway Trust Fund du pays, financé avec les taxes que les Américains paient à la pompe, est financièrement à sec.
+
+Script done on 2025-01-28 19:44:43+00:00 [COMMAND_EXIT_CODE="0"]
