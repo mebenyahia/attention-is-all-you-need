@@ -2,7 +2,7 @@ import os
 
 import pandas as pd
 
-from TransformerModel.plotting import plot_metrics
+from visualization.plotting import plot_metrics
 
 # Define the file path
 file_path = 'training_log.csv'
